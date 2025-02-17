@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <div class="card-body">
+                <h4 class="card-title text-center mb-4">Login</h4>
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Select Role</label>
+                        <select class="form-control" id="role" name="role" required onchange="toggleStudentFields(this.value)">
+                            <option value="">Select Role</option>
+                            <option value="admin">Administrator</option>
+                            <option value="hod">Head of Department</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+
+                    <!-- Student-specific fields (hidden by default) -->
+                    <div id="studentFields" style="display: none;">
+                        <div class="mb-3">
+                            <label for="admission_year" class="form-label">Admission Year</label>
+                            <select class="form-control" id="admission_year" name="admission_year">
+                                <option value="2024">2024 (1st Year)</option>
+                                <option value="2023">2023 (2nd Year)</option>
+                                <option value="2022">2022 (3rd Year)</option>
+                                <option value="2021">2021 (4th Year)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleStudentFields(role) {
+    const studentFields = document.getElementById('studentFields');
+    const yearField = document.getElementById('admission_year');
+
+    if (role === 'student') {
+        studentFields.style.display = 'block';
+        yearField.required = true;
+    } else {
+        studentFields.style.display = 'none';
+        yearField.required = false;
+    }
+}
+</script>
+{% endblock %}
