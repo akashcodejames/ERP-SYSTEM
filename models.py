@@ -110,9 +110,10 @@ class CourseSubject(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     course_id = db.Column(db.Integer, db.ForeignKey('courses.id'), nullable=False)
+    batch_id = db.Column(db.Integer, nullable=False)  # Batch ID field
     subject_code = db.Column(db.String(20), nullable=False)
     subject_name = db.Column(db.String(100), nullable=False)
-    year = db.Column(db.Integer, nullable=False)  # admission year e.g., 2024
+    year = db.Column(db.Integer, nullable=False)  # Admission year, e.g., 2024
     semester = db.Column(db.Integer, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     is_active = db.Column(db.Boolean, default=True)
@@ -160,12 +161,12 @@ class Attendance(db.Model):
 def load_user(id):
     return UserCredentials.query.get(int(id))
 
+
 def create_test_data():
     try:
         # Create admin user if it doesn't exist
         admin = UserCredentials.query.filter_by(email='admin@example.com').first()
         if not admin:
-            # Create admin credentials
             admin = UserCredentials(
                 email='admin@example.com',
                 role='admin',
@@ -175,7 +176,6 @@ def create_test_data():
             db.session.add(admin)
             db.session.flush()  # Get the ID before creating profile
 
-            # Create admin profile
             admin_profile = AdminProfile(
                 credential_id=admin.id,
                 department='Administration',
@@ -185,36 +185,47 @@ def create_test_data():
             db.session.commit()
             print("Admin user created successfully")
 
-        # Check if CSE course exists
+        # Ensure courses exist
         cse = Course.query.filter_by(code='CSE').first()
         if not cse:
             cse = Course(code='CSE', name='Computer Science and Engineering')
             db.session.add(cse)
             db.session.commit()
 
-        # Check if ECE course exists
         ece = Course.query.filter_by(code='ECE').first()
         if not ece:
             ece = Course(code='ECE', name='Electronics and Communication Engineering')
             db.session.add(ece)
             db.session.commit()
 
-        # Create test subjects for CSE if they don't exist
+        # Hardcoded batch IDs as integers
+        batch_ids = {
+            "CSE_2024": 101,
+            "CSE_2023": 102,
+            "CSE_2022": 103,
+            "ECE_2024": 201,
+            "ECE_2023": 202
+        }
+
+        # Create test subjects for CSE
         existing_subjects = CourseSubject.query.filter_by(course_id=cse.id).all()
         existing_codes = {subject.subject_code for subject in existing_subjects}
 
         cse_subjects = []
         for subject_data in [
-            # 2024 batch (1st year)
-            {'code': 'CS101', 'name': 'Introduction to Programming', 'year': 2024, 'semester': 1},
-            {'code': 'CS102', 'name': 'Digital Logic', 'year': 2024, 'semester': 1},
-            {'code': 'CS103', 'name': 'Data Structures', 'year': 2024, 'semester': 2},
-            # 2023 batch (2nd year)
-            {'code': 'CS201', 'name': 'Object Oriented Programming', 'year': 2023, 'semester': 1},
-            {'code': 'CS202', 'name': 'Computer Architecture', 'year': 2023, 'semester': 1},
-            # 2022 batch (3rd year)
-            {'code': 'CS301', 'name': 'Database Systems', 'year': 2022, 'semester': 1},
-            {'code': 'CS302', 'name': 'Operating Systems', 'year': 2022, 'semester': 1},
+            {'code': 'CS101', 'name': 'Introduction to Programming', 'year': 2024, 'semester': 1,
+             'batch_id': batch_ids["CSE_2024"]},
+            {'code': 'CS102', 'name': 'Digital Logic', 'year': 2024, 'semester': 1, 'batch_id': batch_ids["CSE_2024"]},
+            {'code': 'CS103', 'name': 'Data Structures', 'year': 2024, 'semester': 2,
+             'batch_id': batch_ids["CSE_2024"]},
+            {'code': 'CS201', 'name': 'Object Oriented Programming', 'year': 2023, 'semester': 1,
+             'batch_id': batch_ids["CSE_2023"]},
+            {'code': 'CS202', 'name': 'Computer Architecture', 'year': 2023, 'semester': 1,
+             'batch_id': batch_ids["CSE_2023"]},
+            {'code': 'CS301', 'name': 'Database Systems', 'year': 2022, 'semester': 1,
+             'batch_id': batch_ids["CSE_2022"]},
+            {'code': 'CS302', 'name': 'Operating Systems', 'year': 2022, 'semester': 1,
+             'batch_id': batch_ids["CSE_2022"]},
         ]:
             if subject_data['code'] not in existing_codes:
                 subject = CourseSubject(
@@ -222,22 +233,24 @@ def create_test_data():
                     subject_code=subject_data['code'],
                     subject_name=subject_data['name'],
                     year=subject_data['year'],
-                    semester=subject_data['semester']
+                    semester=subject_data['semester'],
+                    batch_id=subject_data['batch_id']
                 )
                 cse_subjects.append(subject)
 
-        # Create test subjects for ECE if they don't exist
+        # Create test subjects for ECE
         existing_subjects = CourseSubject.query.filter_by(course_id=ece.id).all()
         existing_codes = {subject.subject_code for subject in existing_subjects}
 
         ece_subjects = []
         for subject_data in [
-            # 2024 batch (1st year)
-            {'code': 'EC101', 'name': 'Basic Electronics', 'year': 2024, 'semester': 1},
-            {'code': 'EC102', 'name': 'Circuit Theory', 'year': 2024, 'semester': 1},
-            # 2023 batch (2nd year)
-            {'code': 'EC201', 'name': 'Analog Electronics', 'year': 2023, 'semester': 1},
-            {'code': 'EC202', 'name': 'Digital Electronics', 'year': 2023, 'semester': 1},
+            {'code': 'EC101', 'name': 'Basic Electronics', 'year': 2024, 'semester': 1,
+             'batch_id': batch_ids["ECE_2024"]},
+            {'code': 'EC102', 'name': 'Circuit Theory', 'year': 2024, 'semester': 1, 'batch_id': batch_ids["ECE_2024"]},
+            {'code': 'EC201', 'name': 'Analog Electronics', 'year': 2023, 'semester': 1,
+             'batch_id': batch_ids["ECE_2023"]},
+            {'code': 'EC202', 'name': 'Digital Electronics', 'year': 2023, 'semester': 1,
+             'batch_id': batch_ids["ECE_2023"]},
         ]:
             if subject_data['code'] not in existing_codes:
                 subject = CourseSubject(
@@ -245,15 +258,23 @@ def create_test_data():
                     subject_code=subject_data['code'],
                     subject_name=subject_data['name'],
                     year=subject_data['year'],
-                    semester=subject_data['semester']
+                    semester=subject_data['semester'],
+                    batch_id=subject_data['batch_id']
                 )
                 ece_subjects.append(subject)
 
         if cse_subjects or ece_subjects:
             db.session.add_all(cse_subjects + ece_subjects)
             db.session.commit()
+            return "Test data added successfully"
 
-        return True
+        return "No new test data was added (all subjects exist)"
+
+    except Exception as e:
+        db.session.rollback()
+        # logging.error(f"Error creating test data: {str(e)}")
+        return f"Error: {str(e)}"
+
 
     except Exception as e:
         db.session.rollback()

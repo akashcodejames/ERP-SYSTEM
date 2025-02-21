@@ -3,68 +3,95 @@
 {% block title %}Manage HODs{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2>Manage HODs</h2>
-    <a href="{{ url_for('auth.admin_dashboard') }}" class="btn btn-secondary mb-3">Back to Dashboard</a>
-    <div>
-        <a href="{{ url_for('auth.render_hod') }}" class="btn btn-primary">Add HOD</a>
+<div class="container mt-4">
+    <!-- Page Title -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="text-primary"><i class="fas fa-user-tie"></i> Manage HODs</h3>
+        <a href="{{ url_for('auth.admin_dashboard') }}" class="btn btn-outline-dark">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
     </div>
-    <table class="table table-striped table-bordered">
-        <thead class="table-dark">
-            <tr>
-                <th>ID</th>
-                <th>Photo</th>
-                <th>Email</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Address</th>
-                <th>Department</th>
-                <th>Office Location</th>
-                <th>Appointment Date</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for hod in hods %}
-            <tr>
-                <form method="POST" action="{{ url_for('auth.update_hod', hod_id=hod.id) }}" enctype="multipart/form-data">
-                    <td>{{ hod.id }}</td>
-                    <!-- Clickable Photo for Modal -->
-                    <td>
-                        {% if hod.photo_path %}
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#photoModal"
-                               data-photo="{{ url_for('static', filename='uploads/' + hod.photo_path) }}">
-                                <img src="{{ url_for('static', filename='uploads/' + hod.photo_path) }}"
-                                     alt="HOD Photo" width="50" height="50" style="border-radius: 50%; cursor: pointer;">
+
+    <!-- Add HOD Button -->
+    <div class="text-end mb-3">
+        <a href="{{ url_for('auth.render_hod') }}" class="btn btn-success">
+            <i class="fas fa-plus-circle"></i> Add HOD
+        </a>
+    </div>
+
+    <!-- Table -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Photo</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Department</th>
+                    <th>Office Location</th>
+                    <th>Appointment Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for hod in hods %}
+                <tr class="align-middle">
+                    <form method="POST" action="{{ url_for('auth.update_hod', hod_id=hod.id) }}" enctype="multipart/form-data">
+                        <td class="fw-bold">{{ hod.id }}</td>
+
+                        <!-- Photo Column -->
+                        <td>
+                            {% if hod.photo_path %}
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#photoModal"
+                                   data-photo="{{ url_for('static', filename='uploads/' + hod.photo_path) }}">
+                                    <img src="{{ url_for('static', filename='uploads/' + hod.photo_path) }}"
+                                         alt="HOD Photo" width="50" height="50"
+                                         class="rounded-circle shadow-sm img-thumbnail"
+                                         style="cursor: pointer;">
+                                </a>
+                            {% else %}
+                                <p class="text-muted">No photo</p>
+                            {% endif %}
+                            <input type="file" name="photo" class="form-control mt-1">
+                        </td>
+
+                        <!-- Editable Fields -->
+                        <td><input type="email" class="form-control" name="email" value="{{ hod.email }}" required></td>
+                        <td><input type="text" class="form-control" name="first_name" value="{{ hod.first_name }}" required></td>
+                        <td><input type="text" class="form-control" name="last_name" value="{{ hod.last_name }}" required></td>
+                        <td>
+    <div class="input-group">
+<!--        <span class="input-group-text"><i class="fas fa-phone"></i></span>-->
+        <input type="tel" class="form-control" name="phone" value="{{ hod.phone }}"
+               pattern="0?[0-9]{10}" maxlength="11" required
+               oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+               placeholder="Enter 10 or 11-digit phone number">
+    </div>
+</td>
+                        <td><input type="text" class="form-control" name="address" value="{{ hod.address }}"></td>
+                        <td><input type="text" class="form-control" name="department" value="{{ hod.department }}"></td>
+                        <td><input type="text" class="form-control" name="office_location" value="{{ hod.office_location }}"></td>
+                        <td class="fw-semibold">{{ hod.appointment_date.strftime('%Y-%m-%d') }}</td>
+
+                        <!-- Actions -->
+                        <td class="text-center">
+                            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Save</button>
+                            <a href="{{ url_for('auth.delete_hod', hod_id=hod.id) }}"
+                               class="btn btn-sm btn-danger"
+                               onclick="return confirm('Are you sure you want to delete this HOD?')">
+                                <i class="fas fa-trash"></i> Delete
                             </a>
-                        {% else %}
-                            <p>No photo</p>
-                        {% endif %}
-                        <!-- Upload New Photo -->
-                        <input type="file" name="photo" class="form-control mt-1">
-                    </td>
-                    <td><input type="email" class="form-control" name="email" value="{{ hod.email }}" required></td>
-                    <td><input type="text" class="form-control" name="first_name" value="{{ hod.first_name }}" required></td>
-                    <td><input type="text" class="form-control" name="last_name" value="{{ hod.last_name }}" required></td>
-                    <td><input type="text" class="form-control" name="phone" value="{{ hod.phone }}"></td>
-                    <td><input type="text" class="form-control" name="address" value="{{ hod.address }}"></td>
-                    <td><input type="text" class="form-control" name="department" value="{{ hod.department }}"></td>
-                    <td><input type="text" class="form-control" name="office_location" value="{{ hod.office_location }}"></td>
-                    <td>{{ hod.appointment_date.strftime('%Y-%m-%d') }}</td>
-                    <td>
-                        <button type="submit" class="btn btn-success btn-sm">Save</button>
-                        <a href="{{ url_for('auth.delete_hod', hod_id=hod.id) }}"
-                           class="btn btn-danger btn-sm"
-                           onclick="return confirm('Are you sure you want to delete this HOD?')">
-                            Delete
-                        </a>
-                    </td>
-                </form>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <!-- Bootstrap Modal for Image Preview -->
@@ -76,7 +103,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img id="modalPhoto" src="" alt="HOD Photo" class="img-fluid">
+                <img id="modalPhoto" src="" alt="HOD Photo" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, redirect, url_for, flash, request,
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash
 from werkzeug.utils import secure_filename
-
+import re
 from extensions import db
 from models import UserCredentials, TeacherDetails, StudentDetails, AdminProfile, HODProfile, SubjectAssignment, Course, CourseSubject, Attendance
 import random
@@ -230,43 +230,63 @@ def logout():
 
 
 
+
 @bp.route('/create_student_batch', methods=['POST'])
 @login_required
 def create_student_batch():
     if current_user.role != 'admin':
-        flash('Access denied: Admin privileges required')
+        flash('Access denied: Admin privileges required', 'danger')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
     try:
         batch_year = request.form.get('batch_year')
         course_id = request.form.get('course_id')
+        batch_id = request.form.get('batch_id')
+        semester = request.form.get('semester')
 
-        if not all([batch_year, course_id]):
-            flash('Batch year and course are required')
+        if not all([batch_year, course_id, batch_id, semester]):
+            flash('Batch year, course, batch ID, and semester are required', 'warning')
             return redirect(url_for('auth.admin_dashboard'))
 
-        # Validate year format
+        # Validate batch year
         try:
-            year = int(batch_year)
-            if year < 1900 or year > 2100:  # reasonable range check
-                raise ValueError("Year out of reasonable range")
+            batch_year = int(batch_year)
+            if batch_year < 1900 or batch_year > 2100:
+                raise ValueError("Batch year out of valid range")
         except ValueError:
-            flash('Invalid year format')
+            flash('Invalid batch year format', 'danger')
             return redirect(url_for('auth.admin_dashboard'))
 
+        # Validate batch ID (1 to 5)
+        try:
+            batch_id = int(batch_id)
+            if batch_id < 1 or batch_id > 5:
+                raise ValueError("Batch ID must be between 1 and 5")
+        except ValueError:
+            flash('Invalid batch ID', 'danger')
+            return redirect(url_for('auth.admin_dashboard'))
 
-        # Fetch course name to construct table name
+        # Validate semester (1 to 8)
+        try:
+            semester = int(semester)
+            if semester < 1 or semester > 8:
+                raise ValueError("Semester must be between 1 and 8")
+        except ValueError:
+            flash('Invalid semester', 'danger')
+            return redirect(url_for('auth.admin_dashboard'))
+
+        # Fetch course to validate and use in table name
         course = Course.query.get(course_id)
         if not course:
-            flash('Invalid course selected')
+            flash('Invalid course selected', 'danger')
             return redirect(url_for('auth.admin_dashboard'))
 
-        # Keep course_id for table naming (since course names can be long)
-        table_name = f'student_batch_{course_id}_{batch_year}'
+        # Generate table name
+        table_name = f'student_batch_{course_id}_{batch_year}_{semester}_{batch_id}'
 
-        # Create table with the same structure as StudentDetails
+        # SQL Query to create the table
         create_table_sql = text(f"""
-        CREATE TABLE IF NOT EXISTS {table_name} (
+        CREATE TABLE IF NOT EXISTS `{table_name}` (
             id INT AUTO_INCREMENT PRIMARY KEY,
             credential_id INT UNIQUE NOT NULL,
             first_name VARCHAR(64) NOT NULL,
@@ -283,7 +303,9 @@ def create_student_batch():
             batch VARCHAR(10) NOT NULL,
             admission_date DATETIME DEFAULT CURRENT_TIMESTAMP,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (credential_id) REFERENCES user_credentials(id),
+            batch_id INT NOT NULL,
+            semester INT NOT NULL,
+            FOREIGN KEY (credential_id) REFERENCES user_credentials(id) ON DELETE CASCADE,
             FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE ON UPDATE CASCADE
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
         """)
@@ -292,16 +314,17 @@ def create_student_batch():
         db.session.execute(create_table_sql)
         db.session.commit()
 
-
-        flash(f'Student batch table for year {batch_year} created successfully')
-        logging.info(f'Created student batch table: {table_name}')
+        flash(f'Student batch table `{table_name}` created successfully!', 'success')
+        logging.info(f'Successfully created student batch table: {table_name}')
 
     except Exception as e:
         db.session.rollback()
-        flash(f'Error creating student batch: {str(e)}')
+        flash(f'Error creating student batch: {str(e)}', 'danger')
         logging.error(f'Error creating student batch: {str(e)}')
 
     return redirect(url_for('auth.admin_dashboard'))
+
+
 
 @bp.route('/get_batch_years')
 def get_batch_years():
@@ -438,11 +461,19 @@ def add_hod():
     return render_template('add_hod.html')
 
 
+
+# Allowed image extensions
+
+
+def allowed_file(filename):
+    """Check if the uploaded file has a valid image extension."""
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 @bp.route('/add_teacher', methods=['GET', 'POST'])
 @login_required
 def add_teacher():
     if current_user.role != 'admin':
-        flash('Access denied: Admin privileges required')
+        flash('Access denied: Admin privileges required', 'danger')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
     if request.method == 'POST':
@@ -453,6 +484,23 @@ def add_teacher():
             phone = request.form.get('phone')
             address = request.form.get('address')
             department = request.form.get('department')
+
+            # **BACKEND VALIDATION: Check Email Format**
+            email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+            if not re.match(email_pattern, email):
+                flash("Invalid email format!", "danger")
+                return redirect(url_for('auth.add_teacher'))
+
+            # **BACKEND VALIDATION: Ensure Phone Number is 10 Digits**
+            if not phone.isdigit():
+                flash("Phone number must contain only numbers!", "danger")
+                return redirect(url_for('auth.add_teacher'))
+
+            if len(phone) == 11 and phone.startswith("0"):
+                phone = phone[1:]  # Remove first zero
+            elif len(phone) != 10:
+                flash("Phone number must be exactly 10 digits or 11 digits starting with 0!", "danger")
+                return redirect(url_for('auth.add_teacher'))
 
             # Generate random password
             password = generate_random_password()
@@ -466,15 +514,19 @@ def add_teacher():
             # Define default photo path
             photo_path = None
 
-            # Handle photo upload
+            # **BACKEND VALIDATION: Check and Save Image File**
             if 'photo' in request.files:
                 photo = request.files['photo']
                 if photo.filename:
-                    # Ensure folder exists
+                    if not allowed_file(photo.filename):
+                        flash("Invalid file format! Only PNG, JPG, JPEG, GIF allowed.", "danger")
+                        return redirect(url_for('auth.add_teacher'))
+
+                    # Ensure upload folder exists
                     upload_folder = os.path.join(current_app.root_path, 'static', 'uploads', 'teacher_photos')
                     os.makedirs(upload_folder, exist_ok=True)
 
-                    # Save photo with a fixed name
+                    # Secure filename and save
                     photo_filename = f"teacher_{credentials.id}.jpg"
                     photo_path = f"{photo_filename}"
                     photo.save(os.path.join(upload_folder, photo_filename))
@@ -513,6 +565,7 @@ def add_teacher():
 
 
 
+
 @bp.route('/render_hod', methods=['GET', 'POST'])
 @login_required
 def render_hod():
@@ -544,7 +597,7 @@ def add_student():
         admission_year = request.form.get('admission_year')
         roll_number = request.form.get('roll_number')
         course_id = request.form.get('course_id')
-        batch = request.form.get('batch')  # Batch ID
+        batch_id = request.form.get('batch')  # Batch ID
         semester = request.form.get('semester')  # Semester selection
 
         # Ensure semester value is valid (1 to 8)
@@ -577,7 +630,7 @@ def add_student():
         current_year = max(1, min(current_year, 4))  # Ensuring it's between 1st to 4th year
 
         # Define batch-specific table name (Includes Course, Admission Year, Batch ID, and Semester)
-        batch_table = f'student_batch_{course_id}_{admission_year}_batch{batch}_sem{semester}'
+        batch_table = f'student_batch_{course_id}_{admission_year}_{batch_id}_{semester}'
 
         # Insert student data into batch-semester-specific table
         sql = text(f"""
@@ -603,13 +656,13 @@ def add_student():
             'current_semester': semester,  # Storing selected semester
             'admission_year': int(admission_year),
             'course_id': course_id,
-            'batch': batch,  # Storing batch ID
+            'batch': batch_id,  # Storing batch ID
             'admission_date': datetime.utcnow()
         })
 
         db.session.commit()
         flash(f'Student added successfully. Temporary password: {password}')
-        logging.info(f'New student created: {email}, Batch {batch}, Semester {semester}, Table: {batch_table}')
+        logging.info(f'New student created: {email}, Batch {batch_id}, Semester {semester}, Table: {batch_table}')
 
     except Exception as e:
         db.session.rollback()
@@ -617,6 +670,7 @@ def add_student():
         logging.error(f'Error creating student: {str(e)}')
 
     return redirect(url_for('auth.admin_dashboard'))
+
 
 
 
@@ -1121,9 +1175,21 @@ def admin_dashboard():
     if current_user.role != 'admin':
         flash('Access denied: Admin privileges required')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
+
     courses = Course.query.all()
     course_subjects = CourseSubject.query.all()
-    return render_template('dashboard/admin.html', courses=courses, course_subjects=course_subjects)
+    result = db.session.execute(text("SHOW TABLES LIKE 'student_batch_%'"))
+    tables = [row[0] for row in result.fetchall()]  # Fetch all table names
+    print(tables)
+    # Fetch all existing student batch data for dropdown handling
+
+    return render_template(
+        'dashboard/admin.html',
+        courses=courses,
+        course_subjects=course_subjects,
+        table_names = tables
+    )
+
 
 @bp.route('/hod/dashboard')
 @login_required
@@ -1320,6 +1386,7 @@ def add_course():
 
     return redirect(url_for('auth.admin_dashboard'))
 
+
 @bp.route('/admin/add_course_subject', methods=['POST'])
 @login_required
 def add_course_subject():
@@ -1327,23 +1394,45 @@ def add_course_subject():
         flash('Access denied: Admin privileges required')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
+    course_id = request.form.get('course_id')
+    year = request.form.get('year')
+    semester = request.form.get('semester')
+    batch_id = request.form.get('batch_id')
+    subject_code = request.form.get('subject_code')
+    subject_name = request.form.get('subject_name')
+
+    # Validate required fields
+    if not all([course_id, year, semester, batch_id, subject_code, subject_name]):
+        flash('All fields are required!')
+        return redirect(url_for('auth.admin_dashboard'))
+
     try:
-        subject = CourseSubject(
-            course_id=request.form.get('course_id'),
-            subject_code=request.form.get('subject_code'),
-            subject_name=request.form.get('subject_name'),
-            year=request.form.get('year'),
-            semester=request.form.get('semester')
-        )
-        db.session.add(subject)
-        db.session.commit()
-        flash('Subject added successfully')
+        # Check if subject already exists for the same batch
+        existing_subject = CourseSubject.query.filter_by(
+            course_id=course_id, year=year, semester=semester, batch_id=batch_id, subject_code=subject_code
+        ).first()
+
+        if existing_subject:
+            flash('Subject already exists for the selected course and batch!')
+        else:
+            new_subject = CourseSubject(
+                course_id=course_id,
+                year=int(year),
+                semester=int(semester),
+                batch_id=batch_id,
+                subject_code=subject_code,
+                subject_name=subject_name
+            )
+            db.session.add(new_subject)
+            db.session.commit()
+            flash('Subject added successfully')
     except Exception as e:
         db.session.rollback()
         flash(f'Error adding subject: {str(e)}')
         logging.error(f'Error adding subject: {str(e)}')
 
     return redirect(url_for('auth.admin_dashboard'))
+
 
 @bp.route('/admin/database')
 @login_required
