@@ -1,6 +1,7 @@
-git clone <repository-url>
+1. Git clone <repository-url>
+```
    cd <repository-name>
-   ```
+```
 
 2. Create and activate a Python virtual environment:
    ```bash
