@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+{% block title %}HOD Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2>HOD Dashboard</h2>
+        <div class="row mt-4">
+            <!-- Assign Subjects to Teachers -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Assign Subjects to Teachers</h5>
+                        <form method="POST" action="{{ url_for('auth.assign_subject') }}" id="assignmentForm">
+                            <div class="row">
+                                <!-- Course Selection -->
+                                <div class="col-md-2">
+                                    <div class="mb-3">
+                                        <label for="course_id" class="form-label">Course</label>
+                                        <select class="form-control" id="course_id" name="course_id" required
+                                                onchange="loadYears()">
+                                            <option value="">Select Course</option>
+                                            {% for course in courses %}
+                                            <option value="{{ course.id }}">{{ course.code }} - {{ course.name }}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Admission Year Selection -->
+                                <div class="col-md-2">
+                                    <div class="mb-3">
+                                        <label for="year" class="form-label">Admission Year</label>
+                                        <select class="form-control" id="year" name="year" required
+                                                onchange="loadSemesters()">
+                                            <option value="">Select Course First</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Semester Selection -->
+                                <div class="col-md-2">
+                                    <div class="mb-3">
+                                        <label for="semester" class="form-label">Semester</label>
+                                        <select class="form-control" id="semester" name="semester" required
+                                                onchange="loadBatches()">
+                                            <option value="">Select Year First</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Batch Selection -->
+                                <div class="col-md-2">
+                                    <div class="mb-3">
+                                        <label for="batch_id" class="form-label">Batch</label>
+                                        <select class="form-control" id="batch_id" name="batch_id" required
+                                                onchange="loadSubjects()">
+                                            <option value="">Select Semester First</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Subject Selection -->
+                                <div class="col-md-2">
+                                    <div class="mb-3">
+                                        <label for="subject_id" class="form-label">Subject</label>
+                                        <select class="form-control" id="subject_id" name="subject_id" required
+                                                onchange="loadTeachers()">
+                                            <option value="">Select Batch First</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Teacher Selection -->
+                                <div class="col-md-2">
+                                    <div class="mb-3">
+                                        <label for="teacher_id" class="form-label">Assign Teacher</label>
+                                        <select class="form-control" id="teacher_id" name="teacher_id" required>
+                                            <option value="">Select Subject First</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Assign Subject</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Assignments -->
+            <div class="col-md-12 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Current Subject Assignments</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Year</th>
+                                    <th>Semester</th>
+                                    <th>Batch</th>
+                                    <th>Subject Code</th>
+                                    <th>Subject Name</th>
+                                    <th>Teacher</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for assignment in subject_assignments %}
+                                <tr>
+                                    <td>{{ assignment.subject.course.name }}</td>
+                                    <td>{{ assignment.subject.year }}</td>
+                                    <td>{{ assignment.subject.semester }}</td>
+                                    <td>{{ assignment.subject.batch_id }}</td>
+                                    <td>{{ assignment.subject.subject_code }}</td>
+                                    <td>{{ assignment.subject.subject_name }}</td>
+                                    <td>{{ assignment.teacher.first_name }} {{ assignment.teacher.last_name }}</td>
+                                    <td>
+                                        <form method="POST" action="{{ url_for('auth.remove_subject_assignment') }}"
+                                              style="display: inline;">
+                                            <input type="hidden" name="assignment_id" value="{{ assignment.id }}">
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                    onclick="return confirm('Are you sure?')">Remove
+                                            </button>
+                                        </form>
+
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadYears() {
+        const courseId = document.getElementById('course_id').value;
+        fetch(`/get_batches_years?course_id=${courseId}`)
+            .then(response => response.json())
+            .then(data => {
+                const yearSelect = document.getElementById('year');
+                yearSelect.innerHTML = '<option value="">Select Year</option>';
+                data.years.forEach(year => {
+                    yearSelect.add(new Option(year, year));
+                });
+            });
+    }
+
+    function loadSemesters() {
+        const courseId = document.getElementById('course_id').value;
+        const year = document.getElementById('year').value;
+        fetch(`/get_semesters?course_id=${courseId}&year=${year}`)
+            .then(response => response.json())
+            .then(data => {
+                const semesterSelect = document.getElementById('semester');
+                semesterSelect.innerHTML = '<option value="">Select Semester</option>';
+                data.semesters.forEach(sem => {
+                    semesterSelect.add(new Option(sem, sem));
+                });
+            });
+    }
+
+    function loadBatches() {
+        const courseId = document.getElementById('course_id').value;
+        const year = document.getElementById('year').value;
+        const semester = document.getElementById('semester').value;
+        fetch(`/get_batches?course_id=${courseId}&year=${year}&semester=${semester}`)
+            .then(response => response.json())
+            .then(data => {
+                const batchSelect = document.getElementById('batch_id');
+                batchSelect.innerHTML = '<option value="">Select Batch</option>';
+                data.batches.forEach(batch => {
+                    batchSelect.add(new Option(batch, batch));
+                });
+            });
+    }
+
+    function loadSubjects() {
+        const courseId = document.getElementById('course_id').value;
+        const year = document.getElementById('year').value;
+        const semester = document.getElementById('semester').value;
+        const batchId = document.getElementById('batch_id').value;
+        fetch(`/get_subjects_course?course_id=${courseId}&year=${year}&semester=${semester}&batch_id=${batchId}`)
+            .then(response => response.json())
+            .then(data => {
+                const subjectSelect = document.getElementById('subject_id');
+                subjectSelect.innerHTML = '<option value="">Select Subject</option>';
+                data.subjects.forEach(subject => {
+                    subjectSelect.add(new Option(subject.subject_name, subject.id));
+                });
+            });
+    }
+
+    function loadTeachers() {
+        fetch(`/get_teachers`)
+            .then(response => response.json())
+            .then(data => {
+                const teacherSelect = document.getElementById('teacher_id');
+                teacherSelect.innerHTML = '<option value="">Select Teacher</option>';
+                data.teachers.forEach(teacher => {
+                    teacherSelect.add(new Option(teacher.name, teacher.id));
+                });
+            });
+    }
+</script>
+
+{% endblock %}

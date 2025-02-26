@@ -1,45 +1,155 @@
 {% extends "base.html" %}
 
-{% block title %}Manage {{ course_name }} - {{ year }} Batch{% endblock %}
+{% block title %}Manage Students{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2>{{ course_name }} - {{ year }} Batch</h2>
-    <a href="{{ url_for('auth.manage_batches') }}" class="btn btn-secondary mb-3">Back to Batches</a>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="fw-bold text-primary">Manage Students</h2>
+        <a href="{{ url_for('auth.manage_batches') }}" class="btn btn-outline-primary">
+            <i class="fas fa-users"></i> Manage Existing Batches
+        </a>
+    </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                {% for column in columns %}
-                <th>{{ column }}</th>
-                {% endfor %}
+    <div class="table-responsive mt-4">
+        <table class="table table-hover table-bordered shadow-lg rounded">
+            <thead class="table-dark">
+            <tr class="text-center">
+                <th>Photo</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Roll Number</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Batch Year</th>
+                <th>Semester</th>
+                <th>Batch ID</th>
                 <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             {% for row in rows %}
-            <tr>
-                <!-- Form for updating student -->
-                <form method="POST" action="{{ url_for('auth.update_student', table_name=table_name, student_id=row[0]) }}">
-                    {% for value in row %}
-                    <td><input type="text" class="form-control" name="column_{{ loop.index }}" value="{{ value }}"></td>
-                    {% endfor %}
+            <tr class="align-middle">
+                <form method="POST"
+                      action="{{ url_for('auth.update_student', table_name=table_name, student_id=row[0]) }}"
+                      enctype="multipart/form-data">
+                    <!-- Photo Upload Section (Now First) -->
+                    <td class="text-center">
+                        {% if row[7] %}
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#photoModal"
+                           data-photo="{{ url_for('auth.protected_image', folder='student_photos', filename=row[7]) }}">
+                            <img src="{{ url_for('auth.protected_image', folder='student_photos', filename=row[7])  }}"
+                                 alt="Student Photo"
+                                 class="rounded-circle shadow-sm border border-secondary" width="50" height="50"
+                                 style="cursor: pointer;">
+                        </a>
+                        {% else %}
+                        <span class="text-muted">No Photo</span>
+                        {% endif %}
+                        <input type="file" name="photo" class="form-control mt-2">
+                    </td>
+
+                    <td><input type="text" class="form-control border-0 bg-light" name="first_name" value="{{ row[2] }}"
+                               required></td>
+                    <td><input type="text" class="form-control border-0 bg-light" name="last_name" value="{{ row[3] }}"
+                               required></td>
+                    <td><input type="text" class="form-control border-0 bg-light" name="roll_number" value="{{ row[8] }}"
+                               required></td>
+                    <td><input type="email" class="form-control border-0 bg-light" name="email" value="{{ row[4] }}"
+                               required></td>
                     <td>
-                        <button type="submit" class="btn btn-success btn-sm">Save</button>
+                        <input type="tel" class="form-control border-0 bg-light" name="phone" value="{{ row[5] }}"
+                               pattern="0?[0-9]{10}" maxlength="11" required
+                               oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </td>
+                    <td><input type="text" class="form-control border-0 bg-light" name="address" value="{{ row[6] }}">
+                    </td>
+
+                    <td><input type="text" class="form-control border-0 bg-light text-center" name="batch_year"
+                               value="{{ row[10] }}" readonly></td>
+                    <td><input type="text" class="form-control border-0 bg-light text-center" name="semester"
+                               value="{{ row[15] }}" readonly></td>
+                    <td><input type="text" class="form-control border-0 bg-light text-center" name="batch_id"
+                               value="{{ row[14] }}" readonly></td>
+
+
+                    <!-- Actions (Save & Delete in One Form) -->
+                    <td class="text-center">
+                        <button type="submit" class="btn btn-success btn-sm px-3">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                        <button type="submit" class="btn btn-danger btn-sm px-3"
+                                formaction="{{ url_for('auth.delete_student', table_name=table_name, student_id=row[0]) }}"
+                                onclick="return confirm('Are you sure you want to delete this student?')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
                     </td>
                 </form>
-
-                <!-- Separate form for deleting student -->
-                <td>
-                    <form method="POST" action="{{ url_for('auth.delete_student', table_name=table_name, student_id=row[0]) }}" style="display:inline;">
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this student?')">
-                            Delete
-                        </button>
-                    </form>
-                </td>
             </tr>
             {% endfor %}
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>
+
+<!-- Bootstrap Modal for Enlarged Image -->
+<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="photoModalLabel">Student Photo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalPhoto" src="" class="img-fluid rounded shadow-lg border border-secondary"
+                     alt="Student Photo">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to Handle Image Click -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var photoModal = document.getElementById("photoModal");
+        var modalPhoto = document.getElementById("modalPhoto");
+
+        photoModal.addEventListener("show.bs.modal", function (event) {
+            var button = event.relatedTarget;
+            var photoSrc = button.getAttribute("data-photo");
+            modalPhoto.setAttribute("src", photoSrc);
+        });
+    });
+</script>
+
+<style>
+    /* Custom Styling */
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .btn {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #0d6efd;
+        color: white;
+    }
+
+    .rounded-circle {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .rounded-circle:hover {
+        transform: scale(1.2);
+    }
+</style>
 {% endblock %}

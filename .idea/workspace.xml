@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="adaa29c2-99b1-4998-b008-94e3958f5837" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/dashboard/add_student.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard/hod_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard/manage_notes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard/testing_color.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1/2007/semester_4/batch_1/subject_C993/Experience-Certificate-Format.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1/2007/semester_4/batch_1/subject_C993/xyzzzz_-_converted.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/hod_photos/3e44cbab65b632470622.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/hod_photos/a02809fe111a0457441c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/student_photos/a5eb85455e00438b4234.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/teacher_photos/a8d2718bf80120fb8ee6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject19.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.replit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replit.nix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/hod_akashyadavazm8_Screenshot 2024-12-26 221050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/teacher_photos/teacher_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/teacher_photos/teacher_22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/hod.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/manage_batches.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/manage_batches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/manage_hods.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/manage_hods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/manage_teachers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/manage_teachers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/student.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/take_attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/take_attendance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/view_batch.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/view_batch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "akashcodejames"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/akashcodejames/ERP-SYSTEM.git",
+    "accountId": "59e14144-2068-47d9-a815-349a2152be97"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2stndXuKgh6OFMwSlVZ7gaCuMh7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.app.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.checking_database.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.models.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/akash/pythonProject19",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="pythonProject19" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="adaa29c2-99b1-4998-b008-94e3958f5837" name="Changes" comment="" />
+      <created>1739283827033</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739283827033</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

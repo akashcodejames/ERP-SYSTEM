@@ -47,10 +47,10 @@
                             <td><input type="text" class="form-control" name="department" value="{{ teacher.department }}"></td>
                             <td class="text-center">
                                 {% if teacher.photo_path %}
-                                    <img src="{{ url_for('static', filename='uploads/teacher_photos/' + teacher.photo_path) }}"
+                                    <img src="{{ url_for('protected_image', folder='teacher_photos', filename=teacher.photo_path) }}"
                                          alt="Teacher Photo" class="profile-img"
                                          data-bs-toggle="modal" data-bs-target="#imageModal"
-                                         onclick="showImage('{{ url_for('static', filename='uploads/teacher_photos/' + teacher.photo_path) }}')">
+                                         onclick="showImage('{{ url_for('protected_image', folder='teacher_photos', filename=teacher.photo_path) }}')">
                                 {% else %}
                                     <span class="text-muted">No Photo</span>
                                 {% endif %}

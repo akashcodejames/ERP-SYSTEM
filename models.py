@@ -38,9 +38,6 @@ class TeacherDetails(db.Model):
 
     # Relationships
     credentials = db.relationship('UserCredentials', backref=db.backref('teacher_profile', uselist=False))
-    assigned_subjects = db.relationship('SubjectAssignment', backref='teacher', lazy=True)
-    uploaded_materials = db.relationship('StudyMaterial', backref='teacher', lazy=True)
-    attendance_records = db.relationship('Attendance', backref='teacher', lazy=True)
 
 class StudentDetails(db.Model):
     __tablename__ = 'student_details'
@@ -64,7 +61,6 @@ class StudentDetails(db.Model):
 
     # Relationships
     credentials = db.relationship('UserCredentials', backref=db.backref('student_profile', uselist=False))
-    attendance_records = db.relationship('Attendance', backref='student', lazy=True)
 
 class AdminProfile(db.Model):
     __tablename__ = 'admin_profiles'
@@ -94,7 +90,6 @@ class HODProfile(db.Model):
 
     # Relationships
     credentials = db.relationship('UserCredentials', backref=db.backref('hod_profile', uselist=False, cascade="all, delete"))
-    subject_assignments = db.relationship('SubjectAssignment', backref='hod', lazy=True)
 
 class Course(db.Model):
     __tablename__ = 'courses'
@@ -113,25 +108,39 @@ class CourseSubject(db.Model):
     batch_id = db.Column(db.Integer, nullable=False)  # Batch ID field
     subject_code = db.Column(db.String(20), nullable=False)
     subject_name = db.Column(db.String(100), nullable=False)
-    year = db.Column(db.Integer, nullable=False)  # Admission year, e.g., 2024
+    year = db.Column(db.Integer, nullable=False, index=True)  # Indexed for faster lookup
     semester = db.Column(db.Integer, nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    is_active = db.Column(db.Boolean, default=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    is_active = db.Column(db.Boolean, default=True, nullable=False)
 
+    # Define relationship with Course model
     course = db.relationship('Course', backref='subjects')
+
+    # Unique constraint to prevent duplicate subject entries
+    __table_args__ = (
+        db.UniqueConstraint('course_id', 'year', 'semester', 'batch_id', 'subject_code', name='uq_course_subject'),
+    )
+
+    def __repr__(self):
+        return f"<CourseSubject {self.subject_code} - {self.subject_name} (Batch {self.year}, Semester {self.semester})>"
+
 
 class SubjectAssignment(db.Model):
     __tablename__ = 'subject_assignments'
 
     id = db.Column(db.Integer, primary_key=True)
-    subject_id = db.Column(db.Integer, db.ForeignKey('course_subjects.id'), nullable=False)
+    course_subject_id = db.Column(db.Integer, db.ForeignKey('course_subjects.id'), nullable=False)
     teacher_id = db.Column(db.Integer, db.ForeignKey('teacher_details.id'), nullable=False)
-    hod_id = db.Column(db.Integer, db.ForeignKey('hod_profiles.id'), nullable=False)
-    academic_year = db.Column(db.Integer, nullable=False)
-    assigned_at = db.Column(db.DateTime, default=datetime.utcnow)
-    is_active = db.Column(db.Boolean, default=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
+    # Define relationships
     subject = db.relationship('CourseSubject', backref='assignments')
+    teacher = db.relationship('TeacherDetails', backref='assigned_subjects')
+
+    def __repr__(self):
+        return f"<SubjectAssignment {self.course_subject.subject_name} -> {self.teacher.first_name} {self.teacher.last_name}>"
+
+
 
 class StudyMaterial(db.Model):
     __tablename__ = 'study_materials'
@@ -200,11 +209,11 @@ def create_test_data():
 
         # Hardcoded batch IDs as integers
         batch_ids = {
-            "CSE_2024": 101,
-            "CSE_2023": 102,
-            "CSE_2022": 103,
-            "ECE_2024": 201,
-            "ECE_2023": 202
+            "CSE_2024": 1,
+            "CSE_2023": 2,
+            "CSE_2022": 3,
+            "ECE_2024": 4,
+            "ECE_2023": 5
         }
 
         # Create test subjects for CSE

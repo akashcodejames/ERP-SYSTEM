@@ -1,31 +1,79 @@
 import os
-from flask import Blueprint, render_template, redirect, url_for, flash, request, jsonify, send_file, current_app
+from flask import Blueprint, render_template, redirect, url_for, flash, request, jsonify, send_file, current_app, abort
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash
 from werkzeug.utils import secure_filename
 import re
 from extensions import db
-from models import UserCredentials, TeacherDetails, StudentDetails, AdminProfile, HODProfile, SubjectAssignment, Course, CourseSubject, Attendance
+from models import UserCredentials, TeacherDetails, StudentDetails, AdminProfile, HODProfile, SubjectAssignment, Course, \
+    CourseSubject, Attendance
 import random
 import string
 import logging
-from datetime import datetime
+from datetime import datetime,timedelta
 from sqlalchemy import inspect, or_, text
 import csv
 from io import StringIO
+import imghdr
+import hashlib, time
+import pandas as pd
+from flask import  send_from_directory
+import io
+from flask import Response, json, stream_with_context
+from sqlalchemy.exc import SQLAlchemyError
 
 bp = Blueprint('auth', __name__)
+
+ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif"}
+MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
+
+
+def generate_secure_filename(filename):
+    ext = filename.split(".")[-1]
+    hashed_name = hashlib.sha256(f"{filename}{time.time()}".encode()).hexdigest()[:20]
+    return f"{hashed_name}.{ext}"
+
+
+@bp.route("/protected_image/<folder>/<filename>")
+@login_required
+def protected_image(folder, filename):
+    UPLOAD_FOLDER = "uploads"  # Base upload folder (outside static)
+    # ✅ Only allow specific folders
+    allowed_folders = ["student_photos", "hod_photos", "teacher_photos"]
+    if folder not in allowed_folders:
+        abort(403)  # Forbidden
+
+    file_path = os.path.join(UPLOAD_FOLDER, folder, filename)
+
+    # ✅ Check if file exists
+    if not os.path.exists(file_path):
+        abort(404)  # File Not Found
+
+    # ✅ Enforce Role-Based Access Control
+    if folder == "student_photos" and current_user.role not in ["admin", "student"]:
+        abort(403)  # Only students & admin can access
+
+    if folder == "hod_photos" and current_user.role not in ["admin", "hod"]:
+        abort(403)  # Only HOD & admin can access
+
+    if folder == "teacher_photos" and current_user.role not in ["admin", "teacher"]:
+        abort(403)  # Only teachers & admin can access
+
+    return send_file(file_path)
+
 
 def generate_random_password(length=12):
     """Generate a random password with letters, digits, and special characters"""
     characters = string.ascii_letters + string.digits + "!@#$%^&*"
     return ''.join(random.choice(characters) for _ in range(length))
 
+
 @bp.route('/')
 def index():
     if current_user.is_authenticated:
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
     return redirect(url_for('auth.login'))
+
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -77,6 +125,7 @@ def login():
         return redirect(url_for(f'auth.{user.role}_dashboard'))
 
     return render_template('login.html')
+
 
 @bp.route('/logout')
 @login_required
@@ -229,8 +278,6 @@ def logout():
 #     return redirect(url_for('auth.admin_dashboard'))
 
 
-
-
 @bp.route('/create_student_batch', methods=['POST'])
 @login_required
 def create_student_batch():
@@ -297,10 +344,8 @@ def create_student_batch():
             photo_path VARCHAR(500),
             roll_number VARCHAR(20) UNIQUE NOT NULL,
             current_year INT NOT NULL,
-            current_semester INT NOT NULL CHECK (current_semester BETWEEN 1 AND 8),
             admission_year INT NOT NULL,
             course_id INT NOT NULL,
-            batch VARCHAR(10) NOT NULL,
             admission_date DATETIME DEFAULT CURRENT_TIMESTAMP,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             batch_id INT NOT NULL,
@@ -323,7 +368,6 @@ def create_student_batch():
         logging.error(f'Error creating student batch: {str(e)}')
 
     return redirect(url_for('auth.admin_dashboard'))
-
 
 
 @bp.route('/get_batch_years')
@@ -359,6 +403,7 @@ def get_batch_years():
     except Exception as e:
         logging.error(f'Error fetching batch years: {str(e)}')
         return jsonify({'error': str(e)}), 500
+
 
 def get_available_batch_years(course_id=None):
     """Fetch all available batch years from existing batch tables for a specific course"""
@@ -413,10 +458,9 @@ def add_hod():
             if 'photo' in request.files:
                 photo = request.files['photo']
                 if photo.filename:
-                    filename = f"hod_{email.split('@')[0]}_{photo.filename}"
-                    photo_paths = os.path.join('static', 'uploads', filename)
-                    photo_path=filename
-                    print(photo_path)
+                    filename = generate_secure_filename(photo.filename)
+                    photo_paths = os.path.join('uploads', 'hod_photos', filename)
+                    photo_path = filename
                     os.makedirs(os.path.dirname(photo_paths), exist_ok=True)
                     photo.save(photo_paths)
 
@@ -461,14 +505,15 @@ def add_hod():
     return render_template('add_hod.html')
 
 
-
 # Allowed image extensions
 
 
 def allowed_file(filename):
+    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
     """Check if the uploaded file has a valid image extension."""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
 @bp.route('/add_teacher', methods=['GET', 'POST'])
 @login_required
 def add_teacher():
@@ -523,11 +568,11 @@ def add_teacher():
                         return redirect(url_for('auth.add_teacher'))
 
                     # Ensure upload folder exists
-                    upload_folder = os.path.join(current_app.root_path, 'static', 'uploads', 'teacher_photos')
+                    upload_folder = os.path.join('uploads', 'teacher_photos')
                     os.makedirs(upload_folder, exist_ok=True)
 
                     # Secure filename and save
-                    photo_filename = f"teacher_{credentials.id}.jpg"
+                    photo_filename = generate_secure_filename(photo.filename)
                     photo_path = f"{photo_filename}"
                     photo.save(os.path.join(upload_folder, photo_filename))
 
@@ -562,14 +607,11 @@ def add_teacher():
     return render_template('dashboard/add_teacher.html')
 
 
-
-
-
-
 @bp.route('/render_hod', methods=['GET', 'POST'])
 @login_required
 def render_hod():
     return render_template('dashboard/add_hod.html')
+
 
 @bp.route('/render_teacher', methods=['GET', 'POST'])
 @login_required
@@ -577,7 +619,20 @@ def render_teacher():
     return render_template('dashboard/add_teacher.html')
 
 
+@bp.route('/render_student', methods=['GET', 'POST'])
+@login_required
+def render_student():
+    result = db.session.execute(text("SHOW TABLES LIKE 'student_batch_%'"))
+    tables = [row[0] for row in result.fetchall()]  # Fetch all batch tables
 
+    courses = Course.query.all()
+    course_subjects = CourseSubject.query.all()
+    result = db.session.execute(text("SHOW TABLES LIKE 'student_batch_%'"))
+    tables = [row[0] for row in result.fetchall()]  # Fetch all table names
+
+    # Fetch all existing student batch data for dropdown handling
+
+    return render_template('dashboard/add_student.html', courses=courses, table_names=tables)
 
 
 @bp.route('/add_student', methods=['POST'])
@@ -597,7 +652,7 @@ def add_student():
         admission_year = request.form.get('admission_year')
         roll_number = request.form.get('roll_number')
         course_id = request.form.get('course_id')
-        batch_id = request.form.get('batch')  # Batch ID
+        batch_id = request.form.get('batch_id')  # Batch ID
         semester = request.form.get('semester')  # Semester selection
 
         # Ensure semester value is valid (1 to 8)
@@ -606,17 +661,34 @@ def add_student():
             flash('Invalid semester. Choose between 1 and 8.')
             return redirect(url_for('auth.admin_dashboard'))
 
+        # Validate roll_number (must be an integer and exactly 10 digits)
+        if not roll_number.isdigit() or len(roll_number) != 10:
+            flash("Invalid roll number. It must be exactly 10 digits.")
+            return redirect(url_for('auth.admin_dashboard'))
+
+        # Validate phone number
+        if phone.isdigit():
+            if len(phone) == 11 and phone.startswith('0'):
+                phone = phone[1:]  # Remove leading zero
+            elif len(phone) == 13 and phone.startswith('+91'):
+                phone = phone[3:]  # Remove "+91"
+
+        if not phone.isdigit() or len(phone) != 10:
+            flash("Invalid phone number. Must be a valid 10-digit number.")
+            return redirect(url_for('auth.admin_dashboard'))
+
         # Handle photo upload
         photo_path = None
+        filename = None
         if 'photo' in request.files:
             photo = request.files['photo']
             if photo.filename:
-                filename = secure_filename(f"student_{email.split('@')[0]}_{photo.filename}")
-                photo_path = os.path.join('static', 'uploads', 'photos', filename)
+                filename = generate_secure_filename(photo.filename)
+                photo_path = os.path.join('uploads', 'student_photos', filename)
                 os.makedirs(os.path.dirname(photo_path), exist_ok=True)
                 photo.save(photo_path)
 
-        # Generate random password for student login
+                # Generate random password for student login
         password = generate_random_password()
 
         # Create user credentials entry
@@ -630,16 +702,16 @@ def add_student():
         current_year = max(1, min(current_year, 4))  # Ensuring it's between 1st to 4th year
 
         # Define batch-specific table name (Includes Course, Admission Year, Batch ID, and Semester)
-        batch_table = f'student_batch_{course_id}_{admission_year}_{batch_id}_{semester}'
+        batch_table = f'student_batch_{course_id}_{admission_year}_{semester}_{batch_id}'
 
         # Insert student data into batch-semester-specific table
         sql = text(f"""
         INSERT INTO {batch_table} (
             credential_id, first_name, last_name, email, phone, address, photo_path,
-            roll_number, current_year, current_semester, admission_year, course_id, batch, admission_date
+            roll_number, current_year, admission_year, course_id, batch_id, semester, admission_date
         ) VALUES (
             :credential_id, :first_name, :last_name, :email, :phone, :address, :photo_path,
-            :roll_number, :current_year, :current_semester, :admission_year, :course_id, :batch, :admission_date
+            :roll_number, :current_year, :admission_year, :course_id, :batch_id, :semester, :admission_date
         )
         """)
 
@@ -650,13 +722,13 @@ def add_student():
             'email': email,
             'phone': phone,
             'address': address,
-            'photo_path': photo_path,
+            'photo_path': filename,
             'roll_number': roll_number,
             'current_year': current_year,
-            'current_semester': semester,  # Storing selected semester
             'admission_year': int(admission_year),
             'course_id': course_id,
-            'batch': batch_id,  # Storing batch ID
+            'batch_id': batch_id,
+            "semester": semester,
             'admission_date': datetime.utcnow()
         })
 
@@ -669,31 +741,7 @@ def add_student():
         flash(f'Error adding student: {str(e)}')
         logging.error(f'Error creating student: {str(e)}')
 
-    return redirect(url_for('auth.admin_dashboard'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return redirect(url_for('auth.render_student'))
 
 
 @bp.route('/admin/manage_batches')
@@ -717,12 +765,17 @@ def manage_batches():
         if len(parts) >= 4:
             course_id = parts[2]
             year = parts[3]
+            semester = parts[4]
+            id = parts[5]
+
             course = Course.query.get(course_id)
             if course:
                 student_batches.append({
                     'table_name': table_name,
                     'course': course.name,
-                    'year': year
+                    'year': year,
+                    'id': id,
+                    'semester': semester
                 })
 
     return render_template('dashboard/manage_batches.html', student_batches=student_batches)
@@ -737,7 +790,7 @@ def view_batch(table_name):
 
     try:
         # Fetch table data dynamically
-        sql = text(f"SELECT * FROM {table_name}")
+        sql = text(f"SELECT * FROM {table_name} ORDER BY CAST(roll_number AS UNSIGNED) ASC")
         result = db.session.execute(sql)
         rows = result.fetchall()
 
@@ -759,38 +812,102 @@ def update_student(table_name, student_id):
         return redirect(url_for('auth.manage_batches'))
 
     try:
-        # Get actual column names from the table
-        column_query = db.session.execute(text(f"DESCRIBE {table_name}"))
-        columns = [col[0] for col in column_query.fetchall()]
+        # Define allowed extensions and max file size (in bytes)
 
-        # Build update query
-        sql = f"UPDATE {table_name} SET "
+        UPLOAD_FOLDER = os.path.join('uploads', 'student_photos')
+
+        # Get actual column names
+        column_query = db.session.execute(text(f"DESCRIBE {table_name}"))
+        columns = {col[0] for col in column_query.fetchall()}
+
+        credential_query = db.session.execute(
+            text(f"SELECT credential_id, email, photo_path FROM {table_name} WHERE id = :student_id"),
+            {"student_id": student_id}
+        )
+        student_data = credential_query.fetchone()
+
+        if student_data is None:
+            flash('Error: Student record not found.')
+            return redirect(url_for('auth.view_batch', table_name=table_name))
+
+        credential_id, email, old_photo = student_data  # Get old photo path
+
+        # Build update query for student table
         updates = []
         values = {"student_id": student_id}
+        update_credentials = {}
 
         for key, value in request.form.items():
-            column_index = key.replace("column_", "")  # Get column index
-            if column_index.isdigit():
-                column_index = int(column_index) - 1  # Convert to zero-based index
-                if 0 <= column_index < len(columns):  # Ensure valid index
-                    column_name = columns[column_index]  # Get actual column name
-                    updates.append(f"{column_name} = :{column_name}")
-                    values[column_name] = value
+            if key in columns:
+                updates.append(f"{key} = :{key}")
+                values[key] = value
 
-        sql += ", ".join(updates) + " WHERE id = :student_id"
+                if key == "email":
+                    update_credentials[key] = value
 
-        # Execute the query
-        db.session.execute(text(sql), values)
+        # 🖼️ **Handle Photo Upload with Validation**
+        if "photo" in request.files:
+            photo = request.files["photo"]
+            if photo.filename:  # Check if file was uploaded
+                filename_ext = photo.filename.rsplit(".", 1)[-1].lower()
+
+                # Validate extension
+                if filename_ext not in ALLOWED_EXTENSIONS:
+                    flash("Invalid file type! Please upload a PNG, JPG, JPEG, or GIF image.")
+                    return redirect(url_for('auth.view_batch', table_name=table_name))
+
+                # Validate image type using imghdr
+                photo.seek(0)  # Reset file pointer before checking
+                file_type = imghdr.what(photo)
+                if file_type not in ALLOWED_EXTENSIONS:
+                    flash("Invalid image format! Ensure it's a valid image file.")
+                    return redirect(url_for('auth.view_batch', table_name=table_name))
+
+                # Validate file size
+                photo.seek(0, os.SEEK_END)  # Move pointer to end to get file size
+                file_size = photo.tell()
+                if file_size > MAX_FILE_SIZE:
+                    flash("File size exceeds 5MB limit! Please upload a smaller image.")
+                    return redirect(url_for('auth.view_batch', table_name=table_name))
+
+                photo.seek(0)  # Reset pointer for saving
+
+                # Generate unique filename using email prefix
+                if old_photo:
+                    old_photo_path = os.path.join(UPLOAD_FOLDER, old_photo)
+                    if os.path.exists(old_photo_path):
+                        os.remove(old_photo_path)
+
+                filename = generate_secure_filename(photo.filename)
+
+                new_photo_path = os.path.join(UPLOAD_FOLDER, filename)
+                photo.save(new_photo_path)  # Save the file
+
+                # Delete old photo if it exists
+
+                updates.append("photo_path = :photo_path")
+                values["photo_path"] = filename
+
+        if updates:
+            sql = f"UPDATE {table_name} SET {', '.join(updates)} WHERE id = :student_id"
+            db.session.execute(text(sql), values)
+
+        # Update credentials if needed
+        if update_credentials:
+            credential_sql = "UPDATE user_credentials SET " + ", ".join(
+                f"{key} = :{key}" for key in update_credentials) + " WHERE id = :id"
+            update_credentials["id"] = credential_id
+            db.session.execute(text(credential_sql), update_credentials)
+
         db.session.commit()
+        flash("Student data updated successfully!")
 
-        flash('Student data updated successfully')
     except Exception as e:
         db.session.rollback()
-        flash(f'Error updating student data: {str(e)}')
-        logging.error(f'Error updating student data: {str(e)}')
+        flash(f"Error updating student data: {str(e)}")
+        logging.error(f"Error updating student data: {str(e)}")
 
     return redirect(url_for('auth.view_batch', table_name=table_name))
-
 
 
 @bp.route('/admin/delete_student/<table_name>/<int:student_id>', methods=['POST'])
@@ -884,7 +1001,6 @@ def manage_hods():
     return render_template('dashboard/manage_hods.html', hods=hods)
 
 
-
 @bp.route('/admin/manage_teachers')
 @login_required
 def manage_teachers():
@@ -909,9 +1025,6 @@ def manage_teachers():
         return redirect(url_for('auth.admin_dashboard'))
 
 
-
-
-
 @bp.route('/admin/update_hod/<int:hod_id>', methods=['POST'])
 @login_required
 def update_hod(hod_id):
@@ -920,66 +1033,92 @@ def update_hod(hod_id):
         return redirect(url_for('auth.manage_hods'))
 
     try:
-        # Get existing HOD details, including the photo path
+        # Define upload folder
+        UPLOAD_FOLDER = os.path.join('uploads', 'hod_photos')
+        os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+        # Get existing HOD details
         hod_query = db.session.execute(
             text("SELECT credential_id, photo_path FROM hod_profiles WHERE id = :hod_id"),
             {"hod_id": hod_id}
         ).fetchone()
 
-        if hod_query:
-            credential_id = hod_query[0]
-            old_photo_path = hod_query[1]  # Old photo filename
+        if not hod_query:
+            flash('HOD not found!', 'danger')
+            return redirect(url_for('auth.manage_hods'))
 
-            # Extract updated values from the form
-            department = request.form.get("department")
-            office_location = request.form.get("office_location")
-            email = request.form.get("email")
-            new_photo = request.files.get("photo")  # New photo file
+        credential_id, old_photo_path = hod_query
 
-            # Handle photo update
-            new_photo_filename = old_photo_path  # Default: Keep the old one
+        # Extract updated values from the form
+        department = request.form.get("department")
+        office_location = request.form.get("office_location")
+        email = request.form.get("email")
 
-            if new_photo and new_photo.filename:  # If user uploads a new photo
-                filename = secure_filename(new_photo.filename)
-                new_photo_filename = f"hod_{hod_id}_{filename}"  # Unique filename
-                photo_path = os.path.join(current_app.root_path, 'static/uploads', new_photo_filename)
+        # Handle photo update
+        new_photo = request.files.get("photo")
+        photo_path = old_photo_path  # Default to old photo
 
-                # Delete the old photo if it exists
-                if old_photo_path:
-                    old_photo_full_path = os.path.join(current_app.root_path, 'static/uploads', old_photo_path)
-                    if os.path.exists(old_photo_full_path):
-                        os.remove(old_photo_full_path)
+        if new_photo and new_photo.filename:
+            filename_ext = new_photo.filename.rsplit(".", 1)[-1].lower()
 
-                # Save the new photo
-                new_photo.save(photo_path)
+            # Validate file extension
+            if filename_ext not in ALLOWED_EXTENSIONS:
+                flash("Invalid file type! Please upload PNG, JPG, JPEG, or GIF.", "danger")
+                return redirect(url_for('auth.manage_hods'))
 
-            # Update HOD details in the database
-            sql = """
-            UPDATE hod_profiles 
-            SET email=:email, department=:department, office_location=:office_location, photo_path=:photo_path
-            WHERE id=:hod_id
-            """
-            db.session.execute(text(sql), {
-                "email": email,
-                "department": department,
-                "office_location": office_location,
-                "photo_path": new_photo_filename,
-                "hod_id": hod_id
-            })
+            # Validate image format
+            new_photo.seek(0)
+            file_type = imghdr.what(new_photo)
+            if file_type not in ALLOWED_EXTENSIONS:
+                flash("Invalid image format! Ensure it's a valid image file.", "danger")
+                return redirect(url_for('auth.manage_hods'))
 
-            # Update email in `user_credentials` table
-            sql = """
-            UPDATE user_credentials 
-            SET email=:email 
-            WHERE id=:credential_id
-            """
-            db.session.execute(text(sql), {"email": email, "credential_id": credential_id})
+            # Validate file size
+            new_photo.seek(0, os.SEEK_END)
+            file_size = new_photo.tell()
+            if file_size > MAX_FILE_SIZE:
+                flash("File size exceeds 5MB limit! Please upload a smaller image.", "danger")
+                return redirect(url_for('auth.manage_hods'))
+            new_photo.seek(0)
 
-            db.session.commit()
-            flash('HOD details and photo updated successfully!', 'success')
+            # Secure filename and define path
+            filename = generate_secure_filename(new_photo.filename)
+            new_photo_path = os.path.join(UPLOAD_FOLDER, filename)
 
-        else:
-            flash('HOD not found or credential ID missing', 'danger')
+            # Delete old photo if it exists
+            if old_photo_path:
+                old_photo_full_path = os.path.join(UPLOAD_FOLDER, old_photo_path)
+                if os.path.exists(old_photo_full_path):
+                    os.remove(old_photo_full_path)
+
+            # Save new photo
+            new_photo.save(new_photo_path)
+            photo_path = filename  # Update database with new filename
+
+        # Update HOD details in database
+        sql = """
+        UPDATE hod_profiles 
+        SET email=:email, department=:department, office_location=:office_location, photo_path=:photo_path
+        WHERE id=:hod_id
+        """
+        db.session.execute(text(sql), {
+            "email": email,
+            "department": department,
+            "office_location": office_location,
+            "photo_path": photo_path,  # Updated photo path
+            "hod_id": hod_id
+        })
+
+        # Update email in `user_credentials` table
+        sql = """
+        UPDATE user_credentials 
+        SET email=:email 
+        WHERE id=:credential_id
+        """
+        db.session.execute(text(sql), {"email": email, "credential_id": credential_id})
+
+        db.session.commit()
+        flash('HOD details and photo updated successfully!', 'success')
 
     except Exception as e:
         db.session.rollback()
@@ -987,7 +1126,8 @@ def update_hod(hod_id):
 
     return redirect(url_for('auth.manage_hods'))
 
-@bp.route('/admin/delete_hod/<int:hod_id>', methods=['GET','POST'])
+
+@bp.route('/admin/delete_hod/<int:hod_id>', methods=['GET', 'POST'])
 @login_required
 def delete_hod(hod_id):
     if current_user.role != 'admin':
@@ -1015,7 +1155,8 @@ def delete_hod(hod_id):
             db.session.execute(text("DELETE FROM hod_profiles WHERE id = :hod_id"), {"hod_id": hod_id})
 
             # Delete from `user_credentials`
-            db.session.execute(text("DELETE FROM user_credentials WHERE id = :credential_id"), {"credential_id": credential_id})
+            db.session.execute(text("DELETE FROM user_credentials WHERE id = :credential_id"),
+                               {"credential_id": credential_id})
 
             db.session.commit()
             flash('HOD, credentials, and profile photo deleted successfully', 'success')
@@ -1029,17 +1170,21 @@ def delete_hod(hod_id):
 
     return redirect(url_for('auth.manage_hods'))
 
+
+# Allowed image extensions and max file size (5MB)
+
+
 @bp.route('/admin/update_teacher/<int:teacher_id>', methods=['POST'])
 @login_required
 def update_teacher(teacher_id):
     if current_user.role != 'admin':
-        flash('Access denied: Admin privileges required')
+        flash('Access denied: Admin privileges required', 'danger')
         return redirect(url_for('auth.manage_teachers'))
 
     try:
-        # Get the credential_id and existing photo path before updating
+        # Fetch teacher credentials and photo path
         teacher_query = db.session.execute(
-            text("SELECT credential_id FROM teacher_details WHERE id = :teacher_id"),
+            text("SELECT credential_id, photo_path FROM teacher_details WHERE id = :teacher_id"),
             {"teacher_id": teacher_id}
         ).fetchone()
 
@@ -1047,7 +1192,7 @@ def update_teacher(teacher_id):
             flash('Teacher not found!', 'danger')
             return redirect(url_for('auth.manage_teachers'))
 
-        credential_id = teacher_query[0]
+        credential_id, old_photo_path = teacher_query
 
         # Extract updated values from the form
         first_name = request.form.get("first_name")
@@ -1058,15 +1203,49 @@ def update_teacher(teacher_id):
         department = request.form.get("department")
 
         # Define upload folder
-        upload_folder = os.path.join(current_app.root_path, 'static', 'uploads', 'teacher_photos')
+        upload_folder = os.path.join('uploads', 'teacher_photos')
         os.makedirs(upload_folder, exist_ok=True)
 
-        # Handle new photo upload (overwrite existing)
+        # Handle new photo upload
         new_photo = request.files.get("photo")
-        photo_path = f"teacher_{teacher_id}.jpg"  # Consistent naming
+        photo_path = old_photo_path  # Default to existing photo
 
         if new_photo and new_photo.filename:
-            new_photo.save(os.path.join(upload_folder, f"teacher_{teacher_id}.jpg"))
+            filename_ext = new_photo.filename.rsplit(".", 1)[-1].lower()
+
+            # Validate file extension
+            if filename_ext not in ALLOWED_EXTENSIONS:
+                flash("Invalid file type! Please upload PNG, JPG, JPEG, or GIF.", "danger")
+                return redirect(url_for('auth.manage_teachers'))
+
+            # Validate image format
+            new_photo.seek(0)
+            file_type = imghdr.what(new_photo)
+            if file_type not in ALLOWED_EXTENSIONS:
+                flash("Invalid image format! Ensure it's a valid image file.", "danger")
+                return redirect(url_for('auth.manage_teachers'))
+
+            # Validate file size
+            new_photo.seek(0, os.SEEK_END)
+            file_size = new_photo.tell()
+            if file_size > MAX_FILE_SIZE:
+                flash("File size exceeds 5MB limit! Please upload a smaller image.", "danger")
+                return redirect(url_for('auth.manage_teachers'))
+            new_photo.seek(0)
+
+            # Secure filename
+            filename = generate_secure_filename(new_photo.filename)
+            new_photo_path = os.path.join(upload_folder, filename)
+
+            # Remove old photo if exists
+            if old_photo_path:
+                old_photo_full_path = os.path.join(upload_folder, old_photo_path)
+                if os.path.exists(old_photo_full_path):
+                    os.remove(old_photo_full_path)
+
+            # Save new photo
+            new_photo.save(new_photo_path)
+            photo_path = filename  # Update DB photo path
 
         # Update Teacher details
         sql = """
@@ -1078,14 +1257,14 @@ def update_teacher(teacher_id):
         db.session.execute(text(sql), {
             "first_name": first_name, "last_name": last_name, "email": email,
             "phone": phone, "address": address, "department": department,
-            "photo_path": photo_path,  # Ensures photo path is updated
+            "photo_path": photo_path,  # Updated photo path
             "teacher_id": teacher_id
         })
 
-        # Update user_credentials table (email and name)
+        # Update user_credentials table (email)
         sql = """
         UPDATE user_credentials 
-        SET email=:email,
+        SET email=:email
         WHERE id=:credential_id
         """
         db.session.execute(text(sql), {
@@ -1103,9 +1282,7 @@ def update_teacher(teacher_id):
     return redirect(url_for('auth.manage_teachers'))
 
 
-
-
-@bp.route('/admin/delete_teacher/<int:teacher_id>', methods=['GET','POST'])
+@bp.route('/admin/delete_teacher/<int:teacher_id>', methods=['GET', 'POST'])
 @login_required
 def delete_teacher(teacher_id):
     if current_user.role != 'admin':
@@ -1133,7 +1310,8 @@ def delete_teacher(teacher_id):
             db.session.execute(text("DELETE FROM teacher_details WHERE id = :teacher_id"), {"teacher_id": teacher_id})
 
             # Delete from `user_credentials`
-            db.session.execute(text("DELETE FROM user_credentials WHERE id = :credential_id"), {"credential_id": credential_id})
+            db.session.execute(text("DELETE FROM user_credentials WHERE id = :credential_id"),
+                               {"credential_id": credential_id})
 
             db.session.commit()
             flash('Teacher, credentials, and profile photo deleted successfully', 'success')
@@ -1148,27 +1326,6 @@ def delete_teacher(teacher_id):
     return redirect(url_for('auth.manage_teachers'))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @bp.route('/admin/dashboard')
 @login_required
 def admin_dashboard():
@@ -1180,41 +1337,158 @@ def admin_dashboard():
     course_subjects = CourseSubject.query.all()
     result = db.session.execute(text("SHOW TABLES LIKE 'student_batch_%'"))
     tables = [row[0] for row in result.fetchall()]  # Fetch all table names
-    print(tables)
+
     # Fetch all existing student batch data for dropdown handling
 
     return render_template(
         'dashboard/admin.html',
         courses=courses,
         course_subjects=course_subjects,
-        table_names = tables
+        table_names=tables
     )
 
 
 @bp.route('/hod/dashboard')
 @login_required
 def hod_dashboard():
-    if current_user.role != 'hod':
-        flash('Access denied: HOD privileges required')
-        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
-
-    # Get all teachers in the HOD's department with their details
-    teachers = TeacherDetails.query.filter_by(
-        department=current_user.hod_profile.department
-    ).all()
-
-    # Get all courses
     courses = Course.query.all()
+    teachers = TeacherDetails.query.all()
+    subject_assignments = SubjectAssignment.query.all()
+    return render_template('dashboard/hod_dashboard.html', courses=courses, teachers=teachers,
+                           subject_assignments=subject_assignments)
 
-    # Get all subject assignments for the department
-    subject_assignments = SubjectAssignment.query.join(CourseSubject).filter(
-        CourseSubject.course_id == Course.id
+
+@bp.route('/get_batches_years', methods=['GET'])
+@login_required
+def get_batches_years():
+    course_id = request.args.get('course_id', type=int)
+    if not course_id:
+        return jsonify({'error': 'Missing course_id'}), 400
+
+    years = db.session.query(CourseSubject.year).filter_by(course_id=course_id).distinct().all()
+    return jsonify({'years': [y[0] for y in years]})
+
+
+@bp.route('/get_semesters', methods=['GET'])
+@login_required
+def get_semesters():
+    course_id = request.args.get('course_id', type=int)
+    year = request.args.get('year', type=int)
+
+    if not course_id or not year:
+        return jsonify({'error': 'Missing parameters'}), 400
+
+    semesters = db.session.query(CourseSubject.semester).filter_by(course_id=course_id, year=year).distinct().all()
+    return jsonify({'semesters': [s[0] for s in semesters]})
+
+
+@bp.route('/get_batches', methods=['GET'])
+@login_required
+def get_batches():
+    course_id = request.args.get('course_id', type=int)
+    year = request.args.get('year', type=int)
+    semester = request.args.get('semester', type=int)
+
+    if not course_id or not year or not semester:
+        return jsonify({'error': 'Missing parameters'}), 400
+
+    batches = db.session.query(CourseSubject.batch_id).filter_by(course_id=course_id, year=year,
+                                                                 semester=semester).distinct().all()
+    return jsonify({'batches': [b[0] for b in batches]})
+
+
+@bp.route('/get_subjects_course', methods=['GET'])
+@login_required
+def get_subjects_course():
+    course_id = request.args.get('course_id', type=int)
+    year = request.args.get('year', type=int)
+    semester = request.args.get('semester', type=int)
+    batch_id = request.args.get('batch_id', type=int)
+
+    if not course_id or not year or not semester or not batch_id:
+        return jsonify({'error': 'Missing parameters'}), 400
+
+    subjects = CourseSubject.query.filter_by(
+        course_id=course_id, year=year, semester=semester, batch_id=batch_id, is_active=True
     ).all()
 
-    return render_template('dashboard/hod.html',
-                         teachers=teachers,
-                         courses=courses,
-                         subject_assignments=subject_assignments)
+    return jsonify(
+        {'subjects': [{'id': s.id, 'subject_code': s.subject_code, 'subject_name': s.subject_name} for s in subjects]})
+
+
+@bp.route('/get_teachers', methods=['GET'])
+@login_required
+def get_teachers():
+    teachers = TeacherDetails.query.all()
+    return jsonify({'teachers': [{'id': t.id, 'name': f"{t.first_name} {t.last_name}"} for t in teachers]})
+
+
+@bp.route('/assign_subject', methods=['POST'])
+@login_required
+def assign_subject():
+    course_subject_id = request.form.get('subject_id', type=int)
+    teacher_id = request.form.get('teacher_id', type=int)
+
+    if not course_subject_id or not teacher_id:
+        flash('Please select a subject and teacher.', 'danger')
+        return redirect(url_for('auth.hod_dashboard'))
+
+    existing_assignment = SubjectAssignment.query.filter_by(course_subject_id=course_subject_id,
+                                                            teacher_id=teacher_id).first()
+    if existing_assignment:
+        flash('This subject is already assigned to the selected teacher.', 'warning')
+        return redirect(url_for('auth.hod_dashboard'))
+
+    assignment = SubjectAssignment(course_subject_id=course_subject_id, teacher_id=teacher_id)
+    db.session.add(assignment)
+    db.session.commit()
+
+    flash('Subject assigned successfully!', 'success')
+    return redirect(url_for('auth.hod_dashboard'))
+
+
+@bp.route('/get_assignments', methods=['GET'])
+@login_required
+def get_assignments():
+    assignments = SubjectAssignment.query.all()
+
+    data = []
+    for a in assignments:
+        data.append({
+            'course': a.course_subject.course.name,
+            'subject_code': a.course_subject.subject_code,
+            'subject_name': a.course_subject.subject_name,
+            'year': a.course_subject.year,
+            'semester': a.course_subject.semester,
+            'batch_id': a.course_subject.batch_id,
+            'teacher_name': f"{a.teacher.first_name} {a.teacher.last_name}",
+        })
+
+    return jsonify({'assignments': data})
+
+
+@bp.route('/remove_subject_assignment', methods=['POST'])
+@login_required
+def remove_subject_assignment():
+    assignment_id = request.form.get('assignment_id', type=int)
+    print(assignment_id)
+
+    if not assignment_id:
+        flash('Invalid request.', 'danger')
+        return redirect(url_for('auth.hod_dashboard'))
+
+    assignment = SubjectAssignment.query.get(assignment_id)
+    if not assignment:
+        flash('Assignment not found.', 'warning')
+        return redirect(url_for('auth.hod_dashboard'))
+
+    db.session.delete(assignment)
+    db.session.commit()
+
+    flash('Assignment removed successfully.', 'success')
+    return redirect(url_for('auth.hod_dashboard'))
+
+
 
 @bp.route('/teacher/dashboard')
 @login_required
@@ -1223,58 +1497,33 @@ def teacher_dashboard():
         flash('Access denied: Teacher privileges required')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
-    # Get assigned subjects for the teacher
-    assigned_subjects = SubjectAssignment.query.filter_by(
-        teacher_id=current_user.teacher_profile.id,
-        is_active=True
-    ).all()
+    # Get assigned subjects for the teacher along with all necessary details
+    assigned_subjects = db.session.execute(text(
+        """
+        SELECT 
+            cs.subject_name,
+            cs.subject_code,
+            c.name AS course_name,
+            cs.year,
+            cs.semester,
+            cs.batch_id,
+            cs.course_id
+        FROM subject_assignments sa
+        JOIN course_subjects cs ON sa.course_subject_id = cs.id
+        JOIN courses c ON cs.course_id = c.id
+        WHERE sa.teacher_id = :teacher_id
+        """
+    ), {"teacher_id": current_user.teacher_profile.id}).fetchall()
+    for subject in assigned_subjects:
+        print(subject)  # Prints each row as a tuple
 
-    return render_template('dashboard/teacher.html',
-                         assigned_subjects=assigned_subjects)
+    return render_template('dashboard/teacher.html', assigned_subjects=assigned_subjects)
 
-@bp.route('/teacher/take_attendance/<int:subject_id>', methods=['GET', 'POST'])
-@login_required
-def take_attendance(subject_id):
-    if current_user.role != 'teacher':
-        flash('Access denied: Teacher privileges required')
-        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
-    subject = CourseSubject.query.get_or_404(subject_id)
-    if request.method == 'POST':
-        try:
-            date = datetime.strptime(request.form.get('date'), '%Y-%m-%d').date()
-            for key, value in request.form.items():
-                if key.startswith('student_'):
-                    student_id = int(key.split('_')[1])
-                    attendance = Attendance(
-                        subject_id=subject_id,
-                        student_id=student_id,
-                        teacher_id=current_user.teacher_profile.id,
-                        date=date,
-                        status=value,
-                        remarks=request.form.get(f'remarks_{student_id}', '')
-                    )
-                    db.session.add(attendance)
 
-            db.session.commit()
-            flash('Attendance recorded successfully')
-            return redirect(url_for('auth.teacher_dashboard'))
 
-        except Exception as e:
-            db.session.rollback()
-            flash(f'Error recording attendance: {str(e)}')
-            logging.error(f'Error recording attendance: {str(e)}')
 
-    # Get students for the subject's year and semester.  Hardcoded for now, needs improvement.
-    students = StudentDetails.query.filter_by(
-        current_year=subject.year,  # Assuming subject.year is available
-        department=subject.department # Assuming subject.department is available
-    ).all()
 
-    return render_template('dashboard/take_attendance.html',
-                         subject=subject,
-                         students=students,
-                         today=datetime.now().date())
 
 @bp.route('/student/dashboard')
 @login_required
@@ -1284,85 +1533,6 @@ def student_dashboard():
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
     return render_template('dashboard/student.html')
 
-@bp.route('/get_subjects')
-@login_required
-def get_subjects():
-    if current_user.role != 'hod':
-        return jsonify({'error': 'Unauthorized'}), 403
-
-    year = request.args.get('year')
-    semester = request.args.get('semester')
-    course_id = request.args.get('course_id')
-
-    if not all([year, semester, course_id]):
-        return jsonify({'error': 'Missing parameters'}), 400
-
-    subjects = CourseSubject.query.filter_by(
-        year=year,
-        semester=semester,
-        course_id=course_id
-    ).all()
-
-    return jsonify({
-        'subjects': [{
-            'id': subject.id,
-            'subject_name': subject.subject_name
-        } for subject in subjects]
-    })
-
-@bp.route('/hod/assign_subject', methods=['POST'])
-@login_required
-def assign_subject():
-    if current_user.role != 'hod':
-        flash('Access denied: HOD privileges required')
-        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
-
-    try:
-        subject_id = request.form.get('subject_id')
-        teacher_id = request.form.get('teacher_id')
-
-        subject = CourseSubject.query.get_or_404(subject_id)
-
-        # Create the assignment
-        assignment = SubjectAssignment(
-            subject_id=subject_id,
-            teacher_id=teacher_id,
-            hod_id=current_user.hod_profile.id,
-            academic_year=datetime.utcnow().year
-        )
-
-        db.session.add(assignment)
-        db.session.commit()
-
-        flash('Subject assigned successfully')
-        logging.info(f'Subject {subject.subject_name} assigned to teacher {teacher_id}')
-
-    except Exception as e:
-        db.session.rollback()
-        flash(f'Error assigning subject: {str(e)}')
-        logging.error(f'Error assigning subject: {str(e)}')
-
-    return redirect(url_for('auth.hod_dashboard'))
-
-@bp.route('/hod/remove_subject_assignment/<int:assignment_id>', methods=['POST'])
-@login_required
-def remove_subject_assignment(assignment_id):
-    if current_user.role != 'hod':
-        flash('Access denied: HOD privileges required')
-        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
-
-    try:
-        assignment = SubjectAssignment.query.get_or_404(assignment_id)
-        db.session.delete(assignment)
-        db.session.commit()
-        flash('Subject assignment removed successfully')
-
-    except Exception as e:
-        db.session.rollback()
-        flash(f'Error removing subject assignment: {str(e)}')
-        logging.error(f'Error removing subject assignment: {str(e)}')
-
-    return redirect(url_for('auth.hod_dashboard'))
 
 @bp.route('/admin/add_course', methods=['POST'])
 @login_required
@@ -1394,6 +1564,8 @@ def add_course_subject():
         flash('Access denied: Admin privileges required')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
+    # Capture form data
+    print(request.form)
     course_id = request.form.get('course_id')
     year = request.form.get('year')
     semester = request.form.get('semester')
@@ -1401,13 +1573,20 @@ def add_course_subject():
     subject_code = request.form.get('subject_code')
     subject_name = request.form.get('subject_name')
 
+    # Debugging: Print received form data
+    print(
+        f"Received data: course_id={course_id}, year={year}, semester={semester}, batch_id={batch_id}, subject_code={subject_code}, subject_name={subject_name}")
+
     # Validate required fields
     if not all([course_id, year, semester, batch_id, subject_code, subject_name]):
         flash('All fields are required!')
         return redirect(url_for('auth.admin_dashboard'))
 
     try:
-        # Check if subject already exists for the same batch
+        # Ensure year is converted to an integer
+        year = int(year)
+
+        # Check if subject already exists
         existing_subject = CourseSubject.query.filter_by(
             course_id=course_id, year=year, semester=semester, batch_id=batch_id, subject_code=subject_code
         ).first()
@@ -1417,15 +1596,18 @@ def add_course_subject():
         else:
             new_subject = CourseSubject(
                 course_id=course_id,
-                year=int(year),
+                year=year,  # Ensuring it's an integer
                 semester=int(semester),
                 batch_id=batch_id,
                 subject_code=subject_code,
                 subject_name=subject_name
             )
+
             db.session.add(new_subject)
             db.session.commit()
             flash('Subject added successfully')
+            print(f"Successfully added subject: {new_subject}")
+
     except Exception as e:
         db.session.rollback()
         flash(f'Error adding subject: {str(e)}')
@@ -1455,6 +1637,7 @@ def database_management():
                 })
 
     return render_template('dashboard/database.html', models=models_list)
+
 
 @bp.route('/admin/database/<table_name>')
 @login_required
@@ -1493,9 +1676,10 @@ def view_table(table_name):
     columns = [column.name for column in model.__table__.columns]
 
     return render_template('dashboard/table_view.html',
-                         table_name=table_name,
-                         columns=columns,
-                         records=records)
+                           table_name=table_name,
+                           columns=columns,
+                           records=records)
+
 
 @bp.route('/admin/database/<table_name>/schema')
 @login_required
@@ -1527,6 +1711,7 @@ def view_schema(table_name):
         })
 
     return jsonify({'columns': columns})
+
 
 @bp.route('/admin/database/<table_name>/export')
 @login_required
@@ -1571,3 +1756,595 @@ def export_table(table_name):
         as_attachment=True,
         download_name=f'{table_name}.csv'
     )
+
+
+def create_attendance_table(course_id, admission_year):
+    table_name = f"attendance_{course_id}_{admission_year}"
+    db.session.execute(text(f"""
+        CREATE TABLE IF NOT EXISTS {table_name} (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            student_id INT NOT NULL,
+            subject_code VARCHAR(50) NOT NULL,
+            batch_id INT NOT NULL,
+            semester INT NOT NULL,
+            year INT NOT NULL,
+            date DATE NOT NULL,
+            status ENUM('Present', 'Absent') NOT NULL,
+            teacher_id INT NOT NULL,
+            UNIQUE(student_id, subject_code, batch_id, semester, year, date)
+        )
+    """))
+    db.session.commit()
+
+
+@bp.route('/teacher/take_attendance', methods=['GET', 'POST'])
+@login_required
+def take_attendance():
+    if current_user.role != 'her':
+        flash('Access denied: Teacher privileges required')
+        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
+
+    # Get subject details from URL parameters
+    subject_code = request.args.get('subject_code')
+    batch_id = request.args.get('batch_id')
+    admission_year = request.args.get('admission_year')
+    course_id = request.args.get("course_id")
+    semester = request.args.get('semester')
+    year = admission_year  # New field added
+
+    if not all([subject_code, batch_id, admission_year, semester, course_id, year]):
+        flash('Invalid request parameters')
+        return redirect(url_for('auth.teacher_dashboard'))
+
+    # Ensure attendance table exists
+    create_attendance_table(course_id, admission_year)
+
+    # Fetch students from batch table
+    student_table = f"student_batch_{course_id}_{admission_year}_{semester}_{batch_id}"
+    students = db.session.execute(text(f"SELECT id, first_name, last_name, roll_number FROM {student_table} ORDER BY roll_number")).fetchall()
+    students_list = [dict(row._mapping) for row in students]
+
+    if request.method == 'POST':
+        date = request.form['date']
+        teacher_id = current_user.teacher_profile.id
+        attendance_records = []
+        existing_attendance_count = 0  # Track if attendance already exists
+
+        # Check if attendance exists for this batch, semester, year, and subject
+        table_name = f"attendance_{course_id}_{admission_year}"
+        existing_records = db.session.execute(text(f"""
+            SELECT COUNT(*) FROM {table_name} 
+            WHERE batch_id = :batch_id AND subject_code = :subject_code 
+            AND semester = :semester AND year = :year AND date = :date
+        """), {"batch_id": batch_id, "subject_code": subject_code, "semester": semester, "year": year, "date": date}).scalar()
+
+        if existing_records > 0:
+            existing_attendance_count = existing_records
+
+        for student in students:
+            status = request.form.get(f"attendance_{student.id}", "Absent")
+            attendance_records.append({
+                "student_id": student.id,
+                "subject_code": subject_code,
+                "batch_id": batch_id,
+                "semester": semester,
+                "year": year,
+                "date": date,
+                "status": status,
+                "teacher_id": teacher_id
+            })
+
+        # Insert or update attendance records
+        for record in attendance_records:
+            db.session.execute(text(f"""
+                INSERT INTO {table_name} (student_id, subject_code, batch_id, semester, year, date, status, teacher_id)
+                VALUES (:student_id, :subject_code, :batch_id, :semester, :year, :date, :status, :teacher_id)
+                ON DUPLICATE KEY UPDATE status = :status, teacher_id = :teacher_id
+            """), record)
+
+        db.session.commit()
+
+        # Flash the appropriate message
+        if existing_attendance_count > 0:
+            flash('Student attendance updated successfully!', 'success')
+        else:
+            flash('Student attendance inserted successfully!', 'success')
+
+        return redirect(url_for('auth.teacher_dashboard'))
+
+    return render_template('dashboard/take_attendance.html', students=students_list, subject_code=subject_code, batch_id=batch_id, admission_year=admission_year, semester=semester, course_id=course_id, year=year)
+
+
+
+@bp.route('/teacher/get_attendance', methods=['GET'])
+@login_required
+def get_attendance():
+    if current_user.role != 'teacher':
+        return jsonify({"error": "Unauthorized access"}), 403
+
+    # Extract parameters from request
+    date = request.args.get('date')
+    subject_code = request.args.get('subject_code')
+    batch_id = request.args.get('batch_id')
+    admission_year = request.args.get('admission_year')
+    semester = request.args.get('semester')
+    course_id = request.args.get("course_id")
+    year = request.args.get("year")
+
+    print(f"Received GET request: date={date}, subject_code={subject_code}, batch_id={batch_id}, admission_year={admission_year}, semester={semester}, course_id={course_id}, year={year}")
+
+    if not all([date, subject_code, batch_id, admission_year, semester, course_id, year]):
+        return jsonify({"error": "Missing required parameters"}), 400
+
+    # Define the attendance table based on course and admission year
+    table_name = f"attendance_{course_id}_{admission_year}"
+
+    # Query attendance records for the given date and subject
+    query = text(f"""
+        SELECT student_id, status FROM {table_name}
+        WHERE date = :date AND subject_code = :subject_code
+        AND batch_id = :batch_id AND semester = :semester AND year = :year
+    """)
+
+    attendance_records = db.session.execute(query, {
+        "date": date,
+        "subject_code": subject_code,
+        "batch_id": batch_id,
+        "semester": semester,
+        "year": year
+    }).fetchall()
+
+    print("Fetched attendance records:", attendance_records)
+
+    # Convert query results into a list of dictionaries
+    attendance_data = [{"student_id": row.student_id, "status": row.status} for row in attendance_records]
+
+    return jsonify(attendance_data)
+
+
+
+
+
+@bp.route('/teacher/attendance_report', methods=['GET'])
+@login_required
+def attendance_report():
+    if current_user.role != 'teacher':
+        flash('Access denied: Teacher privileges required')
+        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
+
+    # Get required filters from query parameters
+    subject_code = request.args.get('subject_code')
+    batch_id = request.args.get('batch_id')
+    admission_year = request.args.get('admission_year')
+    course_id = request.args.get('course_id')
+    semester = request.args.get('semester')
+    start_date_str = request.args.get('start_date')  # e.g., 2024-02-01
+    end_date_str = request.args.get('end_date')  # e.g., 2024-02-10
+
+    if not all([subject_code, batch_id, admission_year, semester, course_id, start_date_str, end_date_str]):
+        flash('Invalid request parameters')
+        return redirect(url_for('auth.teacher_dashboard'))
+
+    # Convert start and end dates to datetime objects
+    start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+    end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
+
+    # Generate all dates between start_date and end_date
+    date_range = [(start_date + timedelta(days=i)).strftime("%Y-%m-%d") for i in
+                  range((end_date - start_date).days + 1)]
+
+    # Define the dynamic table name
+    attendance_table = f"attendance_{course_id}_{admission_year}"
+    student_table = f"student_batch_{course_id}_{admission_year}_{semester}_{batch_id}"
+
+    # Fetch student details
+    student_query = text(f"""
+        SELECT s.roll_number, s.first_name, s.last_name
+        FROM {student_table} s
+        ORDER BY s.roll_number
+    """)
+
+    students = db.session.execute(student_query).fetchall()
+
+    # Create dictionary to store attendance with "A" as default
+    attendance_data = {s.roll_number: {"Name": f"{s.first_name} {s.last_name}"} for s in students}
+    print(attendance_data)
+    # Initialize all date columns with "A" (Absent)
+    for student in attendance_data:
+        for date in date_range:
+            attendance_data[student][date] = "A"
+
+    # Fetch attendance records
+    attendance_query = text(f"""
+        SELECT s.roll_number, a.date, a.status
+        FROM {attendance_table} a
+        JOIN {student_table} s ON a.student_id = s.id
+        WHERE a.batch_id = :batch_id 
+        AND a.subject_code = :subject_code 
+        AND a.semester = :semester 
+        AND a.date BETWEEN :start_date AND :end_date
+    """)
+
+    attendance_records = db.session.execute(attendance_query, {
+        "batch_id": batch_id,
+        "subject_code": subject_code,
+        "semester": semester,
+        "start_date": start_date_str,
+        "end_date": end_date_str
+    }).fetchall()
+
+    # Update the attendance dictionary with "P" where present
+    for roll_number, date, status in attendance_records:
+        print(roll_number,date,status)
+        attendance_data[roll_number][date.strftime("%Y-%m-%d")] = "P" if status == "Present" else "A"
+
+    # Convert dictionary to DataFrame
+    df = pd.DataFrame.from_dict(attendance_data, orient="index", columns=["Name"] + date_range)
+    df.reset_index(inplace=True)
+    df.rename(columns={"index": "Roll Number"}, inplace=True)  # Rename index column
+
+    # Generate Excel file
+    output = io.BytesIO()
+    with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
+        df.to_excel(writer, sheet_name="Attendance Report", index=False)
+
+    output.seek(0)
+
+    # Send the Excel file as response
+    filename = f"Attendance_Report_{batch_id}_{start_date_str}_to_{end_date_str}.xlsx"
+    return send_file(output, download_name=filename, as_attachment=True,
+                     mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+
+
+
+
+
+
+@bp.route('/teacher/manage_notes/<int:batch_id>/<int:admission_year>/<int:semester>/<int:course_id>/<subject_code>', methods=['GET', 'POST'])
+@login_required
+def manage_notes(batch_id, admission_year, semester, course_id, subject_code):
+    if current_user.role != 'teacher':
+        flash('Access denied!', 'danger')
+        return redirect(url_for(f'auth.{current_user.role}_dashboard'))
+
+    teacher_id = current_user.teacher_profile.id
+
+    # Security Check: Ensure the teacher is assigned to this subject
+    result = db.session.execute(text("""
+        SELECT cs.id 
+        FROM subject_assignments sa
+        JOIN course_subjects cs ON sa.course_subject_id = cs.id
+        WHERE sa.teacher_id = :teacher_id 
+          AND cs.batch_id = :batch_id 
+          AND cs.year = :admission_year
+          AND cs.semester = :semester
+          AND cs.course_id = :course_id
+          AND cs.subject_code = :subject_code
+    """), {
+        "teacher_id": teacher_id,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester,
+        "course_id": course_id,
+        "subject_code": subject_code
+    }).fetchone()
+
+    if not result:
+        flash('Unauthorized access: You are not assigned to this subject!', 'danger')
+        return redirect(url_for('auth.teacher_dashboard'))
+
+    BASE_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+    # Define subject folder path
+    subject_folder = os.path.join(BASE_UPLOAD_FOLDER, f"{course_id}/{admission_year}/semester_{semester}/batch_{batch_id}/subject_{subject_code}")
+
+    # Create directory if not exists
+    if not os.path.exists(subject_folder):
+        os.makedirs(subject_folder)
+
+    # List existing notes
+    existing_notes = os.listdir(subject_folder)
+
+    return render_template('dashboard/manage_notes.html',
+                           batch_id=batch_id,
+                           admission_year=admission_year,
+                           semester=semester,
+                           course_id=course_id,
+                           subject_code=subject_code,
+                           existing_notes=existing_notes)
+
+
+upload_progress = {}
+
+
+@bp.route('/teacher/upload_progress/<upload_id>', methods=['GET'])
+@login_required
+def get_upload_progress(upload_id):
+    def generate():
+        # Initial progress message
+        yield f"data: {json.dumps({'progress': 0, 'status': 'Starting upload'})}\n\n"
+
+        # Keep checking progress until complete
+        while True:
+            if upload_id in upload_progress:
+                progress_data = upload_progress[upload_id]
+                yield f"data: {json.dumps(progress_data)}\n\n"
+
+                # If processing is complete, break the loop
+                if progress_data.get('status') == 'complete' or progress_data.get('status') == 'error':
+                    # Clean up the progress data
+                    if upload_id in upload_progress:
+                        del upload_progress[upload_id]
+                    break
+
+            time.sleep(0.5)  # Check every 500ms
+
+    # Return a streaming response
+    return Response(stream_with_context(generate()),
+                    mimetype="text/event-stream",
+                    headers={"Cache-Control": "no-cache",
+                             "X-Accel-Buffering": "no"})
+
+
+@bp.route('/teacher/upload_notes', methods=['POST'])
+@login_required
+def upload_notes():
+    # Create a unique ID for this upload session
+    import uuid
+    upload_id = str(uuid.uuid4())
+
+    # Initialize progress for this upload
+    upload_progress[upload_id] = {
+        'progress': 0,
+        'status': 'Starting',
+        'processed_files': 0,
+        'total_files': 0
+    }
+
+    if current_user.role != 'teacher':
+        upload_progress[upload_id] = {'progress': 0, 'status': 'error', 'message': 'Access denied!'}
+        return jsonify({'success': False, 'upload_id': upload_id, 'message': 'Access denied!'})
+
+    ALLOWED_EXTENSIONS = {
+        'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'odt', 'ods', 'odp', 'pdf', 'txt',
+        'rtf', 'tex', 'csv', 'tsv', 'epub', 'mobi', 'jpg', 'jpeg', 'png', 'gif', 'bmp',
+        'tiff', 'svg', 'eps', 'webp', 'heic', 'raw', 'psd', 'ai', 'py', 'java', 'c',
+        'cpp', 'cs', 'go', 'rs', 'rb', 'swift', 'sh', 'bat', 'cmd', 'pl', 'r', 'html',
+        'css', 'js', 'ts', 'php', 'asp', 'jsp', 'json', 'yaml', 'yml', 'xml', 'ini',
+        'cfg', 'toml', 'sql', 'db', 'sqlite', 'md', 'rst', 'adoc', 'gitignore',
+        'gitattributes', 'lua', 'kt', 'dart', 'm', 'asm'
+    }
+
+    MAX_FILE_SIZE = 200 * 1024 * 1024  # 200MB limit per file
+
+    # Get form data
+    batch_id = request.form.get('batch_id')
+    admission_year = request.form.get('admission_year')
+    semester = request.form.get('semester')
+    course_id = request.form.get('course_id')
+    subject_code = request.form.get('subject_code')
+    files = request.files.getlist('files')  # Get multiple files
+
+    # Update progress - received request
+    upload_progress[upload_id]['status'] = 'Validating request'
+    upload_progress[upload_id]['progress'] = 5
+
+    if not all([batch_id, admission_year, semester, course_id, subject_code]) or not files:
+        upload_progress[upload_id] = {'progress': 0, 'status': 'error', 'message': 'All fields are required!'}
+        return jsonify({'success': False, 'upload_id': upload_id, 'message': 'All fields are required!'})
+
+    # Update total files count
+    upload_progress[upload_id]['total_files'] = len(files)
+
+    # Update progress - checking teacher assignment
+    upload_progress[upload_id]['status'] = 'Checking permissions'
+    upload_progress[upload_id]['progress'] = 10
+
+    # Ensure teacher is assigned to this subject
+    teacher_id = current_user.teacher_profile.id
+    result = db.session.execute(text("""
+        SELECT cs.id 
+        FROM subject_assignments sa
+        JOIN course_subjects cs ON sa.course_subject_id = cs.id
+        WHERE sa.teacher_id = :teacher_id 
+          AND cs.batch_id = :batch_id 
+          AND cs.year = :admission_year
+          AND cs.semester = :semester
+          AND cs.course_id = :course_id
+          AND cs.subject_code = :subject_code
+    """), {
+        "teacher_id": teacher_id,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester,
+        "course_id": course_id,
+        "subject_code": subject_code
+    }).fetchone()
+
+    if not result:
+        upload_progress[upload_id] = {'progress': 0, 'status': 'error', 'message': 'Unauthorized access!'}
+        return jsonify({'success': False, 'upload_id': upload_id, 'message': 'Unauthorized access!'})
+
+    # Update progress - preparing directory
+    upload_progress[upload_id]['status'] = 'Preparing file storage'
+    upload_progress[upload_id]['progress'] = 15
+
+    # Define folder path
+    BASE_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+    subject_folder = os.path.join(BASE_UPLOAD_FOLDER,
+                                  f"{course_id}/{admission_year}/semester_{semester}/batch_{batch_id}/subject_{subject_code}")
+
+    os.makedirs(subject_folder, exist_ok=True)
+
+    # Calculate progress increment per file
+    progress_per_file = 75 / max(len(files), 1)  # 15% to 90% for file processing
+
+    uploaded_files = []
+    for index, file in enumerate(files, start=1):
+        # Update progress for each file
+        file_progress = 15 + (index * progress_per_file)
+        filename = file.filename if file.filename else "unknown"
+        upload_progress[upload_id] = {
+            'progress': int(file_progress),
+            'status': f'Processing file {index + 1} of {len(files)}: {filename}',
+            'processed_files': index,
+            'total_files': len(files)
+        }
+
+        if file.filename == "":
+            continue
+
+        # Security: Check file type
+        original_filename = secure_filename(file.filename)
+
+        # Split the filename into name and extension
+        name, ext = os.path.splitext(original_filename)
+
+        # Add a timestamp to make it unique
+        timestamp = int(time.time())
+        filename = f"{name}_{timestamp}{ext}"
+        file_extension = filename.rsplit('.', 1)[1].lower() if '.' in filename else ''
+
+        if file_extension not in ALLOWED_EXTENSIONS:
+            continue
+
+        # Security: Check file size
+        if file.content_length > MAX_FILE_SIZE:
+            continue
+
+        # Save file securely
+        upload_progress[upload_id]['status'] = f'Saving file: {filename}'
+        file_path = os.path.join(subject_folder, filename)
+        file.save(file_path)
+        uploaded_files.append(filename)
+
+        # Update progress after saving
+        upload_progress[upload_id] = {
+            'progress': int(file_progress + (progress_per_file / 2)),
+            'status': f'Saved file {index + 1} of {len(files)}: {filename}',
+            'processed_files': index + 1,
+            'total_files': len(files)
+        }
+
+    # Final progress update
+    if uploaded_files:
+        upload_progress[upload_id] = {
+            'progress': 100,
+            'status': 'complete',
+            'message': f'Uploaded: {", ".join(uploaded_files)}',
+            'processed_files': len(uploaded_files),
+            'total_files': len(files)
+        }
+        flash(f'Uploaded: {", ".join(uploaded_files)}', 'success')
+    else:
+        upload_progress[upload_id] = {
+            'progress': 100,
+            'status': 'error',
+            'message': 'No valid files were uploaded.',
+            'processed_files': 0,
+            'total_files': len(files)
+        }
+        flash('No valid files were uploaded.', 'danger')
+
+    # Return a JSON response with the upload_id
+    return jsonify({
+        'success': True,
+        'upload_id': upload_id,
+        'message': 'Upload complete',
+        'files': uploaded_files
+    })
+
+
+
+@bp.route('/teacher/download_file/<int:course_id>/<int:admission_year>/<int:semester>/<int:batch_id>/<subject_code>/<filename>')
+@login_required
+def download_file(course_id, admission_year, semester, batch_id, subject_code, filename):
+    teacher_id = current_user.teacher_profile.id
+
+    # Security Check
+    result = db.session.execute(text("""
+        SELECT cs.id 
+        FROM subject_assignments sa
+        JOIN course_subjects cs ON sa.course_subject_id = cs.id
+        WHERE sa.teacher_id = :teacher_id 
+          AND cs.batch_id = :batch_id 
+          AND cs.year = :admission_year
+          AND cs.semester = :semester
+          AND cs.course_id = :course_id
+          AND cs.subject_code = :subject_code
+    """), {
+        "teacher_id": teacher_id,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester,
+        "course_id": course_id,
+        "subject_code": subject_code
+    }).fetchone()
+
+    if not result:
+        flash('Unauthorized access!', 'danger')
+        return redirect(url_for('teacher.teacher_dashboard'))
+
+    BASE_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+
+    subject_folder = os.path.join(BASE_UPLOAD_FOLDER, f"{course_id}/{admission_year}/semester_{semester}/batch_{batch_id}/subject_{subject_code}")
+
+    return send_from_directory(subject_folder, filename, as_attachment=True)
+
+
+@bp.route('/teacher/delete_note', methods=['POST'])
+@login_required
+def delete_note():
+    teacher_id = current_user.teacher_profile.id
+
+    # Fetching values from the form
+    file_name = request.form.get("file_name")
+    course_id = request.form.get("course_id")
+    admission_year = request.form.get("admission_year")
+    semester = request.form.get("semester")
+    batch_id = request.form.get("batch_id")
+    subject_code = request.form.get("subject_code")
+
+    # Convert numeric values to integers (important to prevent type issues)
+    course_id = int(course_id)
+    admission_year = int(admission_year)
+    semester = int(semester)
+    batch_id = int(batch_id)
+
+    # Security Check: Verify if the teacher is assigned to this subject
+    result = db.session.execute(text("""
+        SELECT cs.id 
+        FROM subject_assignments sa
+        JOIN course_subjects cs ON sa.course_subject_id = cs.id
+        WHERE sa.teacher_id = :teacher_id 
+          AND cs.batch_id = :batch_id 
+          AND cs.year = :admission_year
+          AND cs.semester = :semester
+          AND cs.course_id = :course_id
+          AND cs.subject_code = :subject_code
+    """), {
+        "teacher_id": teacher_id,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester,
+        "course_id": course_id,
+        "subject_code": subject_code
+    }).fetchone()
+
+    if not result:
+        flash('Unauthorized access!', 'danger')
+        return redirect(url_for('teacher.teacher_dashboard'))
+
+    # File deletion process
+    BASE_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+
+    subject_folder = os.path.join(BASE_UPLOAD_FOLDER, f"{course_id}/{admission_year}/semester_{semester}/batch_{batch_id}/subject_{subject_code}")
+    file_path = os.path.join(subject_folder, file_name)
+
+    if os.path.exists(file_path):
+        os.remove(file_path)
+        flash('File deleted successfully!', 'success')
+    else:
+        flash('File not found!', 'danger')
+
+    return redirect(request.referrer)
