@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 import re
 from extensions import db
 from models import UserCredentials, TeacherDetails, StudentDetails, AdminProfile, HODProfile, SubjectAssignment, Course, \
-    CourseSubject, Attendance
+    CourseSubject, Attendance, BatchTable
 import random
 import string
 import logging
@@ -20,6 +20,7 @@ import pandas as pd
 from flask import  send_from_directory
 import io
 from flask import Response, json, stream_with_context
+from flask import session
 from sqlalchemy.exc import SQLAlchemyError
 
 bp = Blueprint('auth', __name__)
@@ -109,16 +110,55 @@ def login():
 
         # Additional verification for students
         if role == 'student':
+            course_id = request.form.get('course')
             admission_year = request.form.get('admission_year')
-            student = StudentDetails.query.filter_by(credential_id=user.id).first()
+            semester = request.form.get('semester')
+            batch_id = request.form.get('batch_id')
 
-            if not admission_year or not student:
-                flash('Please select admission year')
+            if not all([course_id, admission_year, semester, batch_id]):
+                flash('Please fill in all student details')
                 return redirect(url_for('auth.login'))
 
-            if str(student.admission_year) != admission_year:
-                flash('Invalid credentials for the selected admission year')
+            # Find the batch record to get the table_name
+            batch = BatchTable.query.filter_by(
+                course_id=course_id,
+                admission_year=admission_year,
+                semester=semester,
+                batch_id=batch_id
+            ).first()
+
+            if not batch:
+                flash('Invalid batch details provided')
                 return redirect(url_for('auth.login'))
+
+            # Get the table_name from the batch record
+            table_name = batch.table_name
+
+            # Use raw SQL to query the student in the dynamic table
+            sql = f"""
+                SELECT * FROM {table_name}
+                WHERE credential_id = :credential_id
+                AND email = :email
+            """
+
+            result = db.session.execute(
+                text(sql),
+                {
+                    'credential_id': user.id,
+                    'email': email
+                }
+            ).fetchone()
+
+            if not result:
+                flash('Your credentials do not match any student in the selected batch')
+                return redirect(url_for('auth.login'))
+
+            # Store batch information in session for later use
+            session['batch_id'] = batch_id
+            session['course_id'] = course_id
+            session['admission_year'] = admission_year
+            session['semester'] = semester
+            session['batch_table_name'] = table_name
 
         login_user(user)
         logging.info(f"Successful login for user: {email}, role: {role}")
@@ -357,6 +397,19 @@ def create_student_batch():
 
         # Execute the table creation
         db.session.execute(create_table_sql)
+
+        # Store the batch table information in the new table
+        batch_table = BatchTable(
+            table_name=table_name,
+            course_id=course.id,
+            course_name=course.name,  # Assuming your Course model has a 'name' attribute
+            course_code=course.code,  # Assuming your Course model has a 'code' attribute
+            admission_year=batch_year,
+            semester=semester,
+            batch_id=batch_id
+        )
+
+        db.session.add(batch_table)
         db.session.commit()
 
         flash(f'Student batch table `{table_name}` created successfully!', 'success')
@@ -662,8 +715,8 @@ def add_student():
             return redirect(url_for('auth.admin_dashboard'))
 
         # Validate roll_number (must be an integer and exactly 10 digits)
-        if not roll_number.isdigit() or len(roll_number) != 10:
-            flash("Invalid roll number. It must be exactly 10 digits.")
+        if not roll_number.isdigit() :
+            flash("Invalid roll number")
             return redirect(url_for('auth.admin_dashboard'))
 
         # Validate phone number
@@ -1523,15 +1576,255 @@ def teacher_dashboard():
 
 
 
-
-
 @bp.route('/student/dashboard')
 @login_required
 def student_dashboard():
     if current_user.role != 'student':
         flash('Access denied: Student privileges required')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
-    return render_template('dashboard/student.html')
+
+    # Fetch session variables
+    batch_id = session['batch_id']
+    course_id = session['course_id']
+    admission_year = session['admission_year']
+    semester = session['semester']
+    table_name = session['batch_table_name']
+    email = current_user.email
+    credential_id = current_user.id
+
+    # Fetch student details
+    query = text(
+        f"SELECT id, first_name, last_name, roll_number FROM {table_name} WHERE credential_id = :credential_id")
+    student = db.session.execute(query, {"credential_id": credential_id}).fetchone()
+
+    if not student:
+        flash("Student not found!", "error")
+        return redirect(url_for('auth.logout'))
+
+    student_id = student.id
+    session['student_id']=student_id
+
+    # Fetch subjects
+    query = text("""
+    SELECT subject_code, subject_name
+    FROM course_subjects
+    WHERE course_id = :course_id AND batch_id = :batch_id AND semester = :semester AND year = :admission_year
+    """)
+    subjects = db.session.execute(query, {
+        "course_id": course_id,
+        "batch_id": batch_id,
+        "semester": semester,
+        "admission_year": admission_year
+    }).fetchall()
+
+    # Fetch attendance
+
+    attendance_table_name = f"attendance_{course_id}_{admission_year}"
+    attendance_summary = {}
+
+    for subject in subjects:
+        query = text(f"""
+            SELECT COUNT(*) FROM {attendance_table_name} 
+        WHERE student_id = :student_id AND subject_code = :subject_code AND batch_id = :batch_id AND semester = :semester
+        """)
+        total_classes = db.session.execute(query, {
+            "student_id": student_id,
+            "subject_code": subject.subject_code,
+            "batch_id": batch_id,
+            "semester": semester
+        }).scalar() or 1  # Avoid division by zero
+
+        query = text(f"""
+            SELECT COUNT(*) FROM {attendance_table_name} 
+        WHERE student_id = :student_id AND subject_code = :subject_code AND batch_id = :batch_id AND semester = :semester and status='Present'
+        """)
+        present_count = db.session.execute(query, {
+            "student_id": student_id,
+            "subject_code": subject.subject_code,
+            "batch_id": batch_id,
+            "semester": semester
+        }).scalar() or 0
+
+        attendance_percentage = (present_count / total_classes) * 100
+
+        attendance_summary[subject.subject_code] = {
+            "present_count": present_count,
+            "total_classes": total_classes,
+            "percentage": round(attendance_percentage, 2),
+        }
+
+    # Fetch teacher details
+    teacher_data = {}
+
+    for subject in subjects:
+        query = text("""
+        SELECT t.first_name, t.last_name, t.email 
+        FROM subject_assignments sa
+        JOIN teacher_details t ON sa.teacher_id = t.id
+        JOIN course_subjects cs ON sa.course_subject_id = cs.id
+        WHERE cs.subject_code = :subject_code AND cs.batch_id = :batch_id 
+              AND cs.semester = :semester AND cs.year = :admission_year AND cs.course_id = :course_id
+        """)
+        teacher = db.session.execute(query, {
+            "subject_code": subject.subject_code,
+            "batch_id": batch_id,
+            "semester": semester,
+            "admission_year": admission_year,
+            "course_id": course_id
+        }).fetchone()
+        teacher_data[subject.subject_code] = teacher
+
+    return render_template("dashboard/student.html", student=student, subjects=subjects,
+                           attendance_summary=attendance_summary, teacher_data=teacher_data,admission_year=session.get("admission_year"),
+                           semester=session.get("semester"),
+                           batch_id=session.get("batch_id"))
+
+
+
+
+@bp.route("/download_attendance/<subject_code>")
+@login_required
+def download_attendance(subject_code):
+    attendance_table_name = f"attendance_{session['course_id']}_{session['admission_year']}"
+    student_id = session.get('student_id')
+    batch_id = session.get('batch_id')
+    admission_year = session.get('admission_year')
+    semester = session.get('semester')
+
+    query = text(f"""
+        SELECT date, status FROM {attendance_table_name}
+        WHERE student_id = :student_id AND subject_code = :subject_code 
+              AND batch_id = :batch_id AND year = :admission_year 
+              AND semester = :semester
+    """)
+    records = db.session.execute(query, {
+        "student_id": student_id,
+        "subject_code": subject_code,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester
+    }).fetchall()
+
+    # Create CSV response
+    def generate_csv():
+        yield "Date,Status\n"
+        for record in records:
+            status =  record.status
+            yield f"{record.date},{status}\n"
+
+    return Response(generate_csv(), mimetype="text/csv",
+                    headers={"Content-Disposition": f"attachment; filename=attendance_{subject_code}.csv"})
+
+
+
+
+@bp.route('/student/view_notes/<subject_code>', methods=['GET'])
+@login_required
+def view_notes(subject_code):
+    # Security Check: Ensure session data matches
+    if not all(key in session for key in ['batch_id', 'course_id', 'admission_year', 'semester', 'student_id', 'batch_table_name']):
+        flash("Session data is missing or corrupted!", "danger")
+        return redirect(url_for('auth.student_dashboard'))
+
+    batch_id = session['batch_id']
+    course_id = session['course_id']
+    admission_year = session['admission_year']
+    semester = session['semester']
+    student_id = session['student_id']
+    table_name = session['batch_table_name']
+
+    # Validate subject exists for this batch, semester, and course
+    result = db.session.execute(text("""
+        SELECT id,subject_name FROM course_subjects
+        WHERE course_id = :course_id 
+        AND batch_id = :batch_id
+        AND year = :admission_year
+        AND semester = :semester
+        AND subject_code = :subject_code
+        AND is_active = 1
+    """), {
+        "course_id": course_id,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester,
+        "subject_code": subject_code
+    }).fetchone()
+
+    if not result:
+        flash("Unauthorized access: Subject not found or not assigned to this batch!", "danger")
+        return redirect(url_for('auth.student_dashboard'))
+
+    # Subject is valid → Get Notes
+    BASE_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+    subject_folder = os.path.join(BASE_UPLOAD_FOLDER, f"{course_id}/{admission_year}/semester_{semester}/batch_{batch_id}/subject_{subject_code}")
+
+    existing_notes = os.listdir(subject_folder) if os.path.exists(subject_folder) else []
+    print(existing_notes)
+    print("hi")
+
+    return render_template('dashboard/view_notes.html',
+                           batch_id=batch_id,
+                           admission_year=admission_year,
+                           semester=semester,
+                           course_id=course_id,
+                           subject_code=subject_code,
+                           subject_name=result.subject_name,
+                           existing_notes=existing_notes)
+
+@bp.route('/student/download_note_student/<subject_code>/<filename>', methods=['GET'])
+@login_required
+def download_note_student(subject_code, filename):
+    # Security Check: Ensure session data matches
+    if not all(key in session for key in ['batch_id', 'course_id', 'admission_year', 'semester', 'student_id', 'batch_table_name']):
+        flash("Session data is missing or corrupted!", "danger")
+        return redirect(url_for('auth.student_dashboard'))
+
+    batch_id = session['batch_id']
+    course_id = session['course_id']
+    admission_year = session['admission_year']
+    semester = session['semester']
+    student_id = session['student_id']
+    table_name = session['batch_table_name']
+
+    # Validate subject exists for this batch, semester, and course
+    result = db.session.execute(text("""
+        SELECT id FROM course_subjects
+        WHERE course_id = :course_id 
+        AND batch_id = :batch_id
+        AND year = :admission_year
+        AND semester = :semester
+        AND subject_code = :subject_code
+        AND is_active = 1
+    """), {
+        "course_id": course_id,
+        "batch_id": batch_id,
+        "admission_year": admission_year,
+        "semester": semester,
+        "subject_code": subject_code
+    }).fetchone()
+
+    if not result:
+        flash("Unauthorized access: Subject not found or not assigned to this batch!", "danger")
+        return redirect(url_for('auth.student_dashboard'))
+
+    # Subject is valid → Allow download
+    BASE_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+    subject_folder = os.path.join(BASE_UPLOAD_FOLDER, f"{course_id}/{admission_year}/semester_{semester}/batch_{batch_id}/subject_{subject_code}")
+    file_path = os.path.join(subject_folder, filename)
+
+    if not os.path.exists(file_path):
+        flash("File not found!", "danger")
+        return redirect(url_for('student.view_notes', subject_code=subject_code))
+
+    return send_file(file_path, as_attachment=True)
+
+
+
+
+
+
+
+
 
 
 @bp.route('/admin/add_course', methods=['POST'])
@@ -1780,7 +2073,7 @@ def create_attendance_table(course_id, admission_year):
 @bp.route('/teacher/take_attendance', methods=['GET', 'POST'])
 @login_required
 def take_attendance():
-    if current_user.role != 'her':
+    if current_user.role != 'teacher':
         flash('Access denied: Teacher privileges required')
         return redirect(url_for(f'auth.{current_user.role}_dashboard'))
 
@@ -2348,3 +2641,102 @@ def delete_note():
         flash('File not found!', 'danger')
 
     return redirect(request.referrer)
+
+
+
+
+
+
+
+
+
+
+
+
+@bp.route('/api/courses', methods=['GET'])
+def get_courses():
+    # Get all unique courses
+    courses = db.session.query(
+        BatchTable.course_id,
+        BatchTable.course_name,
+        BatchTable.course_code
+    ).distinct().all()
+
+    result = []
+    for course in courses:
+        result.append({
+            'id': course.course_id,
+            'course_name': course.course_name,
+            'course_code': course.course_code
+        })
+
+    return jsonify(result)
+
+
+@bp.route('/api/years', methods=['GET'])
+def get_years():
+    course_id = request.args.get('course_id')
+
+    if not course_id:
+        return jsonify([])
+
+    # Get all admission years for the selected course
+    years = db.session.query(
+        BatchTable.admission_year
+    ).filter(
+        BatchTable.course_id == course_id
+    ).distinct().order_by(
+        BatchTable.admission_year.desc()
+    ).all()
+
+    return jsonify([year[0] for year in years])
+
+
+@bp.route('/api/semesters', methods=['GET'])
+def get_semesters_inlogin():
+    course_id = request.args.get('course_id')
+    admission_year = request.args.get('admission_year')
+
+    if not course_id or not admission_year:
+        return jsonify([])
+
+    # Get all semesters for the selected course and admission year
+    semesters = db.session.query(
+        BatchTable.semester
+    ).filter(
+        BatchTable.course_id == course_id,
+        BatchTable.admission_year == admission_year
+    ).distinct().order_by(
+        BatchTable.semester
+    ).all()
+
+    return jsonify([semester[0] for semester in semesters])
+
+
+@bp.route('/api/batches', methods=['GET'])
+def get_batches_inlogin():
+    course_id = request.args.get('course_id')
+    admission_year = request.args.get('admission_year')
+    semester = request.args.get('semester')
+
+    if not course_id or not admission_year or not semester:
+        return jsonify([])
+
+    # Get all batches for the selected course, admission year, and semester
+    batches = db.session.query(
+        BatchTable.id,
+        BatchTable.batch_id
+    ).filter(
+        BatchTable.course_id == course_id,
+        BatchTable.admission_year == admission_year,
+        BatchTable.semester == semester
+    ).distinct().all()
+
+    result = []
+    for batch in batches:
+        result.append({
+            'id': batch.id,
+            'batch_id': batch.batch_id
+        })
+
+    return jsonify(result)

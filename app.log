@@ -3544,3 +3544,1455 @@
 2025-02-26 13:41:43,336 - app - INFO - Test data already exists
 2025-02-26 13:41:43,379 - werkzeug - WARNING -  * Debugger is active!
 2025-02-26 13:41:43,384 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 14:45:22,974 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 14:45:22] "[32mGET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 14:45:23,171 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 14:45:23] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 14:45:23,606 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 14:45:23] "[32mGET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 14:45:23,644 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 14:45:23] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 14:45:24,295 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 14:45:24] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 14:45:28,926 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 14:45:28] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 15:10:19,121 - app - INFO - Test data already exists
+2025-02-26 15:10:19,196 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-26 15:10:19,196 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 15:10:19,200 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 15:10:22,578 - app - INFO - Test data already exists
+2025-02-26 15:10:22,620 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 15:10:22,626 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 15:10:22,798 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-26 15:10:22,858 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:22] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:10:23,094 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:23,118 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:10:26,029 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:26] "[32mGET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 15:10:26,054 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:26] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:10:26,250 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:26,263 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:10:31,074 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:31] "[32mGET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 15:10:31,095 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:31] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:10:31,301 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:31,309 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:10:36,763 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:36] "[32mGET /teacher/take_attendance?subject_code=C201&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 15:10:36,790 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:36] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:10:36,963 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:37,021 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:10:39,073 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:39] "[32mGET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 15:10:39,138 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:39] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:10:39,278 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:10:39,282 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:40,245 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:40] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 15:10:40,350 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:40,472 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:10:44,060 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:44] "[32mGET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1[0m" 302 -
+2025-02-26 15:10:44,081 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:44] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:10:44,225 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:10:44,281 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:10:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:11:20,049 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-26 15:11:25,906 - app - INFO - Test data already exists
+2025-02-26 15:11:25,997 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-26 15:11:25,998 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 15:11:26,002 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 15:11:29,455 - app - INFO - Test data already exists
+2025-02-26 15:11:29,518 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 15:11:29,525 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 15:11:29,762 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-26 15:11:29,823 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:29] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 15:11:30,110 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:11:30,125 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:11:31,555 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:31] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-26 15:11:31,613 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:11:31,637 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:11:43,126 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:11:43] "GET /teacher/attendance_report?subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007&start_date=2025-02-12&end_date=2025-02-28 HTTP/1.1" 200 -
+2025-02-26 15:12:25,714 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:25] "GET /teacher/get_attendance?date=2025-02-19&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-26 15:12:40,704 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:40] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 15:12:40,854 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:12:40,874 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:12:54,209 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:54] "POST /teacher/upload_notes HTTP/1.1" 200 -
+2025-02-26 15:12:54,224 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:54] "GET /teacher/upload_progress/e0524d2b-9053-425b-8762-bfe061200b5c HTTP/1.1" 200 -
+2025-02-26 15:12:55,766 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:55] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 15:12:55,819 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:12:55,825 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:12:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:13:05,924 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:13:05] "[32mPOST /teacher/delete_note HTTP/1.1[0m" 302 -
+2025-02-26 15:13:05,949 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:13:05] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 15:13:06,101 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:13:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 15:13:06,152 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:13:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 15:13:07,345 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:13:07] "GET /teacher/download_file/1/2007/4/1/C993/Experience-Certificate-123_1740562974.pdf HTTP/1.1" 200 -
+2025-02-26 15:13:17,911 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 15:13:17] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 17:44:45,089 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:44:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-26 17:44:45,176 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:44:45] "GET /login HTTP/1.1" 200 -
+2025-02-26 17:44:45,269 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:44:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:44:45,279 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:44:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:45:04,254 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-02-26 17:45:04,600 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-02-26 17:45:04,602 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-26 17:45:04,768 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:04] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 17:45:04,921 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:45:04,957 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:45:08,432 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:08] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 17:45:08,567 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:45:08,605 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:45:29,398 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:29] "[32mPOST /add_student HTTP/1.1[0m" 302 -
+2025-02-26 17:45:29,432 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:29] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 17:45:29,620 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:45:29,621 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:45:39,341 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:39] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 17:45:39,443 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:45:39,495 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:45:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:46:30,474 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-26 17:46:30,912 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 17:46:35,963 - app - INFO - Test data already exists
+2025-02-26 17:46:36,024 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 17:46:36,032 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 17:46:53,872 - root - ERROR - Error creating student: (MySQLdb.IntegrityError) (1062, "Duplicate entry 'akashyadavazm8@gmail.com' for key 'user_credentials.email'")
+[SQL: INSERT INTO user_credentials (email, password_hash, `role`, is_active, created_at) VALUES (%s, %s, %s, %s, %s)]
+[parameters: ('akashyadavazm8@gmail.com', 'scrypt:32768:8:1$SYTGsMG6LlBXOXlE$ec3433cb62eb1c41e4ff54403679ddbb7f4d28fb42bbbced26e97507bb130f76134c5cd13e495a474fd4e46d47e997824541ed1aa64738f901d417050edb5c54', 'student', 1, datetime.datetime(2025, 2, 26, 12, 16, 53, 852681))]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-26 17:46:53,875 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:46:53] "[32mPOST /add_student HTTP/1.1[0m" 302 -
+2025-02-26 17:46:53,939 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:46:53] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 17:46:54,212 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:46:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:46:54,227 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:46:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:47:26,034 - root - INFO - New student created: student@gmail.com, Batch 1, Semester 4, Table: student_batch_1_2007_4_1
+2025-02-26 17:47:26,036 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:47:26] "[32mPOST /add_student HTTP/1.1[0m" 302 -
+2025-02-26 17:47:26,062 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:47:26] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 17:47:26,257 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:47:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:47:26,268 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:47:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 17:48:21,133 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:48:21] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 17:48:26,815 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:48:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-26 17:48:26,835 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:48:26] "GET /login HTTP/1.1" 200 -
+2025-02-26 17:48:27,123 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:48:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 17:48:27,124 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 17:48:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:07:44,122 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\models.py', reloading
+2025-02-26 18:07:44,511 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 18:07:48,299 - app - INFO - Test data already exists
+2025-02-26 18:07:48,369 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 18:07:48,378 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 18:10:02,092 - app - INFO - Creating test users and data
+2025-02-26 18:10:02,432 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-26 18:10:02,432 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 18:10:02,436 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 18:10:05,836 - app - INFO - Test data already exists
+2025-02-26 18:10:05,880 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 18:10:05,886 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 18:12:13,574 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-26 18:12:14,064 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 18:12:19,766 - app - INFO - Test data already exists
+2025-02-26 18:12:19,827 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-26 18:12:19,828 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 18:12:19,832 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 18:12:23,008 - app - INFO - Test data already exists
+2025-02-26 18:12:23,055 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 18:12:23,061 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 18:12:25,791 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:25] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-26 18:12:25,851 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:25] "GET /login HTTP/1.1" 200 -
+2025-02-26 18:12:26,054 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:12:26,090 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:12:34,364 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-02-26 18:12:34,705 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-02-26 18:12:34,707 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-26 18:12:34,775 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:34] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 18:12:34,890 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:12:34,915 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:12:51,715 - root - ERROR - Error adding course: (MySQLdb.IntegrityError) (1062, "Duplicate entry 'CSE' for key 'courses.code'")
+[SQL: INSERT INTO courses (code, name, created_at, is_active) VALUES (%s, %s, %s, %s)]
+[parameters: ('CSE', 'Computer Science', datetime.datetime(2025, 2, 26, 12, 42, 51, 709506), 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-02-26 18:12:51,717 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:51] "[32mPOST /admin/add_course HTTP/1.1[0m" 302 -
+2025-02-26 18:12:51,741 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:51] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 18:12:51,878 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:12:51,897 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:12:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:13:28,158 - root - INFO - Successfully created student batch table: student_batch_1_2007_4_1
+2025-02-26 18:13:28,159 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:28] "[32mPOST /create_student_batch HTTP/1.1[0m" 302 -
+2025-02-26 18:13:28,189 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:28] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 18:13:28,376 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:13:28,377 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:13:43,314 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:43] "[32mPOST /admin/add_course_subject HTTP/1.1[0m" 302 -
+2025-02-26 18:13:43,337 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:43] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 18:13:43,453 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:13:43,498 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:13:46,197 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:46] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 18:13:46,299 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:13:46,350 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:13:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:14:41,858 - root - INFO - New student created: student@gmail.com, Batch 1, Semester 4, Table: student_batch_1_2007_4_1
+2025-02-26 18:14:41,860 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:14:41] "[32mPOST /add_student HTTP/1.1[0m" 302 -
+2025-02-26 18:14:41,882 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:14:41] "GET /render_student HTTP/1.1" 200 -
+2025-02-26 18:14:42,078 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:14:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 18:14:42,080 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 18:14:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 18:54:52,401 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-26 18:54:52,779 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 19:00:39,378 - app - INFO - Test data already exists
+2025-02-26 19:00:39,444 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-26 19:00:39,444 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 19:00:39,449 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 19:00:43,094 - app - INFO - Test data already exists
+2025-02-26 19:00:43,135 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 19:00:43,140 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 19:00:43,318 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-26 19:00:43,401 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:43] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 19:00:43,584 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:00:43,585 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:00:47,075 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-26 19:00:47,098 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:47] "GET /login HTTP/1.1" 200 -
+2025-02-26 19:00:47,288 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:00:47,343 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:00:50,791 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:50] "GET /api/courses HTTP/1.1" 200 -
+2025-02-26 19:00:54,347 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:00:54] "GET /api/years?course_id=1 HTTP/1.1" 200 -
+2025-02-26 19:01:06,748 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:06] "GET /api/semesters?course_id=1&admission_year=2007 HTTP/1.1" 200 -
+2025-02-26 19:01:17,421 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:17] "GET /api/batches?course_id=1&admission_year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-26 19:01:40,379 - root - INFO - Login attempt for email: student@gmail.com, role: student
+2025-02-26 19:01:40,909 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:40] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-26 19:01:41,055 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:41] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-26 19:01:41,130 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:41] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-26 19:01:41,223 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:41] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=N5CRA4jJMxzVN4w8shL9 HTTP/1.1" 200 -
+2025-02-26 19:01:41,274 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:01:41] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-26 19:02:25,912 - app - INFO - Test data already exists
+2025-02-26 19:02:25,970 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-26 19:02:25,971 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 19:02:25,975 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 19:02:29,399 - app - INFO - Test data already exists
+2025-02-26 19:02:29,448 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 19:02:29,454 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-26 19:02:29,592 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-26 19:02:29,630 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:29] "GET /login HTTP/1.1" 200 -
+2025-02-26 19:02:29,809 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:02:29,810 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:02:31,765 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:31] "GET /api/courses HTTP/1.1" 200 -
+2025-02-26 19:02:32,906 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:32] "GET /api/years?course_id=1 HTTP/1.1" 200 -
+2025-02-26 19:02:34,026 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:34] "GET /api/semesters?course_id=1&admission_year=2007 HTTP/1.1" 200 -
+2025-02-26 19:02:35,209 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:35] "GET /api/batches?course_id=1&admission_year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-26 19:02:45,771 - root - INFO - Login attempt for email: student@gmail.com, role: student
+2025-02-26 19:02:46,173 - root - INFO - Successful login for user: student@gmail.com, role: student
+2025-02-26 19:02:46,175 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-26 19:02:46,257 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:02:46] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-26 19:21:03,924 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-26 19:21:03,938 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:03] "GET /login HTTP/1.1" 200 -
+2025-02-26 19:21:04,165 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:21:04,167 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:21:13,331 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-02-26 19:21:13,683 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-02-26 19:21:13,685 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-26 19:21:13,753 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:13] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-26 19:21:13,876 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:21:13,904 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:21:31,449 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:31] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-26 19:21:31,586 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:21:31,631 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:21:50,314 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:50] "[32mPOST /add_teacher HTTP/1.1[0m" 302 -
+2025-02-26 19:21:50,331 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:50] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-26 19:21:50,525 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:21:50,533 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:21:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:22:08,342 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:22:08] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-26 19:22:36,578 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:22:36] "GET /render_hod HTTP/1.1" 200 -
+2025-02-26 19:22:36,785 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:22:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:22:36,789 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:22:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:23:03,762 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:03] "[32mPOST /add_hod HTTP/1.1[0m" 302 -
+2025-02-26 19:23:03,778 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:03] "GET /render_hod HTTP/1.1" 200 -
+2025-02-26 19:23:04,006 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:23:04,007 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:23:27,853 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-26 19:23:27,869 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:27] "GET /login HTTP/1.1" 200 -
+2025-02-26 19:23:28,080 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:23:28,081 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:23:42,939 - root - INFO - Login attempt for email: hod@gmail.com, role: hod
+2025-02-26 19:23:43,300 - root - INFO - Successful login for user: hod@gmail.com, role: hod
+2025-02-26 19:23:43,303 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-26 19:23:43,439 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:43] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-26 19:23:43,533 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:23:43,565 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:23:48,093 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:48] "GET /get_batches_years?course_id=1 HTTP/1.1" 200 -
+2025-02-26 19:23:49,326 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:49] "GET /get_semesters?course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-26 19:23:50,267 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:50] "GET /get_batches?course_id=1&year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-26 19:23:51,075 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:51] "GET /get_subjects_course?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-02-26 19:23:52,206 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:52] "GET /get_teachers HTTP/1.1" 200 -
+2025-02-26 19:23:58,401 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:58] "[32mPOST /assign_subject HTTP/1.1[0m" 302 -
+2025-02-26 19:23:58,428 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:58] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-26 19:23:58,574 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:23:58,641 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:23:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:24:02,223 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:02] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-26 19:24:21,639 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:21] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-26 19:24:21,655 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:21] "GET /login HTTP/1.1" 200 -
+2025-02-26 19:24:21,954 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:24:21,958 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:24:43,331 - root - INFO - Login attempt for email: teacher@gmail.com, role: teacher
+2025-02-26 19:24:43,706 - root - INFO - Successful login for user: teacher@gmail.com, role: teacher
+2025-02-26 19:24:43,709 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-26 19:24:43,751 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:43] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-26 19:24:43,917 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:24:43,949 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:24:47,203 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:47] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-26 19:24:47,320 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:24:47,356 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:24:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:25:14,212 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:25:14] "GET /teacher/manage_notes/1/2007/4/1/C993 HTTP/1.1" 200 -
+2025-02-26 19:25:14,330 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:25:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-26 19:25:14,373 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:25:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-26 19:25:35,884 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:25:35] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-02-26 19:25:38,621 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 19:25:38] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-27 13:52:06,188 - app - INFO - Test data already exists
+2025-02-27 13:52:06,321 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 13:52:06,323 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 13:52:06,328 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:52:09,835 - app - INFO - Test data already exists
+2025-02-27 13:52:09,882 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 13:52:09,890 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 13:52:10,093 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 13:52:10,319 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:10] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 13:52:10,633 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 13:52:10,652 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 13:52:23,473 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 13:52:23,591 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:23] "GET /login HTTP/1.1" 200 -
+2025-02-27 13:52:23,739 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 13:52:23,768 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 13:52:25,322 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:25] "GET /api/courses HTTP/1.1" 200 -
+2025-02-27 13:52:26,398 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:26] "GET /api/years?course_id=1 HTTP/1.1" 200 -
+2025-02-27 13:52:27,782 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:27] "GET /api/semesters?course_id=1&admission_year=2007 HTTP/1.1" 200 -
+2025-02-27 13:52:29,490 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:29] "GET /api/batches?course_id=1&admission_year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-27 13:52:50,482 - root - INFO - Login attempt for email: student@gmail.com, role: student
+2025-02-27 13:52:50,876 - root - INFO - Successful login for user: student@gmail.com, role: student
+2025-02-27 13:52:50,879 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 13:52:51,129 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:51] "[35m[1mGET /student/dashboard HTTP/1.1[0m" 500 -
+2025-02-27 13:52:51,350 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:51] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-27 13:52:51,387 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:51] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-27 13:52:51,502 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:51] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=tNZekkzjATl8eJzqIUcA HTTP/1.1" 200 -
+2025-02-27 13:52:51,567 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:52:51] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-27 13:54:36,678 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 13:54:37,211 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:54:45,796 - app - INFO - Test data already exists
+2025-02-27 13:54:45,856 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 13:54:45,857 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 13:54:45,859 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:54:49,471 - app - INFO - Test data already exists
+2025-02-27 13:54:49,512 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 13:54:49,517 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 13:54:49,743 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:54:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 13:54:49,840 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:54:49] "[35m[1mGET /student/dashboard HTTP/1.1[0m" 500 -
+2025-02-27 13:54:50,003 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:54:50] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-27 13:54:50,004 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:54:50] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-27 13:54:50,095 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:54:50] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=IdlkZ318BXkweyqMYEOL HTTP/1.1" 200 -
+2025-02-27 13:57:33,430 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 13:57:36,026 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:58:04,115 - app - INFO - Test data already exists
+2025-02-27 13:58:04,194 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 13:58:04,194 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 13:58:04,199 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:58:07,580 - app - INFO - Test data already exists
+2025-02-27 13:58:07,627 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 13:58:07,633 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 13:58:09,243 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:09] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 13:58:09,436 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:09] "[35m[1mGET /student/dashboard HTTP/1.1[0m" 500 -
+2025-02-27 13:58:09,674 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:09] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-27 13:58:09,683 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:09] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-27 13:58:09,767 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:09] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=1xbZGdYIrzOQ34CKzBTO HTTP/1.1" 200 -
+2025-02-27 13:58:52,420 - app - INFO - Test data already exists
+2025-02-27 13:58:52,492 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 13:58:52,493 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 13:58:52,496 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:58:56,080 - app - INFO - Test data already exists
+2025-02-27 13:58:56,126 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 13:58:56,134 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 13:58:56,326 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 13:58:56,366 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:58:56] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 13:59:54,758 - app - INFO - Test data already exists
+2025-02-27 13:59:54,821 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 13:59:54,821 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 13:59:54,825 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 13:59:58,337 - app - INFO - Test data already exists
+2025-02-27 13:59:58,388 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 13:59:58,396 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 13:59:58,546 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:59:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 13:59:58,619 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:59:58] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 13:59:58,842 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:59:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 13:59:58,843 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 13:59:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:00:05,956 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 14:00:05,979 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:05] "GET /login HTTP/1.1" 200 -
+2025-02-27 14:00:06,251 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:00:06,262 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:00:37,757 - root - INFO - Login attempt for email: teacher@gmail.com, role: teacher
+2025-02-27 14:00:38,127 - root - INFO - Successful login for user: teacher@gmail.com, role: teacher
+2025-02-27 14:00:38,128 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 14:00:38,173 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:38] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 14:00:38,289 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:00:38,305 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:00:40,203 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:40] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:00:40,313 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:00:40,353 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:00:46,367 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:46] "GET /teacher/get_attendance?date=2025-02-27&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 14:00:49,772 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:49] "[32mPOST /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1[0m" 302 -
+2025-02-27 14:00:49,798 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:49] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 14:00:50,021 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:00:50,085 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:00:51,539 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:51] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:00:51,620 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:00:51,658 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:00:56,061 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:00:56] "GET /teacher/get_attendance?date=2025-02-26&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 14:01:00,422 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:00] "GET /teacher/get_attendance?date=2025-02-25&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 14:01:02,961 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:02] "[32mPOST /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1[0m" 302 -
+2025-02-27 14:01:02,987 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:02] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 14:01:03,131 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:03,165 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:08,583 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:08] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:01:08,738 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:08,768 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:13,398 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:13] "GET /teacher/get_attendance?date=2025-02-13&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 14:01:16,119 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:16] "[32mPOST /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1[0m" 302 -
+2025-02-27 14:01:16,143 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:16] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 14:01:16,413 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:16,430 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:17,377 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:17] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:01:17,497 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:17,528 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:21,650 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:21] "GET /teacher/get_attendance?date=2025-02-20&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 14:01:33,607 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:33] "[32mPOST /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1[0m" 302 -
+2025-02-27 14:01:33,630 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:33] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 14:01:33,788 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:33,888 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:35,420 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:35] "GET /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&course_id=1&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:01:35,527 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:35,579 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:41,509 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:41] "GET /teacher/get_attendance?date=2025-02-18&subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 14:01:45,145 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:45] "[32mPOST /teacher/take_attendance?subject_code=C993&batch_id=1&admission_year=2007&semester=4&course_id=1&year=2007 HTTP/1.1[0m" 302 -
+2025-02-27 14:01:45,171 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:45] "GET /teacher/dashboard HTTP/1.1" 200 -
+2025-02-27 14:01:45,310 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:45,436 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:52,899 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 14:01:52,919 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:52] "GET /login HTTP/1.1" 200 -
+2025-02-27 14:01:53,134 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:01:53,174 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:01:55,975 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:55] "GET /api/courses HTTP/1.1" 200 -
+2025-02-27 14:01:57,393 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:01:57] "GET /api/years?course_id=1 HTTP/1.1" 200 -
+2025-02-27 14:02:02,802 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:02] "GET /api/semesters?course_id=1&admission_year=2007 HTTP/1.1" 200 -
+2025-02-27 14:02:03,952 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:03] "GET /api/batches?course_id=1&admission_year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:02:21,831 - root - INFO - Login attempt for email: student@gmail.com, role: student
+2025-02-27 14:02:22,199 - root - INFO - Successful login for user: student@gmail.com, role: student
+2025-02-27 14:02:22,202 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 14:02:22,221 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:22] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:02:22,461 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:02:22,468 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:02:46,143 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 14:02:46,160 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:46] "GET /login HTTP/1.1" 200 -
+2025-02-27 14:02:46,354 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:02:46,403 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:02:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:03:00,762 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:00] "GET /api/courses HTTP/1.1" 200 -
+2025-02-27 14:03:02,170 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:02] "GET /api/years?course_id=1 HTTP/1.1" 200 -
+2025-02-27 14:03:03,132 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:03] "GET /api/semesters?course_id=1&admission_year=2007 HTTP/1.1" 200 -
+2025-02-27 14:03:04,142 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:04] "GET /api/batches?course_id=1&admission_year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-27 14:03:15,159 - root - INFO - Login attempt for email: student@gmail.com, role: student
+2025-02-27 14:03:15,590 - root - INFO - Successful login for user: student@gmail.com, role: student
+2025-02-27 14:03:15,592 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 14:03:15,613 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:15] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:03:15,872 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:03:15,875 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:03:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:04:03,560 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:04:05,370 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:04:13,124 - app - INFO - Test data already exists
+2025-02-27 14:04:13,181 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:04:13,181 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:04:13,185 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:04:16,907 - app - INFO - Test data already exists
+2025-02-27 14:04:16,954 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:04:16,961 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:04:17,129 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:04:17,191 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:17] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:04:17,412 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:04:17,415 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:04:41,881 - app - INFO - Test data already exists
+2025-02-27 14:04:41,953 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:04:41,953 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:04:41,957 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:04:45,686 - app - INFO - Test data already exists
+2025-02-27 14:04:45,734 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:04:45,740 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:04:45,943 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:04:46,017 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:46] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:04:46,222 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:04:46,226 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:04:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:06:08,404 - app - INFO - Test data already exists
+2025-02-27 14:06:08,481 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:06:08,482 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:06:08,485 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:06:11,923 - app - INFO - Test data already exists
+2025-02-27 14:06:11,967 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:06:11,974 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:06:12,116 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:06:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:06:12,181 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:06:12] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:06:12,376 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:06:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:06:12,380 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:06:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:23:02,643 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:23:03,047 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:23:06,824 - app - INFO - Test data already exists
+2025-02-27 14:23:06,868 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:23:06,874 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:24:09,100 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:24:09,734 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:24:15,086 - app - INFO - Test data already exists
+2025-02-27 14:24:15,134 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:24:15,140 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:24:59,430 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:24:59,875 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:25:04,404 - app - INFO - Test data already exists
+2025-02-27 14:25:04,442 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:25:04,448 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:26:06,428 - app - INFO - Test data already exists
+2025-02-27 14:26:06,487 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:26:06,487 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:26:06,491 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:26:10,003 - app - INFO - Test data already exists
+2025-02-27 14:26:10,048 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:26:10,055 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:26:10,224 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:26:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:26:10,408 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:26:10] "[35m[1mGET /student/dashboard HTTP/1.1[0m" 500 -
+2025-02-27 14:26:10,613 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:26:10] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:26:10,635 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:26:10] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-27 14:26:10,718 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:26:10] "GET /student/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=yi4NFhCuNSBlENNAnBkJ HTTP/1.1" 200 -
+2025-02-27 14:26:10,807 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:26:10] "[36mGET /student/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-27 14:27:01,161 - app - INFO - Test data already exists
+2025-02-27 14:27:01,224 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:27:01,225 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:27:01,229 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:27:04,776 - app - INFO - Test data already exists
+2025-02-27 14:27:04,822 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:27:04,829 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:27:05,006 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:27:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:27:05,065 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:27:05] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:27:05,264 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:27:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:27:05,270 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:27:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:31:31,819 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:31:32,196 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:31:35,715 - app - INFO - Test data already exists
+2025-02-27 14:31:35,757 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:31:35,764 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:41:24,183 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:41:25,025 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:42:52,738 - app - INFO - Test data already exists
+2025-02-27 14:42:52,813 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:42:52,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:42:52,817 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:42:56,597 - app - INFO - Test data already exists
+2025-02-27 14:42:56,650 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:42:56,658 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:42:58,876 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:42:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:42:58,962 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:42:58] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:42:59,258 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:42:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:42:59,264 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:42:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:43:01,902 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:43:01] "GET /download_attendance/C993 HTTP/1.1" 200 -
+2025-02-27 14:44:34,334 - app - INFO - Test data already exists
+2025-02-27 14:44:34,419 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:44:34,420 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:44:34,424 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:44:38,481 - app - INFO - Test data already exists
+2025-02-27 14:44:38,647 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:44:38,669 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:44:39,434 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:44:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:44:39,664 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:44:39] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:44:41,182 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:44:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:44:41,273 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:44:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:44:43,114 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:44:43] "GET /download_attendance/C993 HTTP/1.1" 200 -
+2025-02-27 14:47:42,501 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 14:47:43,151 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:47:51,964 - app - INFO - Test data already exists
+2025-02-27 14:47:52,023 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:47:52,030 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:48:19,977 - app - INFO - Test data already exists
+2025-02-27 14:48:20,035 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:48:20,035 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:48:20,039 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:48:23,933 - app - INFO - Test data already exists
+2025-02-27 14:48:23,980 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:48:23,986 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:48:24,154 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:48:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:48:24,214 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:48:24] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:48:24,406 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:48:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:48:24,410 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:48:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:53:39,858 - app - INFO - Test data already exists
+2025-02-27 14:53:39,935 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:53:39,935 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:53:39,940 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:53:43,985 - app - INFO - Test data already exists
+2025-02-27 14:53:44,039 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:53:44,046 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:53:47,907 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:53:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:53:47,990 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:53:47] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:53:48,247 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:53:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:53:48,253 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:53:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 14:57:51,254 - app - INFO - Test data already exists
+2025-02-27 14:57:51,344 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 14:57:51,344 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:57:51,349 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:57:55,075 - app - INFO - Test data already exists
+2025-02-27 14:57:55,125 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:57:55,131 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 14:57:55,327 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:57:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 14:57:55,401 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:57:55] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 14:57:55,600 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:57:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 14:57:55,602 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 14:57:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:00:24,203 - app - INFO - Test data already exists
+2025-02-27 15:00:24,271 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:00:24,272 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:00:24,276 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:00:27,944 - app - INFO - Test data already exists
+2025-02-27 15:00:27,988 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:00:27,995 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:00:28,186 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:00:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:00:28,250 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:00:28] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:00:28,473 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:00:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:00:28,479 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:00:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:03:08,419 - app - INFO - Test data already exists
+2025-02-27 15:03:08,512 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:03:08,513 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:03:14,371 - app - INFO - Test data already exists
+2025-02-27 15:03:14,431 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:03:14,432 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:03:14,437 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:03:18,222 - app - INFO - Test data already exists
+2025-02-27 15:03:18,270 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:03:18,276 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:03:18,487 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:03:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:03:18,558 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:03:18] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:03:18,749 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:03:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:03:18,756 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:03:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:04:07,609 - app - INFO - Test data already exists
+2025-02-27 15:04:07,675 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:04:07,675 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:04:07,680 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:04:11,348 - app - INFO - Test data already exists
+2025-02-27 15:04:11,399 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:04:11,406 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:04:11,616 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:11] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:04:11,697 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:11] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:04:11,951 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:04:11,952 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:04:28,112 - app - INFO - Test data already exists
+2025-02-27 15:04:28,202 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:04:28,203 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:04:28,206 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:04:31,877 - app - INFO - Test data already exists
+2025-02-27 15:04:31,924 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:04:31,930 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:04:32,152 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:04:32,225 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:32] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:04:32,387 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:04:32,396 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:04:38,973 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:38] "[32mGET /teacher/dashboard HTTP/1.1[0m" 302 -
+2025-02-27 15:04:39,055 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:04:39] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:05:45,726 - app - INFO - Test data already exists
+2025-02-27 15:05:45,808 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:05:45,808 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:05:45,813 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:05:49,673 - app - INFO - Test data already exists
+2025-02-27 15:05:49,723 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:05:49,730 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:05:49,947 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:05:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:05:50,013 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:05:50] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:05:50,221 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:05:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:05:50,254 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:05:50] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-02-27 15:12:34,815 - app - INFO - Test data already exists
+2025-02-27 15:12:34,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:12:34,882 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:12:34,886 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:12:38,765 - app - INFO - Test data already exists
+2025-02-27 15:12:38,815 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:12:38,823 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:12:39,031 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:12:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:12:39,101 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:12:39] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 15:12:39,309 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:12:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:12:39,312 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:12:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:13:03,015 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 15:13:03,039 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:03] "GET /login HTTP/1.1" 200 -
+2025-02-27 15:13:03,189 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:13:03,264 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:13:14,828 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-02-27 15:13:15,273 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-02-27 15:13:15,275 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 15:13:15,484 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:15] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:13:15,600 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:13:15,602 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:13:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:16:50,885 - app - INFO - Test data already exists
+2025-02-27 15:16:50,958 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:16:50,958 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:16:50,963 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:16:54,795 - app - INFO - Test data already exists
+2025-02-27 15:16:54,845 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:16:54,852 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:16:55,067 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:16:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:16:55,155 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:16:55] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:16:55,420 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:16:55] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:16:55,448 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:16:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:17:08,008 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:17:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 15:17:08,030 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:17:08] "GET /login HTTP/1.1" 200 -
+2025-02-27 15:17:08,215 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:17:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:17:08,223 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:17:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:17:58,316 - app - INFO - Test data already exists
+2025-02-27 15:17:58,381 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:17:58,381 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:17:58,385 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:18:02,281 - app - INFO - Test data already exists
+2025-02-27 15:18:02,332 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:18:02,338 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:18:02,537 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:18:02,576 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:02] "GET /login HTTP/1.1" 200 -
+2025-02-27 15:18:02,791 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:18:02,814 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:18:12,669 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-02-27 15:18:13,054 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-02-27 15:18:13,059 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 15:18:13,138 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:13] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:18:13,275 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:18:13,293 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:18:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:19:27,914 - app - INFO - Test data already exists
+2025-02-27 15:19:27,990 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:19:27,990 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:19:27,994 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:19:31,955 - app - INFO - Test data already exists
+2025-02-27 15:19:32,007 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:19:32,014 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:19:32,215 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:19:32,282 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:32] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:19:32,503 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:32] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:19:32,509 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:19:57,244 - app - INFO - Test data already exists
+2025-02-27 15:19:57,308 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:19:57,309 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:19:57,313 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:19:58,654 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:19:58,699 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:58] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:19:58,836 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:58] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:19:58,836 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:19:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:20:01,203 - app - INFO - Test data already exists
+2025-02-27 15:20:01,254 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:20:01,261 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:20:33,383 - app - INFO - Test data already exists
+2025-02-27 15:20:33,456 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:20:33,456 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:20:33,460 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:20:37,278 - app - INFO - Test data already exists
+2025-02-27 15:20:37,326 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:20:37,334 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:20:37,555 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:20:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:20:37,684 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:20:37] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:20:37,921 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:20:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-27 15:20:37,930 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:20:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:21:08,301 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:21:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 15:21:08,330 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:21:08] "GET /login HTTP/1.1" 200 -
+2025-02-27 15:21:08,540 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:21:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:21:08,544 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:21:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:24:42,088 - app - INFO - Test data already exists
+2025-02-27 15:24:42,158 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:24:42,173 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:24:42,178 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:24:46,068 - app - INFO - Test data already exists
+2025-02-27 15:24:46,119 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:24:46,126 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:24:46,331 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:24:46,371 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:46] "GET /login HTTP/1.1" 200 -
+2025-02-27 15:24:46,664 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:24:46,687 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:24:54,820 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-02-27 15:24:55,213 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-02-27 15:24:55,217 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 15:24:55,312 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:55] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:24:55,422 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:24:55,449 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:24:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:31:44,969 - app - INFO - Test data already exists
+2025-02-27 15:31:45,044 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:31:45,044 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:31:45,051 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:31:48,827 - app - INFO - Test data already exists
+2025-02-27 15:31:48,877 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:31:48,883 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:31:49,091 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:31:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:31:49,215 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:31:49] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:31:49,441 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:31:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:31:49,445 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:31:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:33:04,908 - app - INFO - Test data already exists
+2025-02-27 15:33:04,991 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:33:04,991 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:33:04,996 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:33:08,717 - app - INFO - Test data already exists
+2025-02-27 15:33:08,764 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:33:08,772 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:33:08,992 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:33:09,119 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:09] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:33:09,377 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:33:09,403 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:33:28,339 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:28] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 15:33:28,462 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:33:28,494 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:33:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:37:05,930 - app - INFO - Test data already exists
+2025-02-27 15:37:06,008 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:37:06,009 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:37:06,013 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:37:09,900 - app - INFO - Test data already exists
+2025-02-27 15:37:09,943 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:37:09,951 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:37:10,119 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:37:10,253 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:10] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+2025-02-27 15:37:10,487 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:10] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-27 15:37:10,518 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:10] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-27 15:37:10,655 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:10] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=d9KiurECfOjy0p0ur5Me HTTP/1.1" 200 -
+2025-02-27 15:37:10,760 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:10] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-27 15:37:25,184 - app - INFO - Test data already exists
+2025-02-27 15:37:25,257 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:37:25,258 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:37:25,262 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:37:29,084 - app - INFO - Test data already exists
+2025-02-27 15:37:29,134 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:37:29,141 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:37:29,333 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:37:29,433 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:29] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:37:29,712 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:37:29,724 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:37:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:40:23,085 - app - INFO - Test data already exists
+2025-02-27 15:40:23,159 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:40:23,160 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:40:23,164 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:40:27,057 - app - INFO - Test data already exists
+2025-02-27 15:40:27,112 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:40:27,118 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:40:27,311 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:40:27,395 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:27] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:40:27,666 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:40:27,678 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:40:27,690 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:27] "GET /static/css/admin-dashboard.css HTTP/1.1" 200 -
+2025-02-27 15:40:40,228 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:40] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 15:40:40,335 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:40:40,367 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:40:43,496 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:43] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 15:40:43,621 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:40:43,661 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:40:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:43:14,985 - app - INFO - Test data already exists
+2025-02-27 15:43:15,075 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:43:15,075 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:43:15,080 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:43:18,872 - app - INFO - Test data already exists
+2025-02-27 15:43:18,922 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:43:18,930 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:43:19,150 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:43:19,248 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:19] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:43:19,511 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:43:19,521 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:43:19,523 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:19] "GET /static/css/admin-dashboard.css HTTP/1.1" 200 -
+2025-02-27 15:43:21,288 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:21] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 15:43:21,393 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:43:21,429 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:43:21,429 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:21] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 15:43:39,409 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:39] "GET /admin/manage_teachers HTTP/1.1" 200 -
+2025-02-27 15:43:39,500 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:43:39,535 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:43:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:53:45,506 - app - INFO - Test data already exists
+2025-02-27 15:53:45,570 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:53:45,570 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:53:45,574 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:53:49,212 - app - INFO - Test data already exists
+2025-02-27 15:53:49,259 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:53:49,266 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:53:49,435 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:53:49,529 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:49] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:53:49,783 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:53:49,817 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:49] "GET /static/css/admin-dashboard.css HTTP/1.1" 200 -
+2025-02-27 15:53:49,821 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:53:51,790 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:51] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 15:53:51,948 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:53:51,981 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:53:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:56:20,052 - app - INFO - Test data already exists
+2025-02-27 15:56:20,113 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 15:56:20,114 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 15:56:20,118 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 15:56:23,735 - app - INFO - Test data already exists
+2025-02-27 15:56:23,783 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 15:56:23,791 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 15:56:23,991 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:23] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 15:56:24,071 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:24] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 15:56:24,297 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:56:24,301 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:56:24,308 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:24] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 15:56:25,278 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:25] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 15:56:25,397 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 15:56:25,431 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:56:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 15:58:58,562 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 15:58:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:01:53,141 - app - INFO - Test data already exists
+2025-02-27 16:01:53,213 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:01:53,214 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:01:53,217 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:01:56,653 - app - INFO - Test data already exists
+2025-02-27 16:01:56,694 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:01:56,700 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:01:56,869 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:01:56,949 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:56] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:01:57,232 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:01:57,240 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:01:57,243 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:57] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:01:58,388 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:58] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 16:01:58,520 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:01:58,552 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:01:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:02:09,390 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:09] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 16:02:09,555 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:02:09,586 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:02:15,505 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:15] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 16:02:15,636 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:02:15,672 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:02:42,648 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:42] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:02:42,761 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:02:42,792 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:02:52,061 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:52] "GET /render_teacher HTTP/1.1" 200 -
+2025-02-27 16:02:52,248 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:02:52,254 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:02:56,258 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:02:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:07:32,829 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:07:32] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:07:32,956 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:07:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:07:33,010 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:07:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:08:52,226 - app - INFO - Test data already exists
+2025-02-27 16:08:52,303 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:08:52,303 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:08:52,309 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:08:55,912 - app - INFO - Test data already exists
+2025-02-27 16:08:55,948 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:08:55,954 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:08:56,105 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:08:56,190 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:56] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:08:56,398 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:08:56,424 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:08:56,428 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:56] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:08:58,260 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:58] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:08:58,375 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:08:58,414 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:08:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:12:37,119 - app - INFO - Test data already exists
+2025-02-27 16:12:37,185 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:12:37,185 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:12:37,190 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:12:40,677 - app - INFO - Test data already exists
+2025-02-27 16:12:40,721 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:12:40,726 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:12:40,898 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:12:40,977 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:40] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:12:41,185 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:41] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:12:41,196 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:12:41,199 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:12:42,684 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:42] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:12:42,805 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:12:42,838 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:12:48,047 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:12:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:02,193 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:02] "GET /admin/manage_hods HTTP/1.1" 200 -
+2025-02-27 16:15:02,383 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:02,403 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:15:04,955 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:04] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:15:27,408 - app - INFO - Test data already exists
+2025-02-27 16:15:27,476 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:15:27,476 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:15:27,481 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:15:30,991 - app - INFO - Test data already exists
+2025-02-27 16:15:31,027 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:15:31,033 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:15:31,198 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:15:31,298 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:31] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:15:31,525 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:31] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:31,529 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:31,540 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:15:32,858 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:32] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:15:33,006 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:33,049 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:15:45,838 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:45] "GET /admin/manage_hods HTTP/1.1" 200 -
+2025-02-27 16:15:45,943 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:45,974 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:15:52,964 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:52] "GET /admin/manage_hods HTTP/1.1" 200 -
+2025-02-27 16:15:53,114 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:15:53,124 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:15:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:18:36,976 - app - INFO - Test data already exists
+2025-02-27 16:18:37,035 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:18:37,035 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:18:37,040 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:18:40,624 - app - INFO - Test data already exists
+2025-02-27 16:18:40,667 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:18:40,674 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:18:40,858 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:18:40,949 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:40] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:18:41,183 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:18:41,189 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:41] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:18:41,207 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:18:42,519 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:42] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:18:42,641 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:18:42,664 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:18:44,109 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:44] "GET /admin/manage_hods HTTP/1.1" 200 -
+2025-02-27 16:18:44,231 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:18:44,264 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:18:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:19:28,077 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:19:28] "GET /render_student HTTP/1.1" 200 -
+2025-02-27 16:19:28,184 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:19:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:19:28,229 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:19:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:21:57,199 - app - INFO - Test data already exists
+2025-02-27 16:21:57,265 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:21:57,266 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:21:57,270 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:22:00,764 - app - INFO - Test data already exists
+2025-02-27 16:22:00,808 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:22:00,815 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:22:00,995 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:00] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:22:01,090 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:01] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:22:01,336 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:01] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:22:01,343 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:22:01,345 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:22:03,131 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:03] "GET /render_student HTTP/1.1" 200 -
+2025-02-27 16:22:03,257 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:22:03,310 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:22:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:23:58,782 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:23:58] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-02-27 16:23:58,913 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:23:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:23:58,927 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:23:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:29:01,786 - app - INFO - Test data already exists
+2025-02-27 16:29:01,863 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:29:01,863 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:29:01,868 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:29:05,499 - app - INFO - Test data already exists
+2025-02-27 16:29:05,542 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:29:05,551 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:29:05,737 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:29:05,826 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:05] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:29:06,037 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:29:06,048 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:29:06,050 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:06] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:29:08,818 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:08] "GET /render_hod HTTP/1.1" 200 -
+2025-02-27 16:29:08,945 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:29:08,973 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:29:11,883 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:11] "GET /render_student HTTP/1.1" 200 -
+2025-02-27 16:29:12,012 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:29:12,039 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:29:13,090 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:13] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-02-27 16:29:13,211 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:29:13,274 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:29:48,931 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:48] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-02-27 16:29:49,081 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:29:49,099 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:29:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:31:34,120 - app - INFO - Test data already exists
+2025-02-27 16:31:34,194 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:31:34,194 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:31:34,198 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:31:37,679 - app - INFO - Test data already exists
+2025-02-27 16:31:37,716 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:31:37,722 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:31:37,896 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:31:37,993 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:37] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:31:38,245 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:38] "[36mGET /static/css/admin-dashboard.css HTTP/1.1[0m" 304 -
+2025-02-27 16:31:38,259 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:31:38,261 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:31:40,925 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:40] "GET /render_student HTTP/1.1" 200 -
+2025-02-27 16:31:41,035 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:31:41,059 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:31:43,008 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:43] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-02-27 16:31:43,135 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:31:43,201 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:31:45,301 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:45] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-02-27 16:31:45,473 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:31:45,509 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:31:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:32:38,666 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:38] "[32mPOST /admin/update_student/student_batch_1_2007_4_1/1 HTTP/1.1[0m" 302 -
+2025-02-27 16:32:38,686 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:38] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-02-27 16:32:38,868 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:32:38,872 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:32:45,641 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:45] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-02-27 16:32:47,550 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:47] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-02-27 16:32:48,360 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:48] "GET /render_student HTTP/1.1" 200 -
+2025-02-27 16:32:49,736 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:32:49] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-02-27 16:33:35,606 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:33:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 16:33:35,630 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:33:35] "GET /login HTTP/1.1" 200 -
+2025-02-27 16:33:35,856 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:33:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:33:35,858 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:33:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:34:42,906 - root - INFO - Login attempt for email: hod@gmail.com, role: hod
+2025-02-27 16:34:43,198 - root - INFO - Successful login for user: hod@gmail.com, role: hod
+2025-02-27 16:34:43,199 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:34:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 16:34:43,388 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:34:43] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-27 16:34:43,548 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:34:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:34:43,560 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:34:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:37:12,767 - app - INFO - Test data already exists
+2025-02-27 16:37:12,827 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:37:12,828 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:37:12,831 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:37:16,272 - app - INFO - Test data already exists
+2025-02-27 16:37:16,313 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:37:16,319 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:37:16,517 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:37:16,588 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:16] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-27 16:37:16,804 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:37:16,804 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:37:51,954 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:51] "GET /get_batches_years?course_id=1 HTTP/1.1" 200 -
+2025-02-27 16:37:53,284 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:53] "GET /get_semesters?course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 16:37:54,389 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:54] "GET /get_batches?course_id=1&year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-27 16:37:55,624 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:37:55] "GET /get_subjects_course?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-02-27 16:39:49,437 - app - INFO - Test data already exists
+2025-02-27 16:39:49,492 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 16:39:49,492 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 16:39:49,494 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 16:39:53,106 - app - INFO - Test data already exists
+2025-02-27 16:39:53,150 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 16:39:53,156 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 16:39:53,339 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:39:53] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 16:39:53,463 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:39:53] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-02-27 16:39:53,674 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:39:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:39:53,677 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:39:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:39:59,645 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:39:59] "GET /get_batches_years?course_id=1 HTTP/1.1" 200 -
+2025-02-27 16:40:00,926 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:00] "GET /get_semesters?course_id=1&year=2007 HTTP/1.1" 200 -
+2025-02-27 16:40:48,365 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-27 16:40:48,393 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:48] "GET /login HTTP/1.1" 200 -
+2025-02-27 16:40:48,657 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:40:48,663 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:40:50,716 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:50] "GET /api/courses HTTP/1.1" 200 -
+2025-02-27 16:40:51,702 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:51] "GET /api/years?course_id=1 HTTP/1.1" 200 -
+2025-02-27 16:40:52,896 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:52] "GET /api/semesters?course_id=1&admission_year=2007 HTTP/1.1" 200 -
+2025-02-27 16:40:54,578 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:40:54] "GET /api/batches?course_id=1&admission_year=2007&semester=4 HTTP/1.1" 200 -
+2025-02-27 16:41:01,712 - root - INFO - Login attempt for email: student@gmail.com, role: student
+2025-02-27 16:41:02,012 - root - INFO - Successful login for user: student@gmail.com, role: student
+2025-02-27 16:41:02,014 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:41:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-27 16:41:02,058 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:41:02] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 16:41:02,245 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:41:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 16:41:02,270 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:41:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 16:41:13,259 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 16:41:13] "GET /download_attendance/C993 HTTP/1.1" 200 -
+2025-02-27 17:19:09,268 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:19:09,676 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:19:13,606 - app - INFO - Test data already exists
+2025-02-27 17:19:13,659 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:19:13,665 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:20:36,770 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:20:37,122 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:20:40,801 - app - INFO - Test data already exists
+2025-02-27 17:20:40,847 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:20:40,854 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:21:10,278 - app - INFO - Test data already exists
+2025-02-27 17:21:10,347 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:21:10,348 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:21:10,351 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:21:13,833 - app - INFO - Test data already exists
+2025-02-27 17:21:13,876 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:21:13,883 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:21:14,066 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:14] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:21:14,142 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:14] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:21:14,361 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:21:14,368 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:21:16,285 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:16] "[35m[1mGET /student/view_notes/C993 HTTP/1.1[0m" 500 -
+2025-02-27 17:21:16,416 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:16] "GET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-27 17:21:16,558 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:16] "GET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-27 17:21:16,652 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:16] "GET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=console.png&s=auvK6POczh1iFpGLj3xZ HTTP/1.1" 200 -
+2025-02-27 17:21:16,711 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:21:16] "GET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-27 17:22:41,873 - app - INFO - Test data already exists
+2025-02-27 17:22:41,933 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:22:41,933 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:22:41,938 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:22:45,810 - app - INFO - Test data already exists
+2025-02-27 17:22:45,860 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:22:45,866 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:23:56,722 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:23:57,131 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:24:02,624 - app - INFO - Test data already exists
+2025-02-27 17:24:02,700 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:24:02,735 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:24:26,722 - app - INFO - Test data already exists
+2025-02-27 17:24:26,780 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:24:26,781 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:24:26,785 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:24:30,222 - app - INFO - Test data already exists
+2025-02-27 17:24:30,259 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:24:30,265 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:24:30,659 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:24:30,774 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:30] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:24:30,983 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:24:30,989 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:24:32,571 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:32] "[35m[1mGET /student/view_notes/C993 HTTP/1.1[0m" 500 -
+2025-02-27 17:24:32,688 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:32] "[36mGET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:24:32,728 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:32] "[36mGET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-27 17:24:32,883 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:24:32] "GET /student/view_notes/C993?__debugger__=yes&cmd=resource&f=console.png&s=7zpcZ0RbGjqXXW2u4ZoU HTTP/1.1" 200 -
+2025-02-27 17:25:15,210 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:25:17,981 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:25:21,780 - app - INFO - Test data already exists
+2025-02-27 17:25:21,834 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:25:21,843 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:25:22,499 - app - INFO - Test data already exists
+2025-02-27 17:25:22,558 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:25:22,559 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:25:22,563 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:25:24,045 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:25:24,120 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:24] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:25:24,420 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:25:24,439 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:25:25,614 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:25] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:25:25,740 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:25:25,778 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:25:26,309 - app - INFO - Test data already exists
+2025-02-27 17:25:26,356 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:25:26,362 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:25:35,192 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:25:35] "[33mGET /student/download_note_student/C993/ HTTP/1.1[0m" 404 -
+2025-02-27 17:26:49,724 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:26:50,469 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:26:50,788 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:27:00,424 - app - INFO - Test data already exists
+2025-02-27 17:27:00,493 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:27:00,493 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:27:00,497 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:27:04,013 - app - INFO - Test data already exists
+2025-02-27 17:27:04,056 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:27:04,062 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:27:04,233 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:27:04,302 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:04] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:27:04,588 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:27:04,599 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:27:06,475 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:06] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:27:06,582 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:27:06,617 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:27:41,287 - app - INFO - Test data already exists
+2025-02-27 17:27:41,353 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:27:41,354 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:27:41,358 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:27:42,778 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:27:42,835 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:42] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:27:43,060 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:27:43,067 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:27:44,600 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:44] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:27:44,728 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:27:44,761 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:27:45,027 - app - INFO - Test data already exists
+2025-02-27 17:27:45,074 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:27:45,081 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:27:46,067 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:27:46] "GET /student/download_note_student/C993/Experience-Certificate-123_1740562974.pdf HTTP/1.1" 200 -
+2025-02-27 17:30:31,273 - app - INFO - Test data already exists
+2025-02-27 17:30:31,332 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:30:31,333 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:30:31,337 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:30:34,842 - app - INFO - Test data already exists
+2025-02-27 17:30:34,883 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:30:34,889 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:30:35,077 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:30:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:30:35,182 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:30:35] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:30:35,422 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:30:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:30:35,423 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:30:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:34:50,605 - app - INFO - Test data already exists
+2025-02-27 17:34:50,671 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:34:50,671 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:34:50,677 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:34:54,154 - app - INFO - Test data already exists
+2025-02-27 17:34:54,194 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:34:54,201 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:34:54,348 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:34:54] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:34:54,424 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:34:54] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:34:54,623 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:34:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:34:54,625 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:34:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:35:13,702 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:35:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:35:51,315 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:35:51] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:35:51,469 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:35:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:35:51,513 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:35:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:37:40,815 - app - INFO - Test data already exists
+2025-02-27 17:37:40,873 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:37:40,873 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:37:40,877 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:37:44,294 - app - INFO - Test data already exists
+2025-02-27 17:37:44,340 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:37:44,346 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:37:44,533 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:37:44,618 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:44] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:37:44,811 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:37:44,813 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:37:46,787 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:46] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:37:46,910 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:37:46,945 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:37:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:38:30,561 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:38:30] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:38:35,591 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:38:35] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:38:35,748 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:38:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:38:35,786 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:38:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:40:41,024 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:40:41] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:40:43,768 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:40:43] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:40:43,889 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:40:43,943 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:40:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:48:47,300 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-02-27 17:48:47,594 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:48:51,380 - app - INFO - Test data already exists
+2025-02-27 17:48:51,425 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:48:51,432 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:49:19,872 - app - INFO - Test data already exists
+2025-02-27 17:49:19,945 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-02-27 17:49:19,946 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 17:49:19,950 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 17:49:23,406 - app - INFO - Test data already exists
+2025-02-27 17:49:23,450 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 17:49:23,456 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-02-27 17:49:23,627 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:23] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-27 17:49:23,709 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:23] "GET /student/dashboard HTTP/1.1" 200 -
+2025-02-27 17:49:23,909 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:49:23,912 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:49:25,428 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:25] "GET /student/view_notes/C993 HTTP/1.1" 200 -
+2025-02-27 17:49:25,574 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:49:25,632 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-27 17:49:40,190 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:49:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-27 17:51:14,235 - werkzeug - INFO - 127.0.0.1 - - [27/Feb/2025 17:51:14] "GET /student/dashboard HTTP/1.1" 200 -

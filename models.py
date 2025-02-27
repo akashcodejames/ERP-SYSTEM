@@ -100,6 +100,26 @@ class Course(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     is_active = db.Column(db.Boolean, default=True)
 
+
+class BatchTable(db.Model):
+    __tablename__ = 'batch_tables'
+
+    id = db.Column(db.Integer, primary_key=True)
+    table_name = db.Column(db.String(100), unique=True, nullable=False)
+    course_id = db.Column(db.Integer, db.ForeignKey('courses.id'), nullable=False)
+    course_name = db.Column(db.String(100), nullable=False)
+    course_code = db.Column(db.String(20), nullable=False)  # Added course code
+    admission_year = db.Column(db.Integer, nullable=False)
+    semester = db.Column(db.Integer, nullable=False)
+    batch_id = db.Column(db.Integer, nullable=False)
+    created_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
+
+    # Relationship with Course model
+    course = db.relationship('Course', backref=db.backref('batch_tables', lazy=True))
+
+    def __repr__(self):
+        return f'<BatchTable {self.table_name}>'
+
 class CourseSubject(db.Model):
     __tablename__ = 'course_subjects'
 

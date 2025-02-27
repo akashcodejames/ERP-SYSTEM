@@ -3,197 +3,164 @@
 {% block title %}Admin Dashboard{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <!-- Admin Dashboard Title -->
-    <div class="text-center mb-4">
-        <h2 class="text-primary fw-bold"><i class="fas fa-user-shield"></i> Admin Dashboard</h2>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin-dashboard.css') }}">
+
+
+<div class="dashboard-container">
+    <div class="text-center mb-5">
+        <h2 class="dashboard-title text-center"><i class="fas fa-user-shield me-2"></i>Admin Dashboard</h2>
     </div>
 
     <!-- Top Navigation Buttons -->
-    <div class="row mb-4">
-        <div class="col-md-4">
-            <a href="{{ url_for('auth.database_management') }}" class="btn btn-primary w-100 shadow">
-                <i class="fas fa-database"></i> Database Management
-            </a>
-        </div>
-        <div class="col-md-4">
-            <a href="{{ url_for('auth.render_teacher') }}" class="btn btn-success w-100 shadow">
-                <i class="fas fa-chalkboard-teacher"></i> Manage & Add Teachers
-            </a>
-        </div>
-        <div class="col-md-4">
-            <a href="{{ url_for('auth.render_hod') }}" class="btn btn-info w-100 shadow">
-                <i class="fas fa-user-tie"></i> Manage & Add HOD
-            </a>
-        </div>
-<!--            <div class="row mb-4">-->
-        <div class="col-md-4 mt-3">
-            <a href="{{ url_for('auth.render_student') }}" class="btn btn-warning w-100 shadow">
-                <i class="fas fa-user-plus"></i> Manage & Add Students
-            </a>
-        </div>
+    <div class="nav-grid mb-5">
+        <a href="{{ url_for('auth.database_management') }}" class="btn btn-primary btn-custom">
+            <i class="fas fa-database"></i> Database Management
+        </a>
+        <a href="{{ url_for('auth.render_teacher') }}" class="btn btn-success btn-custom">
+            <i class="fas fa-chalkboard-teacher"></i> Manage Teachers
+        </a>
+        <a href="{{ url_for('auth.render_hod') }}" class="btn btn-info btn-custom">
+            <i class="fas fa-user-tie"></i> Manage HOD
+        </a>
+        <a href="{{ url_for('auth.render_student') }}" class="btn btn-warning btn-custom">
+            <i class="fas fa-user-graduate"></i> Manage Students
+        </a>
     </div>
 
-    <div class="row">
+    <h3 class="section-title mb-4"><i class="fas fa-cogs me-2"></i>Management Sections</h3>
+
+    <div class="row g-4">
+        <!-- Course Management -->
+        <div class="col-lg-6">
+            <div class="card card-custom h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="fas fa-book"></i> Course Management</h5>
+                    <form method="POST" action="{{ url_for('auth.add_course') }}">
+                        <div class="mb-3">
+                            <label class="form-label">Course Code</label>
+                            <input type="text" class="form-control" name="course_code" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Course Name</label>
+                            <input type="text" class="form-control" name="course_name" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-custom w-100">
+                            <i class="fas fa-plus-circle"></i> Add Course
+                        </button>
+                    </form>
+
+                    <div class="mt-4">
+                        <h6 class="fw-bold mb-3">Existing Courses</h6>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for course in courses %}
+                                <tr>
+                                    <td>{{ course.code }}</td>
+                                    <td>{{ course.name }}</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subject Management -->
+        <div class="col-lg-6">
+            <div class="card card-custom h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-success"><i class="fas fa-book-open"></i> Subject Management</h5>
+                    <form method="POST" action="{{ url_for('auth.add_course_subject') }}">
+                        <div class="mb-3">
+                            <label class="form-label">Course</label>
+                            <select class="form-control" name="course_id" required>
+                                <option value="">Select Course</option>
+                                {% for course in courses %}
+                                <option value="{{ course.id }}">{{ course.code }} - {{ course.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject Code</label>
+                            <input type="text" class="form-control" name="subject_code" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject Name</label>
+                            <input type="text" class="form-control" name="subject_name" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-custom w-100">
+                            <i class="fas fa-plus-circle"></i> Add Subject
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Batch Management -->
         <div class="col-12">
-            <h3 class="fw-bold text-dark mb-3"><i class="fas fa-cogs"></i> Management Sections</h3>
-
-            <div class="row mt-4">
-                <!-- Course Management -->
-                <div class="col-md-6">
-                    <div class="card shadow-lg border-0">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary"><i class="fas fa-book"></i> Course Management</h5>
-                            <form method="POST" action="{{ url_for('auth.add_course') }}">
-                                <div class="mb-3">
-                                    <label for="course_code" class="form-label fw-bold">Course Code</label>
-                                    <input type="text" class="form-control" id="course_code" name="course_code"
-                                           required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="course_name" class="form-label fw-bold">Course Name</label>
-                                    <input type="text" class="form-control" id="course_name" name="course_name"
-                                           required>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100 shadow">
-                                    <i class="fas fa-plus-circle"></i> Add Course
-                                </button>
-                            </form>
-
-                            <div class="mt-4">
-                                <h6 class="fw-bold">Existing Courses</h6>
-                                <div class="table-responsive">
-                                    <table class="table table-bordered">
-                                        <thead class="table-dark">
-                                        <tr>
-                                            <th>Code</th>
-                                            <th>Name</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for course in courses %}
-                                        <tr>
-                                            <td>{{ course.code }}</td>
-                                            <td>{{ course.name }}</td>
-                                        </tr>
-                                        {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title text-danger"><i class="fas fa-users"></i> Student Batch Management</h5>
+                    <form method="POST" action="{{ url_for('auth.create_student_batch') }}">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Course</label>
+                                <select class="form-control" name="course_id" required>
+                                    <option value="">Select Course</option>
+                                    {% for course in courses %}
+                                    <option value="{{ course.id }}">{{ course.code }} - {{ course.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Batch Year</label>
+                                <select class="form-control" name="batch_year" required>
+                                    <option value="">Select Batch Year</option>
+                                    {% for year in range(2000, 2101) %}
+                                    <option value="{{ year }}">{{ year }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Semester</label>
+                                <select class="form-control" name="semester" required>
+                                    <option value="">Select Semester</option>
+                                    {% for sem in range(1, 9) %}
+                                    <option value="{{ sem }}">{{ sem }} Semester</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Batch ID</label>
+                                <select class="form-control" name="batch_id" required>
+                                    <option value="">Select Batch ID</option>
+                                    {% for batch in range(1, 6) %}
+                                    <option value="{{ batch }}">{{ batch }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
                         </div>
-                    </div>
+                        <button type="submit" class="btn btn-danger btn-custom w-100">
+                            <i class="fas fa-plus-circle"></i> Create Batch
+                        </button>
+                    </form>
                 </div>
-                <!-- Subject Management -->
-                <div class="col-md-6">
-                    <div class="card shadow-lg border-0">
-                        <div class="card-body">
-                            <h5 class="card-title text-success"><i class="fas fa-book-open"></i> Subject Management</h5>
-                            <form method="POST" action="{{ url_for('auth.add_course_subject') }}">
-                                <div class="mb-3">
-                                    <label for="subject_course" class="form-label fw-bold">Course</label>
-                                    <select class="form-control" id="subject_course" name="course_id" required>
-                                        <option value="">Select Course</option>
-                                        {% for course in courses %}
-                                        <option value="{{ course.id }}">{{ course.code }} - {{ course.name }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject_year" class="form-label fw-bold">Batch Year</label>
-                                    <select class="form-control" id="subject_year" name="year" required>
-                                        <option value="">Select Batch Year</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject_semester" class="form-label fw-bold">Semester</label>
-                                    <select class="form-control" id="subject_semester" name="semester" required>
-                                        <option value="">Select Semester</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject_batch" class="form-label fw-bold">Batch ID</label>
-                                    <select class="form-control" id="subject_batch" name="batch_id" required>
-                                        <option value="">Select Batch ID</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject_code" class="form-label fw-bold">Subject Code</label>
-                                    <input type="text" class="form-control" id="subject_code" name="subject_code"
-                                           required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject_name" class="form-label fw-bold">Subject Name</label>
-                                    <input type="text" class="form-control" id="subject_name" name="subject_name"
-                                           required>
-                                </div>
-                                <button type="submit" class="btn btn-success w-100 shadow">
-                                    <i class="fas fa-plus-circle"></i> Add Subject
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Student Batch Management (Batch ID Added) -->
-                <div class="col-md-6 mt-4">
-                    <div class="card shadow-lg border-0">
-                        <div class="card-body">
-                            <h5 class="card-title text-danger"><i class="fas fa-users"></i> Student Batch Management
-                            </h5>
-                            <form method="POST" action="{{ url_for('auth.create_student_batch') }}">
-                                <div class="mb-3">
-                                    <label for="batch_course" class="form-label fw-bold">Course</label>
-                                    <select class="form-control" id="batch_course" name="course_id" required>
-                                        <option value="">Select Course</option>
-                                        {% for course in courses %}
-                                        <option value="{{ course.id }}">{{ course.code }} - {{ course.name }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                                <!-- Batch Year -->
-                                <div class="mb-3">
-                                    <label for="batch_year" class="form-label fw-bold">Batch Year</label>
-                                    <select class="form-control" id="batch_year" name="batch_year" required>
-                                        <option value="" selected disabled>Select Batch Year</option>
-                                        {% for year in range(2000, 2101) %}
-                                        <option value="{{ year }}">{{ year }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-
-                                <!-- Semester -->
-                                <div class="mb-3">
-                                    <label for="semester" class="form-label fw-bold">Semester</label>
-                                    <select class="form-control" id="semester" name="semester" required>
-                                        <option value="" selected disabled>Select Semester</option>
-                                        {% for sem in range(1, 9) %}
-                                        <option value="{{ sem }}">{{ sem }} Semester</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-
-                                <!-- Batch ID -->
-                                <div class="mb-3">
-                                    <label for="batch_id" class="form-label fw-bold">Batch ID</label>
-                                    <select class="form-control" id="batch_id" name="batch_id" required>
-                                        <option value="" selected disabled>Select Batch ID</option>
-                                        {% for batch in range(1, 6) %}
-                                        <option value="{{ batch }}">{{ batch }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-danger w-100 shadow">
-                                    <i class="fas fa-plus-circle"></i> Create Batch
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-            </div> <!-- Row End -->
+            </div>
         </div>
     </div>
 </div>
+
+
+
 
 <script>
 
