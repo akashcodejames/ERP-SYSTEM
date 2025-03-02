@@ -62,6 +62,8 @@ with app.app_context():
     from auth import bp as auth_bp
 
     app.register_blueprint(auth_bp)
+    from timetable import timetable_bp as timetable_bp
+    app.register_blueprint(timetable_bp, url_prefix='/timetable')
 
     # Create database tables
     db.create_all()

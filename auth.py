@@ -1414,6 +1414,16 @@ def hod_dashboard():
                            subject_assignments=subject_assignments)
 
 
+@bp.route('/hod/manage_teacher_subjects')
+@login_required
+def manage_teacher_subjects():
+    courses = Course.query.all()
+    teachers = TeacherDetails.query.all()
+    subject_assignments = SubjectAssignment.query.all()
+    return render_template('dashboard/manage_teacher_subjects.html', courses=courses, teachers=teachers,
+                           subject_assignments=subject_assignments)
+
+
 @bp.route('/get_batches_years', methods=['GET'])
 @login_required
 def get_batches_years():
