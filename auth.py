@@ -35,6 +35,9 @@ def generate_secure_filename(filename):
     return f"{hashed_name}.{ext}"
 
 
+
+
+
 @bp.route("/protected_image/<folder>/<filename>")
 @login_required
 def protected_image(folder, filename):
@@ -1625,13 +1628,14 @@ def student_dashboard():
     for subject in subjects:
         query = text(f"""
             SELECT COUNT(*) FROM {attendance_table_name} 
-        WHERE student_id = :student_id AND subject_code = :subject_code AND batch_id = :batch_id AND semester = :semester
+        WHERE student_id = :student_id AND subject_code = :subject_code AND batch_id = :batch_id AND semester = :semester and year=:admission_year
         """)
         total_classes = db.session.execute(query, {
             "student_id": student_id,
             "subject_code": subject.subject_code,
             "batch_id": batch_id,
-            "semester": semester
+            "semester": semester,
+            "admission_year": admission_year
         }).scalar() or 1  # Avoid division by zero
 
         query = text(f"""
@@ -2740,3 +2744,372 @@ def get_batches_inlogin():
         })
 
     return jsonify(result)
+
+
+
+
+# ADMIN DASTABASE MANAGEMENT
+
+@bp.route('/admin/database-explorer')
+@login_required
+def database_explorer():
+    # Ensure only admin can access
+    if current_user.role != 'admin':
+        flash('Access denied. Admin privileges required.')
+        return redirect(url_for('auth.index'))
+
+    # Get all table names from the database
+    inspector = inspect(db.engine)
+    tables = inspector.get_table_names()
+
+    return render_template('dashboard/database_explorer.html', tables=tables)
+
+
+@bp.route('/api/table/<table_name>', methods=['GET'])
+@login_required
+def get_table_data(table_name):
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        # Get table structure
+        inspector = inspect(db.engine)
+        columns = []
+        for column in inspector.get_columns(table_name):
+            is_primary = False
+            for pk in inspector.get_pk_constraint(table_name)['constrained_columns']:
+                if column['name'] == pk:
+                    is_primary = True
+                    break
+
+            columns.append({
+                "name": column['name'],
+                "type": str(column['type']),
+                "primary_key": is_primary
+            })
+
+        # Get table data
+        query = f"SELECT * FROM {table_name} LIMIT 1000"  # Add limit for safety
+        result = db.session.execute(text(query))
+        rows = [dict(row._mapping) for row in result]
+
+        return jsonify({"columns": columns, "rows": rows})
+
+    except SQLAlchemyError as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@bp.route('/api/table/<table_name>/structure', methods=['GET'])
+@login_required
+def get_table_structure(table_name):
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        # Get table structure
+        inspector = inspect(db.engine)
+        columns = []
+        for column in inspector.get_columns(table_name):
+            is_primary = False
+            is_auto_increment = False
+
+            # Check if this is a primary key
+            for pk in inspector.get_pk_constraint(table_name)['constrained_columns']:
+                if column['name'] == pk:
+                    is_primary = True
+                    break
+
+            # Attempt to determine auto increment (this can be database-specific)
+            if is_primary and hasattr(column.get('type', None), 'autoincrement'):
+                is_auto_increment = True
+
+            columns.append({
+                "name": column['name'],
+                "type": str(column['type']),
+                "primary_key": is_primary,
+                "auto_increment": is_auto_increment
+            })
+
+        return jsonify(columns)
+
+    except SQLAlchemyError as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@bp.route('/api/table/<table_name>/row/<row_id>', methods=['PUT'])
+@login_required
+def update_row(table_name, row_id):
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        data = request.json
+
+        # Get primary key column
+        inspector = inspect(db.engine)
+        pk_columns = inspector.get_pk_constraint(table_name)['constrained_columns']
+
+        if not pk_columns:
+            return jsonify({"success": False, "message": "Table has no primary key"}), 400
+
+        # Build update query
+        set_clause = ", ".join([f"{key} = :{key}" for key in data.keys()])
+        where_clause = f"{pk_columns[0]} = :id"
+
+        query = f"UPDATE {table_name} SET {set_clause} WHERE {where_clause}"
+
+        # Add the ID to the parameters
+        params = {**data, "id": row_id}
+
+        # Execute the query
+        result = db.session.execute(text(query), params)
+        db.session.commit()
+
+        return jsonify({"success": True, "message": f"Row updated successfully"})
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        return jsonify({"success": False, "message": str(e)}), 500
+
+
+@bp.route('/api/table/<table_name>/row/<row_id>', methods=['DELETE'])
+@login_required
+def delete_row(table_name, row_id):
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        # Get primary key column
+        inspector = inspect(db.engine)
+        pk_columns = inspector.get_pk_constraint(table_name)['constrained_columns']
+
+        if not pk_columns:
+            return jsonify({"success": False, "message": "Table has no primary key"}), 400
+
+        # Build delete query
+        query = f"DELETE FROM {table_name} WHERE {pk_columns[0]} = :id"
+
+        # Execute the query
+        result = db.session.execute(text(query), {"id": row_id})
+        db.session.commit()
+
+        return jsonify({"success": True, "message": "Row deleted successfully"})
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        return jsonify({"success": False, "message": str(e)}), 500
+
+
+@bp.route('/api/table/<table_name>/row', methods=['POST'])
+@login_required
+def add_row(table_name):
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        data = request.json
+
+        # Build insert query
+        columns = ", ".join(data.keys())
+        values = ", ".join([f":{key}" for key in data.keys()])
+
+        query = f"INSERT INTO {table_name} ({columns}) VALUES ({values})"
+
+        # Execute the query
+        result = db.session.execute(text(query), data)
+        db.session.commit()
+
+        return jsonify({"success": True, "message": "Row added successfully"})
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        return jsonify({"success": False, "message": str(e)}), 500
+
+
+@bp.route('/api/execute-sql', methods=['POST'])
+@login_required
+def execute_sql():
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        query = request.json.get('query', '').strip()
+
+        if not query:
+            return jsonify({"success": False, "message": "No query provided"}), 400
+
+        # Block potentially dangerous operations (this is a basic protection)
+        dangerous_operations = ['DROP DATABASE', 'DROP SCHEMA', 'TRUNCATE DATABASE']
+        for op in dangerous_operations:
+            if op.upper() in query.upper():
+                return jsonify({
+                    "success": False,
+                    "message": f"Operation not allowed: {op}"
+                }), 403
+
+        # Execute the query
+        result = db.session.execute(text(query))
+
+        # Try to determine which tables might be affected
+        affected_tables = []
+        query_upper = query.upper()
+        if any(op in query_upper for op in ['UPDATE', 'DELETE', 'INSERT', 'ALTER']):
+            # Extract table names from query (simplified approach)
+            words = query.split()
+            for i, word in enumerate(words):
+                if word.upper() in ['INTO', 'UPDATE', 'FROM', 'TABLE'] and i + 1 < len(words):
+                    table = words[i + 1].strip('`;,')
+                    if table not in affected_tables:
+                        affected_tables.append(table)
+
+        # Check if the query returns data
+        if result.returns_rows:
+            # Get column names
+            columns = [{"name": col} for col in result.keys()]
+
+            # Get rows (limit to 1000 for safety)
+            rows = [dict(row._mapping) for row in result.fetchmany(1000)]
+
+            return jsonify({
+                "success": True,
+                "columns": columns,
+                "rows": rows,
+                "affectedTables": affected_tables
+            })
+        else:
+            # For non-SELECT queries
+            rowcount = result.rowcount
+            db.session.commit()
+
+            return jsonify({
+                "success": True,
+                "message": f"Query executed successfully. Rows affected: {rowcount}",
+                "affectedTables": affected_tables
+            })
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        return jsonify({"success": False, "message": str(e)}), 500
+
+
+@bp.route('/api/table/<table_name>/export-csv')
+@login_required
+def export_csv(table_name):
+    if current_user.role != 'admin':
+        return jsonify({"error": "Unauthorized"}), 403
+
+    try:
+        # Get table data
+        query = f"SELECT * FROM {table_name}"
+        result = db.session.execute(text(query))
+
+        # Create CSV in memory
+        output = StringIO()
+        writer = csv.writer(output)
+
+        # Write header
+        writer.writerow(result.keys())
+
+        # Write data
+        for row in result:
+            writer.writerow(row)
+
+        # Prepare response
+        output.seek(0)
+
+        return Response(
+            output.getvalue(),
+            mimetype="text/csv",
+            headers={"Content-Disposition": f"attachment;filename={table_name}.csv"}
+        )
+
+    except SQLAlchemyError as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
+# MANAGE SUBJECTS
+    # ✅ Route to render the Manage Subjects page (View Only)
+@bp.route('/view_subjects')
+@login_required
+def view_subjects_page():
+    if current_user.role != 'admin':  # Security Check: Only Admin Can Access
+        flash("Access denied! Only admins can manage subjects.", "danger")
+        return redirect(url_for('dashboard'))  # Redirect to a safe page
+
+    subjects = CourseSubject.query.all()  # Fetch all subjects
+    return render_template('dashboard/manage_subjects.html', subjects=subjects)
+
+# ✅ Route to update a subject
+@bp.route('/update_subject/<int:id>', methods=['POST'])
+@login_required
+def update_subject_details(id):
+    if current_user.role != 'admin':  # Security Check
+        flash("Access denied! Only admins can update subjects.", "danger")
+        return redirect(url_for('auth.view_subjects_page'))
+
+    subject = CourseSubject.query.get_or_404(id)
+
+    subject.subject_code = request.form.get('subject_code')
+    subject.subject_name = request.form.get('subject_name')
+    subject.course_id = request.form.get('course_id')
+    subject.batch_id = request.form.get('batch_id')
+    subject.semester = request.form.get('semester')
+    subject.year = request.form.get('year')
+
+    db.session.commit()
+    flash("Subject updated successfully!", "success")
+    return redirect(url_for('auth.view_subjects_page'))
+
+# ✅ Route to delete a subject
+@bp.route('/delete_subject/<int:id>', methods=['POST'])
+@login_required
+def delete_subject_entry(id):
+    if current_user.role != 'admin':  # Security Check
+        flash("Access denied! Only admins can delete subjects.", "danger")
+        return redirect(url_for('auth.view_subjects_page'))
+
+    subject = CourseSubject.query.get_or_404(id)
+    db.session.delete(subject)
+    db.session.commit()
+    flash("Subject deleted successfully!", "danger")
+    return redirect(url_for('auth.view_subjects_page'))
+
+
+# View Courses Page
+@bp.route('/manage_courses')
+@login_required
+def manage_courses():
+    courses = Course.query.all()
+    return render_template('dashboard/manage_courses.html', courses=courses)
+
+
+# Update Course
+@bp.route('/update_course/<int:id>', methods=['POST'])
+@login_required
+def update_course(id):
+    data = request.json
+    course = Course.query.get(id)
+
+    if course:
+        course.code = data.get('code')
+        course.name = data.get('name')
+        course.is_active = bool(int(data.get('is_active')))
+        db.session.commit()
+        return jsonify({"message": "Course updated successfully"}), 200
+
+    return jsonify({"message": "Course not found"}), 404
+
+
+# Delete Course
+@bp.route('/delete_course/<int:id>', methods=['POST'])
+@login_required
+def delete_course(id):
+    course = Course.query.get(id)
+
+    if course:
+        db.session.delete(course)
+        db.session.commit()
+        return jsonify({"message": "Course deleted successfully"}), 200
+
+    return jsonify({"message": "Course not found"}), 404
