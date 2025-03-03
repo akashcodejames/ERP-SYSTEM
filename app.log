@@ -1,0 +1,1665 @@
+2025-03-02 21:48:59,229 - app - INFO - Test data already exists
+2025-03-02 21:48:59,303 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-02 21:48:59,304 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 21:48:59,308 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 21:49:02,940 - app - INFO - Test data already exists
+2025-03-02 21:49:02,988 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 21:49:02,994 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 21:49:03,183 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:03] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 21:49:03,322 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:03] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-02 21:49:03,524 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-02 21:49:03,538 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:03] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-02 21:49:07,358 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-02 21:49:07,377 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:07] "GET /login HTTP/1.1" 200 -
+2025-03-02 21:49:07,517 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:49:07,581 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:49:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:50:04,745 - root - INFO - Login attempt for email: admin@example.com, role: admin
+2025-03-02 21:50:05,108 - root - INFO - Successful login for user: admin@example.com, role: admin
+2025-03-02 21:50:05,110 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:50:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 21:50:05,197 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:50:05] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-03-02 21:50:05,388 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:50:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:50:05,436 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:50:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:53:20,661 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:20] "GET /render_student HTTP/1.1" 200 -
+2025-03-02 21:53:20,861 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:53:20,876 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:53:30,532 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:30] "GET /render_student HTTP/1.1" 200 -
+2025-03-02 21:53:30,657 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:53:30,699 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:53:33,336 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:33] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-03-02 21:53:33,433 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:53:33,517 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:53:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:56:53,990 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:56:53] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-03-02 21:56:54,131 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:56:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:56:54,147 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:56:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:57:39,174 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:57:39] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-03-02 21:57:39,300 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:57:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:57:39,348 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:57:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 21:57:39,370 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:57:39] "GET /protected_image/student_photos/01d17b36e27fee5e0a12.png HTTP/1.1" 200 -
+2025-03-02 21:59:08,676 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:59:08] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-03-02 21:59:08,817 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:59:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 21:59:08,835 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 21:59:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:00:00,444 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:00:00] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-03-02 22:00:00,581 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:00:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:00:00,616 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:00:00] "[36mGET /protected_image/student_photos/01d17b36e27fee5e0a12.png HTTP/1.1[0m" 304 -
+2025-03-02 22:00:00,650 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:00:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:06:04,036 - app - INFO - Test data already exists
+2025-03-02 22:06:04,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-02 22:06:04,121 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 22:06:04,125 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 22:06:07,775 - app - INFO - Test data already exists
+2025-03-02 22:06:07,828 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 22:06:07,839 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 22:06:08,015 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:06:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 22:06:08,115 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:06:08] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-03-02 22:06:08,211 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:06:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:06:08,221 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:06:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:08:16,776 - app - INFO - Test data already exists
+2025-03-02 22:08:16,839 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-02 22:08:16,840 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 22:08:16,844 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 22:08:19,244 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-02 22:08:19,364 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:19] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-03-02 22:08:19,620 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:19] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-02 22:08:19,620 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:19] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-02 22:08:20,636 - app - INFO - Test data already exists
+2025-03-02 22:08:20,688 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 22:08:20,695 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 22:08:58,530 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:58] "GET /render_student HTTP/1.1" 200 -
+2025-03-02 22:08:58,618 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:08:58,699 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:08:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:09:01,764 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:01] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-03-02 22:09:01,906 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:09:01,931 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:09:10,349 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:10] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-03-02 22:09:10,460 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:09:10,482 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:09:17,615 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:17] "GET /render_hod HTTP/1.1" 200 -
+2025-03-02 22:09:17,705 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:09:17,741 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:09:25,978 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:25] "GET /render_teacher HTTP/1.1" 200 -
+2025-03-02 22:09:26,061 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:09:26,113 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:09:29,673 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:29] "GET /render_student HTTP/1.1" 200 -
+2025-03-02 22:09:29,740 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:09:29,766 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:09:37,004 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:37] "GET /manage_courses HTTP/1.1" 200 -
+2025-03-02 22:09:37,124 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:09:37,165 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:09:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:10:02,716 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:02] "GET /render_student HTTP/1.1" 200 -
+2025-03-02 22:10:02,899 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:10:02,906 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:10:04,196 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:04] "GET /admin/manage_batches HTTP/1.1" 200 -
+2025-03-02 22:10:04,309 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:10:04,366 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:10:07,110 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:07] "GET /admin/view_batch/student_batch_1_2007_4_1 HTTP/1.1" 200 -
+2025-03-02 22:10:07,276 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-02 22:10:07,349 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-02 22:10:07,356 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 22:10:07] "GET /protected_image/student_photos/01d17b36e27fee5e0a12.png HTTP/1.1" 200 -
+2025-03-02 23:04:10,653 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable_generator.py', reloading
+2025-03-02 23:04:10,756 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable_generator.py', reloading
+2025-03-02 23:04:11,126 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:04:11,144 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:04:20,323 - app - INFO - Test data already exists
+2025-03-02 23:04:20,348 - app - INFO - Test data already exists
+2025-03-02 23:04:20,385 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:04:20,393 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:04:20,400 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:04:20,409 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:05:26,826 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:05:26,883 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:05:27,180 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:05:27,247 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:05:31,019 - app - INFO - Test data already exists
+2025-03-02 23:05:31,025 - app - INFO - Test data already exists
+2025-03-02 23:05:31,058 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:05:31,062 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:05:31,063 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:05:31,068 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:08:17,691 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:08:18,050 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:08:18,550 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:08:18,934 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:08:21,856 - app - INFO - Test data already exists
+2025-03-02 23:08:21,904 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:08:21,912 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:08:22,755 - app - INFO - Test data already exists
+2025-03-02 23:08:22,802 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:08:22,809 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:12:52,909 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable_module.py', reloading
+2025-03-02 23:12:53,229 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:12:53,293 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable_module.py', reloading
+2025-03-02 23:12:53,692 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:12:57,054 - app - INFO - Test data already exists
+2025-03-02 23:12:57,095 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:12:57,101 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:12:57,447 - app - INFO - Test data already exists
+2025-03-02 23:12:57,476 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:12:57,483 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:16:06,944 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:16:07,290 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:16:07,307 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:16:07,655 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:16:10,889 - app - INFO - Test data already exists
+2025-03-02 23:16:10,924 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:16:10,931 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:16:11,146 - app - INFO - Test data already exists
+2025-03-02 23:16:11,181 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:16:11,189 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:16:36,629 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:16:36,979 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:16:37,044 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:16:37,443 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:16:40,859 - app - INFO - Test data already exists
+2025-03-02 23:16:40,894 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:16:40,902 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:16:41,122 - app - INFO - Test data already exists
+2025-03-02 23:16:41,155 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:16:41,161 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:17:02,099 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:17:02,507 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:17:02,625 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:17:03,296 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:17:06,512 - app - INFO - Test data already exists
+2025-03-02 23:17:06,546 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:17:06,557 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:17:06,911 - app - INFO - Test data already exists
+2025-03-02 23:17:06,947 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 23:17:06,955 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-02 23:18:31,102 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:18:31,196 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-02 23:18:31,506 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 23:18:31,582 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:14:44,468 - app - INFO - Test data already exists
+2025-03-03 04:14:44,532 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:14:44,532 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:14:44,540 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:14:48,587 - app - INFO - Test data already exists
+2025-03-03 04:14:48,616 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:14:48,625 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:14:48,847 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:48] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:14:48,983 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:48] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-03-03 04:14:48,998 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:48] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:14:49,281 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:49] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 04:14:49,289 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:14:49,292 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 04:14:49,303 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:14:52,645 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-03 04:14:52,668 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:52] "GET /login HTTP/1.1" 200 -
+2025-03-03 04:14:52,866 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:14:52,905 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:14:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:15:01,231 - root - INFO - Login attempt for email: hod@gmail.com, role: hod
+2025-03-03 04:15:01,688 - root - INFO - Successful login for user: hod@gmail.com, role: hod
+2025-03-03 04:15:01,690 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:15:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-03 04:15:01,737 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:15:01] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:15:01,910 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:15:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:15:01,912 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:15:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:24:44,015 - app - INFO - Test data already exists
+2025-03-03 04:24:44,063 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:24:44,064 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:24:44,070 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:24:46,901 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:24:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:24:47,038 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:24:47] "[35m[1mGET /hod/dashboard HTTP/1.1[0m" 500 -
+2025-03-03 04:24:47,128 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:24:47] "GET /hod/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-03 04:24:47,181 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:24:47] "GET /hod/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-03 04:24:47,231 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:24:47] "GET /hod/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=iP68j8UYgXF7Qaok9AdC HTTP/1.1" 200 -
+2025-03-03 04:24:47,502 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:24:47] "GET /hod/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-03 04:24:48,138 - app - INFO - Test data already exists
+2025-03-03 04:24:48,173 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:24:48,183 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:26:32,985 - app - INFO - Test data already exists
+2025-03-03 04:26:33,032 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:26:33,034 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:26:33,038 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:26:34,532 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:34] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:26:34,600 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:34] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:26:34,733 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:26:34,743 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:26:36,719 - app - INFO - Test data already exists
+2025-03-03 04:26:36,751 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:26:36,758 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:26:39,753 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:26:39,821 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:39] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:26:39,920 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:26:40,041 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:26:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:30:20,707 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-03 04:30:20,730 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\auth.py', reloading
+2025-03-03 04:30:21,081 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:30:21,107 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:30:25,009 - app - INFO - Test data already exists
+2025-03-03 04:30:25,023 - app - INFO - Test data already exists
+2025-03-03 04:30:25,047 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:30:25,055 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:30:25,059 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:30:25,067 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:30:59,796 - app - INFO - Test data already exists
+2025-03-03 04:30:59,843 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:30:59,844 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:30:59,850 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:31:04,032 - app - INFO - Test data already exists
+2025-03-03 04:31:04,053 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:31:04,057 - werkzeug - INFO -  * Debugger PIN: 866-072-851
+2025-03-03 04:31:22,674 - app - INFO - Test data already exists
+2025-03-03 04:31:22,717 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:31:22,721 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:31:22,734 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:31:24,952 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:31:25,054 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:25] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:31:25,271 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:31:25,280 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:31:27,195 - app - INFO - Test data already exists
+2025-03-03 04:31:27,228 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:31:27,237 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:31:28,127 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:28] "GET /hod/manage_teacher_subjects HTTP/1.1" 200 -
+2025-03-03 04:31:28,237 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:31:28,270 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:31:33,311 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:31:33] "GET /get_batches_years?course_id=1 HTTP/1.1" 200 -
+2025-03-03 04:34:26,240 - app - INFO - Test data already exists
+2025-03-03 04:34:26,283 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:34:26,287 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:34:26,293 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:34:28,206 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:34:28,241 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:28] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:34:28,299 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:34:28,519 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:34:29,594 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:29] "GET /hod/manage_teacher_subjects HTTP/1.1" 200 -
+2025-03-03 04:34:29,683 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:34:29,697 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:34:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:34:30,430 - app - INFO - Test data already exists
+2025-03-03 04:34:30,462 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:34:30,469 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:41:03,179 - app - INFO - Test data already exists
+2025-03-03 04:41:03,232 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:41:03,233 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:41:03,238 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:41:04,537 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:41:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:41:04,625 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:41:04] "[35m[1mGET /hod/dashboard HTTP/1.1[0m" 500 -
+2025-03-03 04:41:04,717 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:41:04] "[36mGET /hod/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:41:04,720 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:41:04] "[36mGET /hod/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-03 04:41:04,782 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:41:04] "GET /hod/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=FYEVVUyceDUJSHPuwtIs HTTP/1.1" 200 -
+2025-03-03 04:41:04,917 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:41:04] "[36mGET /hod/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-03 04:41:06,994 - app - INFO - Test data already exists
+2025-03-03 04:41:07,025 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:41:07,035 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:44:59,653 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 04:44:59,969 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 04:44:59,997 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:45:00,332 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:45:04,013 - app - INFO - Test data already exists
+2025-03-03 04:45:04,040 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:45:04,044 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:45:04,262 - app - INFO - Test data already exists
+2025-03-03 04:45:04,297 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:45:04,307 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:46:19,131 - app - INFO - Test data already exists
+2025-03-03 04:46:19,177 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:46:19,179 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:46:19,187 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:46:22,767 - app - INFO - Test data already exists
+2025-03-03 04:46:22,797 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:46:22,805 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:46:24,790 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:46:24,860 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:24] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:46:25,227 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:46:25,283 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:46:27,170 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:27] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 04:46:35,575 - app - INFO - Test data already exists
+2025-03-03 04:46:35,608 - app - INFO - Test data already exists
+2025-03-03 04:46:35,654 - app - INFO - Test data already exists
+2025-03-03 04:46:35,717 - app - INFO - Test data already exists
+2025-03-03 04:46:36,560 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:36] "[35m[1mPOST /timetable/generate HTTP/1.1[0m" 500 -
+2025-03-03 04:46:36,688 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:36] "GET /timetable/generate?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-03 04:46:36,731 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:36] "GET /timetable/generate?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-03 04:46:36,872 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:36] "GET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png&s=D6k9181hmGZxaAlQrAnQ HTTP/1.1" 200 -
+2025-03-03 04:46:36,933 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:46:36] "GET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-03 04:49:21,086 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 04:49:21,174 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 04:49:21,498 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:49:21,535 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:49:25,277 - app - INFO - Test data already exists
+2025-03-03 04:49:25,282 - app - INFO - Test data already exists
+2025-03-03 04:49:25,308 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:49:25,310 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:49:25,312 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:49:25,319 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:50:01,068 - app - INFO - Test data already exists
+2025-03-03 04:50:01,104 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 04:50:01,106 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 04:50:01,111 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 04:50:04,925 - app - INFO - Test data already exists
+2025-03-03 04:50:04,949 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 04:50:04,957 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 04:50:08,490 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 04:50:08,577 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:08] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 04:50:09,070 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 04:50:09,073 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 04:50:10,305 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:10] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 04:50:15,979 - app - INFO - Test data already exists
+2025-03-03 04:50:15,988 - app - INFO - Test data already exists
+2025-03-03 04:50:16,012 - app - INFO - Test data already exists
+2025-03-03 04:50:16,032 - app - INFO - Test data already exists
+2025-03-03 04:50:16,884 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:16] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 04:50:47,142 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:47] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 04:50:47,248 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:47] "GET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1" 200 -
+2025-03-03 04:50:47,257 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:47] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 04:50:58,408 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:50:58] "GET /timetable/print_timetable?course_id=4&year=2011&semester=2&batch_id=3 HTTP/1.1" 200 -
+2025-03-03 04:51:16,272 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:51:16] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 04:51:20,671 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 04:51:20] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 05:03:06,423 - app - INFO - Test data already exists
+2025-03-03 05:03:06,466 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 05:03:06,467 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 05:03:06,471 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 05:03:10,242 - app - INFO - Test data already exists
+2025-03-03 05:03:10,266 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 05:03:10,274 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 05:03:12,993 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 05:03:13,036 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:13] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 05:03:13,088 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:03:13,092 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:03:14,563 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:14] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 05:03:14,673 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:03:14,764 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:03:28,294 - app - INFO - Test data already exists
+2025-03-03 05:03:28,312 - app - INFO - Test data already exists
+2025-03-03 05:03:28,329 - app - INFO - Test data already exists
+2025-03-03 05:03:28,343 - app - INFO - Test data already exists
+2025-03-03 05:03:29,061 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:03:29] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 05:07:30,693 - app - INFO - Test data already exists
+2025-03-03 05:07:30,732 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 05:07:30,734 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 05:07:30,738 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 05:07:34,479 - app - INFO - Test data already exists
+2025-03-03 05:07:34,503 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 05:07:34,509 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 05:07:35,089 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 05:07:35,120 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:35] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 05:07:35,189 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:07:35,191 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:07:36,902 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:36] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 05:07:37,033 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:07:37,106 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:07:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:09:13,301 - app - INFO - Test data already exists
+2025-03-03 05:09:13,345 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 05:09:13,349 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 05:09:13,353 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 05:09:16,376 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 05:09:16,405 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:16] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 05:09:16,480 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:09:16,485 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:09:17,489 - app - INFO - Test data already exists
+2025-03-03 05:09:17,528 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 05:09:17,535 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 05:09:17,920 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:17] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 05:09:18,040 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:09:18,126 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:09:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:11:35,768 - app - INFO - Test data already exists
+2025-03-03 05:11:35,808 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 05:11:35,809 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 05:11:35,815 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 05:11:38,560 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 05:11:38,618 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:38] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 05:11:38,660 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:11:38,665 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 05:11:39,859 - app - INFO - Test data already exists
+2025-03-03 05:11:39,896 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 05:11:39,904 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 05:11:41,104 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:41] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 05:11:41,191 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 05:11:41,238 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 05:11:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:24:56,808 - app - INFO - Test data already exists
+2025-03-03 13:24:56,863 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 13:24:56,865 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:24:56,871 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 13:24:59,025 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:24:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 13:24:59,082 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:24:59] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 13:24:59,136 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:24:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:24:59,316 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:24:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:25:01,061 - app - INFO - Test data already exists
+2025-03-03 13:25:01,087 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 13:25:01,096 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 13:25:07,137 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:25:07] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 13:25:07,278 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:25:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:25:07,323 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:25:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:25:32,489 - app - INFO - Test data already exists
+2025-03-03 13:25:32,511 - app - INFO - Test data already exists
+2025-03-03 13:25:32,522 - app - INFO - Test data already exists
+2025-03-03 13:25:32,532 - app - INFO - Test data already exists
+2025-03-03 13:25:33,392 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:25:33] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 13:25:33,486 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:25:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:25:33,552 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:25:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:26:09,372 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:26:09] "GET /timetable/print_timetable HTTP/1.1" 200 -
+2025-03-03 13:26:09,492 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:26:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:26:09,494 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:26:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:26:24,609 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:26:24] "GET /timetable/print_timetable HTTP/1.1" 200 -
+2025-03-03 13:26:24,705 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:26:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:26:24,711 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:26:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:41:52,906 - app - INFO - Test data already exists
+2025-03-03 13:41:52,948 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 13:41:52,950 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:41:52,954 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 13:41:54,539 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:54] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 13:41:54,574 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:54] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 13:41:54,649 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:41:54,650 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:41:56,829 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:56] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 13:41:56,909 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:41:56,965 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:41:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:41:57,094 - app - INFO - Test data already exists
+2025-03-03 13:41:57,127 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 13:41:57,132 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 13:42:08,092 - app - INFO - Test data already exists
+2025-03-03 13:42:08,119 - app - INFO - Test data already exists
+2025-03-03 13:42:08,157 - app - INFO - Test data already exists
+2025-03-03 13:42:08,166 - app - INFO - Test data already exists
+2025-03-03 13:42:09,185 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:09] "[35m[1mPOST /timetable/generate HTTP/1.1[0m" 500 -
+2025-03-03 13:42:09,319 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:09] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:42:09,352 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:09] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-03 13:42:09,484 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:09] "GET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png&s=0fIiyuOkeGToYc1lQdUT HTTP/1.1" 200 -
+2025-03-03 13:42:09,545 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:09] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-03 13:42:17,848 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:17] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 13:42:17,995 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:42:18,006 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:42:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:56:06,249 - app - INFO - Test data already exists
+2025-03-03 13:56:06,302 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 13:56:06,302 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:56:06,309 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 13:56:07,744 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:07] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 13:56:07,781 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:07] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 13:56:07,865 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:56:07,867 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:56:09,875 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:09] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 13:56:10,295 - app - INFO - Test data already exists
+2025-03-03 13:56:10,314 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 13:56:10,322 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 13:56:17,375 - app - INFO - Test data already exists
+2025-03-03 13:56:17,391 - app - INFO - Test data already exists
+2025-03-03 13:56:17,429 - app - INFO - Test data already exists
+2025-03-03 13:56:17,449 - app - INFO - Test data already exists
+2025-03-03 13:56:18,188 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:18] "[35m[1mPOST /timetable/generate HTTP/1.1[0m" 500 -
+2025-03-03 13:56:18,336 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:18] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:56:18,390 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:18] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-03 13:56:18,505 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:56:18] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png&s=0fIiyuOkeGToYc1lQdUT HTTP/1.1[0m" 304 -
+2025-03-03 13:59:48,660 - app - INFO - Test data already exists
+2025-03-03 13:59:48,703 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 13:59:48,704 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:59:48,708 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 13:59:52,402 - app - INFO - Test data already exists
+2025-03-03 13:59:52,434 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 13:59:52,441 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 13:59:54,442 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:59:54] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 13:59:54,478 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:59:54] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 13:59:54,551 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:59:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:59:54,569 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:59:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 13:59:56,257 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 13:59:56] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:00:04,115 - app - INFO - Test data already exists
+2025-03-03 14:00:04,116 - app - INFO - Test data already exists
+2025-03-03 14:00:04,137 - app - INFO - Test data already exists
+2025-03-03 14:00:04,157 - app - INFO - Test data already exists
+2025-03-03 14:00:05,125 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:00:05] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:00:12,848 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:00:12] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 14:00:12,977 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:00:12] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 14:00:12,988 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:00:12] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 14:07:57,454 - app - INFO - Test data already exists
+2025-03-03 14:07:57,500 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:07:57,501 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:07:57,506 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:08:00,141 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:00] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:08:00,168 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:00] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:08:00,486 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:08:00,498 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:08:01,669 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:01] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:08:01,711 - app - INFO - Test data already exists
+2025-03-03 14:08:01,744 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:08:01,751 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:08:01,800 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:08:01,854 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:08:13,597 - app - INFO - Test data already exists
+2025-03-03 14:08:13,639 - app - INFO - Test data already exists
+2025-03-03 14:08:13,685 - app - INFO - Test data already exists
+2025-03-03 14:08:13,727 - app - INFO - Test data already exists
+2025-03-03 14:08:14,325 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:14] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:08:19,564 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:19] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 14:08:19,707 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:19] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 14:08:19,709 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:08:19] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 14:11:29,083 - app - INFO - Test data already exists
+2025-03-03 14:11:29,128 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:11:29,129 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:11:29,133 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:11:31,294 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:11:31,374 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:31] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:11:31,440 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:11:31,563 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:11:33,148 - app - INFO - Test data already exists
+2025-03-03 14:11:33,179 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:11:33,188 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:11:33,299 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:33] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:11:38,702 - app - INFO - Test data already exists
+2025-03-03 14:11:38,723 - app - INFO - Test data already exists
+2025-03-03 14:11:38,730 - app - INFO - Test data already exists
+2025-03-03 14:11:38,766 - app - INFO - Test data already exists
+2025-03-03 14:11:39,538 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:39] "[35m[1mPOST /timetable/generate HTTP/1.1[0m" 500 -
+2025-03-03 14:11:39,650 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:39] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:11:39,676 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:39] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-03 14:11:39,781 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:39] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png&s=0fIiyuOkeGToYc1lQdUT HTTP/1.1[0m" 304 -
+2025-03-03 14:11:39,822 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:11:39] "[36mGET /timetable/generate?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-03 14:13:56,261 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\main.py', reloading
+2025-03-03 14:13:56,479 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\main.py', reloading
+2025-03-03 14:13:56,936 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:13:57,290 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:14:01,127 - app - INFO - Test data already exists
+2025-03-03 14:14:01,153 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:14:01,159 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:14:11,803 - app - INFO - Test data already exists
+2025-03-03 14:14:11,848 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:14:11,850 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:14:11,855 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:14:13,378 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:14:13] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:14:13,447 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:14:13] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:14:13,707 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:14:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:14:13,709 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:14:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:14:15,242 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:14:15] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:14:15,888 - app - INFO - Test data already exists
+2025-03-03 14:14:15,911 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:14:15,918 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:14:20,951 - app - INFO - Test data already exists
+2025-03-03 14:14:20,967 - app - INFO - Test data already exists
+2025-03-03 14:14:20,978 - app - INFO - Test data already exists
+2025-03-03 14:14:20,979 - app - INFO - Test data already exists
+2025-03-03 14:14:21,887 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:14:21] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:26:44,594 - app - INFO - Test data already exists
+2025-03-03 14:26:44,647 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:26:44,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:26:44,655 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:26:47,194 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:26:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:26:47,232 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:26:47] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:26:47,313 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:26:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:26:47,315 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:26:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:26:48,562 - app - INFO - Test data already exists
+2025-03-03 14:26:48,572 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:26:48] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:26:48,609 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:26:48,620 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:26:55,536 - app - INFO - Test data already exists
+2025-03-03 14:26:55,543 - app - INFO - Test data already exists
+2025-03-03 14:26:55,548 - app - INFO - Test data already exists
+2025-03-03 14:26:55,591 - app - INFO - Test data already exists
+2025-03-03 14:26:56,590 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:26:56] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:27:40,942 - app - INFO - Test data already exists
+2025-03-03 14:27:40,981 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:27:40,981 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:27:40,986 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:27:42,702 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:27:42,712 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:27:42,780 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:42] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:27:42,798 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:42] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:27:43,006 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:43] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 14:27:43,014 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:43] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 14:27:43,021 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:27:43,152 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:27:44,511 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:44] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:27:44,603 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:27:44,609 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:27:45,262 - app - INFO - Test data already exists
+2025-03-03 14:27:45,298 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:27:45,305 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:27:51,019 - app - INFO - Test data already exists
+2025-03-03 14:27:51,036 - app - INFO - Test data already exists
+2025-03-03 14:27:51,055 - app - INFO - Test data already exists
+2025-03-03 14:27:51,061 - app - INFO - Test data already exists
+2025-03-03 14:27:51,912 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:27:51] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:29:01,750 - app - INFO - Test data already exists
+2025-03-03 14:29:01,794 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:29:01,795 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:29:01,800 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:29:03,270 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:03] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:29:03,326 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:03] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:29:03,493 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 14:29:03,495 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:03] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 14:29:04,552 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:29:04,589 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:04] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:29:04,626 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:29:04,664 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:29:05,713 - app - INFO - Test data already exists
+2025-03-03 14:29:05,744 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:29:05,753 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:29:06,016 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:06] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:29:06,112 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:29:06,135 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:29:11,825 - app - INFO - Test data already exists
+2025-03-03 14:29:11,831 - app - INFO - Test data already exists
+2025-03-03 14:29:11,890 - app - INFO - Test data already exists
+2025-03-03 14:29:11,902 - app - INFO - Test data already exists
+2025-03-03 14:29:12,583 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:12] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:29:12,757 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:29:12,801 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:29:19,872 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:19] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 14:29:20,057 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:29:20,116 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:20] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 14:29:20,122 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:20] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 14:29:20,129 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:29:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:30:47,632 - app - INFO - Test data already exists
+2025-03-03 14:30:47,665 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:30:47,665 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:30:47,668 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:30:49,087 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:30:49,171 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:49] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:30:49,330 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 14:30:49,386 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:49] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 14:30:51,048 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:51] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:30:51,186 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:30:51,213 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:30:51,990 - app - INFO - Test data already exists
+2025-03-03 14:30:52,024 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:30:52,032 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:30:57,579 - app - INFO - Test data already exists
+2025-03-03 14:30:57,605 - app - INFO - Test data already exists
+2025-03-03 14:30:57,621 - app - INFO - Test data already exists
+2025-03-03 14:30:57,660 - app - INFO - Test data already exists
+2025-03-03 14:30:58,542 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:58] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:30:58,677 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:30:58,712 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:30:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:31:53,228 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:53] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 14:31:53,322 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:31:53,327 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:53] "GET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1" 200 -
+2025-03-03 14:31:53,334 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:53] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 14:31:53,335 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:31:58,519 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:58] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 14:31:58,704 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:31:58,714 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:31:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:32:10,105 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:32:10] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 14:32:10,271 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:32:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:32:10,272 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:32:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:32:25,703 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:32:25] "GET /timetable/print_timetable?course_id=4&year=2011&semester=2&batch_id=3 HTTP/1.1" 200 -
+2025-03-03 14:32:25,781 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:32:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:32:25,807 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:32:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:33:22,776 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:33:22] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:33:27,754 - app - INFO - Test data already exists
+2025-03-03 14:33:27,755 - app - INFO - Test data already exists
+2025-03-03 14:33:27,758 - app - INFO - Test data already exists
+2025-03-03 14:33:27,759 - app - INFO - Test data already exists
+2025-03-03 14:33:28,782 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:33:28] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:33:30,734 - app - INFO - Test data already exists
+2025-03-03 14:33:30,753 - app - INFO - Test data already exists
+2025-03-03 14:33:30,793 - app - INFO - Test data already exists
+2025-03-03 14:33:30,800 - app - INFO - Test data already exists
+2025-03-03 14:33:31,610 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:33:31] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:33:31,756 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:33:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:33:31,826 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:33:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:33:55,818 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:33:55] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:34:02,551 - app - INFO - Test data already exists
+2025-03-03 14:34:02,567 - app - INFO - Test data already exists
+2025-03-03 14:34:02,578 - app - INFO - Test data already exists
+2025-03-03 14:34:02,644 - app - INFO - Test data already exists
+2025-03-03 14:34:03,658 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:34:03] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:34:03,797 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:34:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:34:03,837 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:34:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:34:25,142 - app - INFO - Test data already exists
+2025-03-03 14:34:25,149 - app - INFO - Test data already exists
+2025-03-03 14:34:25,170 - app - INFO - Test data already exists
+2025-03-03 14:34:25,191 - app - INFO - Test data already exists
+2025-03-03 14:34:26,127 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:34:26] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:34:26,221 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:34:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:34:26,243 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:34:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:35:07,113 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:35:07] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:35:13,837 - app - INFO - Test data already exists
+2025-03-03 14:35:13,908 - app - INFO - Test data already exists
+2025-03-03 14:35:13,963 - app - INFO - Test data already exists
+2025-03-03 14:35:13,985 - app - INFO - Test data already exists
+2025-03-03 14:35:14,975 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:35:14] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:35:15,170 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:35:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:35:15,232 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:35:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:37:36,399 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\main.py', reloading
+2025-03-03 14:37:36,794 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:37:36,893 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\main.py', reloading
+2025-03-03 14:37:37,256 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:37:41,236 - app - INFO - Test data already exists
+2025-03-03 14:37:41,276 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:37:41,282 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:37:45,551 - app - INFO - Test data already exists
+2025-03-03 14:37:45,594 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:37:45,595 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:37:45,600 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:37:47,425 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:37:47,480 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:47] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:37:47,686 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:47] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 14:37:47,691 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:47] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 14:37:48,781 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:48] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:37:48,846 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:37:48,875 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:37:49,884 - app - INFO - Test data already exists
+2025-03-03 14:37:49,925 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:37:49,936 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:37:54,201 - app - INFO - Test data already exists
+2025-03-03 14:37:54,216 - app - INFO - Test data already exists
+2025-03-03 14:37:54,218 - app - INFO - Test data already exists
+2025-03-03 14:37:54,254 - app - INFO - Test data already exists
+2025-03-03 14:37:55,189 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:55] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:37:55,264 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:37:55,275 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:37:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:45:07,206 - app - INFO - Test data already exists
+2025-03-03 14:45:07,254 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:45:07,255 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:45:07,259 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:45:09,633 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:09] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:45:09,667 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:09] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:45:09,794 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:45:09,795 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:45:11,239 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:11] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:45:11,265 - app - INFO - Test data already exists
+2025-03-03 14:45:11,303 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:45:11,309 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:45:11,362 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:45:11,427 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:45:20,838 - app - INFO - Test data already exists
+2025-03-03 14:45:20,838 - app - INFO - Test data already exists
+2025-03-03 14:45:20,842 - app - INFO - Test data already exists
+2025-03-03 14:45:20,844 - app - INFO - Test data already exists
+2025-03-03 14:45:21,562 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:21] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:45:21,696 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:45:21,770 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:45:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:50:21,275 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:50:21] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:50:25,983 - app - INFO - Test data already exists
+2025-03-03 14:50:25,984 - app - INFO - Test data already exists
+2025-03-03 14:50:26,017 - app - INFO - Test data already exists
+2025-03-03 14:50:26,065 - app - INFO - Test data already exists
+2025-03-03 14:50:26,680 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:50:26] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:50:26,784 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:50:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:50:26,825 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:50:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:54:54,655 - app - INFO - Test data already exists
+2025-03-03 14:54:54,699 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 14:54:54,701 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 14:54:54,705 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 14:54:57,090 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 14:54:57,126 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:57] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 14:54:57,204 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:54:57,352 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:54:58,409 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:58] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 14:54:58,549 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:54:58,612 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:54:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 14:54:58,628 - app - INFO - Test data already exists
+2025-03-03 14:54:58,668 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 14:54:58,674 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 14:55:03,999 - app - INFO - Test data already exists
+2025-03-03 14:55:04,002 - app - INFO - Test data already exists
+2025-03-03 14:55:04,019 - app - INFO - Test data already exists
+2025-03-03 14:55:04,035 - app - INFO - Test data already exists
+2025-03-03 14:55:04,958 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:55:04] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 14:55:05,113 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:55:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 14:55:05,140 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 14:55:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:01:03,533 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:01:03] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 15:01:08,544 - app - INFO - Test data already exists
+2025-03-03 15:01:08,588 - app - INFO - Test data already exists
+2025-03-03 15:01:08,654 - app - INFO - Test data already exists
+2025-03-03 15:01:08,668 - app - INFO - Test data already exists
+2025-03-03 15:01:09,534 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:01:09] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 15:01:09,689 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:01:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:01:09,728 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:01:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:03:53,459 - app - INFO - Test data already exists
+2025-03-03 15:03:53,499 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:03:53,501 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:03:53,505 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:03:57,174 - app - INFO - Test data already exists
+2025-03-03 15:03:57,206 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:03:57,213 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:04:00,121 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:00] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:04:00,148 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:00] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:04:00,225 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:04:00,227 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:04:01,291 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:01] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 15:04:01,397 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:04:01,436 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:04:07,008 - app - INFO - Test data already exists
+2025-03-03 15:04:07,014 - app - INFO - Test data already exists
+2025-03-03 15:04:07,022 - app - INFO - Test data already exists
+2025-03-03 15:04:07,029 - app - INFO - Test data already exists
+2025-03-03 15:04:07,753 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:07] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 15:04:07,918 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:04:07,956 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:04:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:06:16,482 - app - INFO - Test data already exists
+2025-03-03 15:06:16,526 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:06:16,528 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:06:16,532 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:06:20,324 - app - INFO - Test data already exists
+2025-03-03 15:06:20,354 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:06:20,360 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:06:20,535 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:06:20,562 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:20] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:06:20,619 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:06:20,886 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:06:21,891 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:21] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 15:06:22,006 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:06:22,047 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:06:26,980 - app - INFO - Test data already exists
+2025-03-03 15:06:27,027 - app - INFO - Test data already exists
+2025-03-03 15:06:27,089 - app - INFO - Test data already exists
+2025-03-03 15:06:27,124 - app - INFO - Test data already exists
+2025-03-03 15:06:28,151 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:28] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 15:06:28,306 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:06:28,351 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:06:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:07:04,834 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:07:04] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 15:07:04,976 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:07:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:07:04,987 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:07:04] "GET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1" 200 -
+2025-03-03 15:07:04,988 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:07:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:07:04,990 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:07:04] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 15:11:46,582 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:11:47,079 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:11:47,402 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:11:47,813 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:11:51,030 - app - INFO - Test data already exists
+2025-03-03 15:11:51,069 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:11:51,077 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:11:51,838 - app - INFO - Test data already exists
+2025-03-03 15:11:51,867 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:11:51,873 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:21:11,133 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:21:11,473 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:21:15,252 - app - INFO - Test data already exists
+2025-03-03 15:21:15,287 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:21:15,295 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:21:15,618 - app - INFO - Test data already exists
+2025-03-03 15:21:15,650 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:21:15,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:21:15,654 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:21:17,217 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:21:17,305 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:17] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:21:17,622 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:17] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 15:21:17,624 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:17] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 15:21:18,725 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:18] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:21:18,754 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:18] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:21:18,871 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:21:18,939 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:21:19,585 - app - INFO - Test data already exists
+2025-03-03 15:21:19,613 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:21:19,619 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:21:26,657 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:26] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:21:26,683 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:26] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:21:26,805 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:21:26,810 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:21:35,620 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:35] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:21:35,649 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:35] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:21:35,790 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:21:35,842 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:21:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:23:39,713 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:23:40,112 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:23:43,211 - app - INFO - Test data already exists
+2025-03-03 15:23:43,250 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:23:43,250 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:23:43,255 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:23:43,679 - app - INFO - Test data already exists
+2025-03-03 15:23:43,705 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:23:43,712 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:23:44,925 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:23:44,956 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:23:45,008 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:45] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:23:45,036 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:45] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:23:45,449 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:23:45,465 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:23:45,496 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:23:45,541 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:23:46,289 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:46] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:23:46,312 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:46] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:23:46,416 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:23:46,417 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:23:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:23:48,086 - app - INFO - Test data already exists
+2025-03-03 15:23:48,123 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:23:48,131 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:24:29,376 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:24:31,394 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:24:31,945 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:24:37,464 - app - INFO - Test data already exists
+2025-03-03 15:24:37,495 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:24:37,502 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:24:37,761 - app - INFO - Test data already exists
+2025-03-03 15:24:37,799 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:24:37,799 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:24:37,804 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:24:41,100 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:24:41,107 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:24:41,179 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:24:41,261 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:24:41,356 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:24:41,375 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:24:41,422 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:24:41,434 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:24:41,912 - app - INFO - Test data already exists
+2025-03-03 15:24:41,939 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:24:41,945 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:24:42,511 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:42] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:24:42,539 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:42] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:24:42,635 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:24:42,641 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:24:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:24:54,920 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:24:55,718 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:24:56,021 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:25:02,659 - app - INFO - Test data already exists
+2025-03-03 15:25:02,689 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:25:02,694 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:25:03,845 - app - INFO - Test data already exists
+2025-03-03 15:25:03,883 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:25:03,883 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:25:03,887 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:25:05,801 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:25:05,877 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:05] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:25:06,179 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:25:06,195 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:25:07,376 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:07] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:25:07,404 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:07] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:25:07,608 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:25:07,609 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:25:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:25:07,774 - app - INFO - Test data already exists
+2025-03-03 15:25:07,810 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:25:07,816 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:26:44,010 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:26:44,105 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:26:44,499 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:26:44,518 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:26:48,496 - app - INFO - Test data already exists
+2025-03-03 15:26:48,520 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:26:48,525 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:26:48,528 - app - INFO - Test data already exists
+2025-03-03 15:26:48,560 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:26:48,567 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:44:53,074 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:44:53,435 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:44:56,893 - app - INFO - Test data already exists
+2025-03-03 15:44:56,937 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:44:56,937 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:44:56,942 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:44:57,187 - app - INFO - Test data already exists
+2025-03-03 15:44:57,222 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:44:57,231 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:44:58,078 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:44:58,159 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:58] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:44:58,344 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:44:58,347 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:44:59,616 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:59] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 15:44:59,697 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:44:59,720 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:44:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:45:00,953 - app - INFO - Test data already exists
+2025-03-03 15:45:00,980 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:45:00,984 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:45:12,079 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:45:12,489 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:45:15,676 - app - INFO - Test data already exists
+2025-03-03 15:45:15,713 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:45:15,714 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:45:15,718 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:45:16,113 - app - INFO - Test data already exists
+2025-03-03 15:45:16,144 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:45:16,152 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:45:17,394 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:45:17,493 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:17] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:45:17,779 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:45:17,786 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:45:18,723 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:18] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 15:45:18,879 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:45:18,938 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:45:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:45:19,711 - app - INFO - Test data already exists
+2025-03-03 15:45:19,734 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:45:19,740 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:46:18,017 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:46:18,409 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:46:21,421 - app - INFO - Test data already exists
+2025-03-03 15:46:21,460 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:46:21,461 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:46:21,465 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:46:22,086 - app - INFO - Test data already exists
+2025-03-03 15:46:22,111 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:46:22,115 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:46:22,659 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:46:22,735 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:22] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:46:23,047 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:46:23,050 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:46:24,300 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:24] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:46:24,331 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:24] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:46:24,498 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:46:24,555 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:46:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:46:25,351 - app - INFO - Test data already exists
+2025-03-03 15:46:25,376 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:46:25,383 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:47:41,904 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 15:47:42,275 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:47:44,738 - app - INFO - Test data already exists
+2025-03-03 15:47:44,778 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 15:47:44,779 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:47:44,783 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 15:47:45,579 - app - INFO - Test data already exists
+2025-03-03 15:47:45,605 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:47:45,610 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 15:47:46,378 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 15:47:46,458 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:46] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:47:46,643 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:47:46,665 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:47:48,128 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:48] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 15:47:48,154 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:48] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 15:47:48,325 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:47:48,369 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 15:47:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 15:47:48,713 - app - INFO - Test data already exists
+2025-03-03 15:47:48,744 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 15:47:48,751 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:40:50,112 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 18:40:51,829 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:41:00,324 - app - INFO - Test data already exists
+2025-03-03 18:41:00,325 - app - INFO - Test data already exists
+2025-03-03 18:41:00,356 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:41:00,364 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:41:00,387 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 18:41:00,388 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 18:41:00,392 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:41:02,305 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 18:41:02,375 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:02] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:41:02,680 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:41:02,710 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:41:04,109 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:04] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 18:41:04,134 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:04] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:41:04,199 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:41:04,275 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:41:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:41:04,754 - app - INFO - Test data already exists
+2025-03-03 18:41:04,789 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:41:04,796 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:42:51,340 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 18:42:51,716 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:42:54,318 - app - INFO - Test data already exists
+2025-03-03 18:42:54,355 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 18:42:54,355 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 18:42:54,359 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:42:55,406 - app - INFO - Test data already exists
+2025-03-03 18:42:55,438 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:42:55,447 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:42:55,816 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 18:42:55,932 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:55] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:42:56,134 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:42:56,160 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:42:57,355 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:57] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 18:42:57,387 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:57] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:42:57,472 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:42:57,479 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:42:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:42:58,372 - app - INFO - Test data already exists
+2025-03-03 18:42:58,405 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:42:58,411 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:43:03,849 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:43:03] "[32mGET /timetable/render_timetable HTTP/1.1[0m" 302 -
+2025-03-03 18:43:03,879 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:43:03] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:43:03,989 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:43:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:43:04,016 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:43:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:49:05,316 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 18:49:05,711 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:49:08,442 - app - INFO - Test data already exists
+2025-03-03 18:49:08,472 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 18:49:08,472 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 18:49:08,475 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:49:09,290 - app - INFO - Test data already exists
+2025-03-03 18:49:09,323 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:49:09,328 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:49:11,287 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:11] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 18:49:11,372 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:11] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:49:11,554 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:49:11,575 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:49:12,296 - app - INFO - Test data already exists
+2025-03-03 18:49:12,332 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:49:12,340 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:49:13,535 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:13] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 18:49:13,639 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:49:13,681 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:49:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:57:23,180 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 18:57:23,936 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:57:27,120 - app - INFO - Test data already exists
+2025-03-03 18:57:27,158 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 18:57:27,159 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 18:57:27,164 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 18:57:27,616 - app - INFO - Test data already exists
+2025-03-03 18:57:27,646 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:57:27,655 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:57:28,879 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 18:57:28,948 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:28] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:57:29,148 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:57:29,163 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:57:31,611 - app - INFO - Test data already exists
+2025-03-03 18:57:31,643 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 18:57:31,647 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 18:57:34,185 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:34] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 18:57:34,298 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:57:34,329 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:57:43,367 - app - INFO - Test data already exists
+2025-03-03 18:57:43,372 - app - INFO - Test data already exists
+2025-03-03 18:57:43,402 - app - INFO - Test data already exists
+2025-03-03 18:57:43,475 - app - INFO - Test data already exists
+2025-03-03 18:57:44,301 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:44] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 18:57:44,436 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:57:44,443 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:57:53,410 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:53] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 18:57:53,489 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:57:53,507 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:53] "GET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1" 200 -
+2025-03-03 18:57:53,511 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:53] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 18:57:53,514 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:57:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:58:08,898 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:08] "POST /timetable/update_timetable HTTP/1.1" 200 -
+2025-03-03 18:58:09,055 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:58:09,148 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:58:21,415 - app - INFO - Test data already exists
+2025-03-03 18:58:21,416 - app - INFO - Test data already exists
+2025-03-03 18:58:21,496 - app - INFO - Test data already exists
+2025-03-03 18:58:21,533 - app - INFO - Test data already exists
+2025-03-03 18:58:22,330 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:22] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 18:58:22,453 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:58:22,475 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:58:24,261 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:24] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 18:58:24,340 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:58:24,354 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:24] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 18:58:24,355 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:24] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 18:58:24,357 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:58:32,841 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:32] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 18:58:33,062 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:58:33,073 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:58:59,071 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:58:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:59:24,492 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:24] "[32mGET /admin/dashboard HTTP/1.1[0m" 302 -
+2025-03-03 18:59:24,632 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:24] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 18:59:27,837 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:27] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 18:59:27,992 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:59:28,025 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:59:36,147 - app - INFO - Test data already exists
+2025-03-03 18:59:36,156 - app - INFO - Test data already exists
+2025-03-03 18:59:36,221 - app - INFO - Test data already exists
+2025-03-03 18:59:36,277 - app - INFO - Test data already exists
+2025-03-03 18:59:37,022 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:37] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 18:59:37,117 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:59:37,203 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 18:59:40,208 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:40] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 18:59:40,311 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:40] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 18:59:40,311 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:40] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 18:59:40,312 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 18:59:40,328 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 18:59:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:04,607 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:04] "POST /timetable/update_timetable HTTP/1.1" 200 -
+2025-03-03 19:00:04,769 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:04,809 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:12,884 - app - INFO - Test data already exists
+2025-03-03 19:00:12,893 - app - INFO - Test data already exists
+2025-03-03 19:00:12,902 - app - INFO - Test data already exists
+2025-03-03 19:00:12,950 - app - INFO - Test data already exists
+2025-03-03 19:00:13,774 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:13] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:00:13,876 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:13,878 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:15,648 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:15] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:00:15,773 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:15,825 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:15] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:15,826 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:15] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:15,827 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:36,835 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:36] "POST /timetable/update_timetable HTTP/1.1" 200 -
+2025-03-03 19:00:36,959 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:36,995 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:49,385 - app - INFO - Test data already exists
+2025-03-03 19:00:49,414 - app - INFO - Test data already exists
+2025-03-03 19:00:49,442 - app - INFO - Test data already exists
+2025-03-03 19:00:49,452 - app - INFO - Test data already exists
+2025-03-03 19:00:50,243 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:50] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:00:50,388 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:50,456 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:54,045 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:54] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:00:54,119 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:54,128 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:54] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:00:54,135 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:54] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:00:54,162 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:00:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:01:31,951 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:01:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:01:31,951 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:01:31] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:05:07,987 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:07] "POST /timetable/update_timetable HTTP/1.1" 200 -
+2025-03-03 19:05:08,182 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:05:08,238 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:05:25,819 - app - INFO - Test data already exists
+2025-03-03 19:05:25,833 - app - INFO - Test data already exists
+2025-03-03 19:05:25,871 - app - INFO - Test data already exists
+2025-03-03 19:05:25,885 - app - INFO - Test data already exists
+2025-03-03 19:05:26,805 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:26] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:05:26,885 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:05:26,912 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:05:28,532 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:28] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:05:28,630 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:05:28,682 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:28] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:05:28,684 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:28] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:05:28,719 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:05:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:10:10,199 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 19:10:10,663 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:10:13,777 - app - INFO - Test data already exists
+2025-03-03 19:10:13,821 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:10:13,821 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:10:13,825 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:10:14,120 - app - INFO - Test data already exists
+2025-03-03 19:10:14,150 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:10:14,156 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:10:17,791 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:10:17,806 - app - INFO - Test data already exists
+2025-03-03 19:10:17,865 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:10:17,872 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:10:17,875 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:17] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:10:18,123 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:10:18,150 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:10:19,475 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:19] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:10:19,559 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:10:19,574 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:10:25,213 - app - INFO - Test data already exists
+2025-03-03 19:10:25,229 - app - INFO - Test data already exists
+2025-03-03 19:10:25,233 - app - INFO - Test data already exists
+2025-03-03 19:10:25,240 - app - INFO - Test data already exists
+2025-03-03 19:10:26,145 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:26] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:10:26,230 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:10:26,240 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:10:27,605 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:27] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:10:27,731 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:10:27,756 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:27] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:10:27,758 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:27] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 19:10:27,763 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:10:54,065 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:10:54] "GET /render_student HTTP/1.1" 200 -
+2025-03-03 19:11:31,614 - app - INFO - Test data already exists
+2025-03-03 19:11:31,653 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:11:31,654 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:11:31,658 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:11:33,214 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:11:33,258 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:33] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:11:33,344 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:33,345 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:11:34,790 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:34] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:11:34,916 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:34,963 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:11:35,802 - app - INFO - Test data already exists
+2025-03-03 19:11:35,837 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:11:35,845 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:11:39,912 - app - INFO - Test data already exists
+2025-03-03 19:11:39,913 - app - INFO - Test data already exists
+2025-03-03 19:11:39,921 - app - INFO - Test data already exists
+2025-03-03 19:11:40,001 - app - INFO - Test data already exists
+2025-03-03 19:11:40,767 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:40] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:11:40,896 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:40,897 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:11:43,330 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:43] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:11:43,511 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:43,511 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:43] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 19:11:43,513 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:43] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:43,517 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:11:49,656 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:49] "[32mPOST /timetable/update_timetable HTTP/1.1[0m" 302 -
+2025-03-03 19:11:49,770 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:49] "GET /timetable/view_saved_timetable HTTP/1.1" 200 -
+2025-03-03 19:11:49,881 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:49,909 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:11:59,733 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:59] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:11:59,823 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:59,864 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:59] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:11:59,866 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:59] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:11:59,904 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:11:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:12:02,825 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:12:02] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:12:02,937 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:12:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:12:02,939 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:12:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:12:39,821 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:12:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:12:58,494 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:12:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:13:34,171 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:13:34] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:13:34,211 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:13:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:13:34,214 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:13:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:19:03,780 - app - INFO - Test data already exists
+2025-03-03 19:19:03,825 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:19:03,827 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:19:03,832 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:19:06,308 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:19:06,379 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:06] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:19:06,692 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 19:19:06,698 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:06] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 19:19:07,561 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:07] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:19:07,698 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:19:07,730 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:19:07,855 - app - INFO - Test data already exists
+2025-03-03 19:19:07,877 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:19:07,881 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:19:15,698 - app - INFO - Test data already exists
+2025-03-03 19:19:15,708 - app - INFO - Test data already exists
+2025-03-03 19:19:15,715 - app - INFO - Test data already exists
+2025-03-03 19:19:15,715 - app - INFO - Test data already exists
+2025-03-03 19:19:16,563 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:16] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:19:16,703 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:19:16,781 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:19:18,249 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:18] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:19:18,360 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:19:18,417 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:18] "GET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1" 200 -
+2025-03-03 19:19:18,418 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:18] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 19:19:18,421 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:19:19,908 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:19] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:19:20,006 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:19:20,018 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:19:38,550 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:19:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:16,741 - app - INFO - Test data already exists
+2025-03-03 19:31:16,799 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:31:16,802 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:31:16,810 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:31:18,625 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:31:18,657 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:18] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:31:18,720 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:18,751 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:31:19,801 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:19] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:31:19,919 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:19,969 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:31:20,571 - app - INFO - Test data already exists
+2025-03-03 19:31:20,607 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:31:20,617 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:31:25,493 - app - INFO - Test data already exists
+2025-03-03 19:31:25,500 - app - INFO - Test data already exists
+2025-03-03 19:31:25,507 - app - INFO - Test data already exists
+2025-03-03 19:31:25,540 - app - INFO - Test data already exists
+2025-03-03 19:31:26,436 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:26] "POST /timetable/generate HTTP/1.1" 200 -
+2025-03-03 19:31:26,553 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:26,586 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:31:28,495 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:28] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:31:28,578 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:28,612 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:28] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:28,614 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:28] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:31:28,638 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:31:31,204 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:31] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:31:31,340 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:31:31,342 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:31:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:39:49,032 - app - INFO - Test data already exists
+2025-03-03 19:39:49,097 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:39:49,099 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:39:49,105 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:39:51,299 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:39:51,343 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:51] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:39:51,443 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:39:51,445 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:39:52,771 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:52] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:39:52,905 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:39:52,958 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:39:53,191 - app - INFO - Test data already exists
+2025-03-03 19:39:53,222 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:39:53,227 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:39:54,500 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:54] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:39:54,650 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:39:54,661 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:54] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:39:54,714 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:54] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 19:39:54,726 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:39:56,769 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:56] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:39:56,948 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:39:56,956 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:39:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:46:17,144 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 19:46:17,261 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 19:46:17,611 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:46:17,831 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:46:22,072 - app - INFO - Test data already exists
+2025-03-03 19:46:22,086 - app - INFO - Test data already exists
+2025-03-03 19:46:22,111 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:46:22,118 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:46:22,119 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:46:22,124 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:46:33,459 - app - INFO - Test data already exists
+2025-03-03 19:46:33,525 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:46:33,527 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:46:33,532 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:46:37,355 - app - INFO - Test data already exists
+2025-03-03 19:46:37,386 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:46:37,395 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:46:39,426 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:46:39,496 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:39] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:46:39,795 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:46:39,800 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:46:41,640 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:41] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:46:41,717 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:46:41,766 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:46:44,894 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:44] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:46:44,979 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:46:44,980 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:44] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:46:44,997 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:44] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:46:45,007 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:46:57,188 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:57] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:46:57,306 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:46:57,307 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:46:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:48:42,008 - app - INFO - Test data already exists
+2025-03-03 19:48:42,051 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:48:42,053 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:48:42,057 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:48:43,901 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:48:43,950 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:43] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:48:44,038 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:48:44,041 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:48:45,555 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:45] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:48:45,649 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:48:45,682 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:48:46,156 - app - INFO - Test data already exists
+2025-03-03 19:48:46,196 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:48:46,204 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:48:47,132 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:47] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:48:47,218 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:48:47,227 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:47] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:48:47,237 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:47] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 19:48:47,239 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:48:56,250 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:56] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:48:56,315 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:48:56,338 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:48:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:49:04,459 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:49:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:52:28,563 - app - INFO - Test data already exists
+2025-03-03 19:52:28,610 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:52:28,612 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:52:28,616 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:52:29,949 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:52:29,978 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:29] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:52:30,080 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:30] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 19:52:30,085 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:30] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-03 19:52:31,913 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:31] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:52:32,032 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:52:32,072 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:52:32,773 - app - INFO - Test data already exists
+2025-03-03 19:52:32,811 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:52:32,820 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:52:33,317 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:33] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:52:33,442 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:52:33,499 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:33] "GET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1" 200 -
+2025-03-03 19:52:33,504 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:33] "GET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1" 200 -
+2025-03-03 19:52:33,506 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:52:35,438 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:35] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:52:35,495 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:52:35,496 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:52:45,406 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:52:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:58:40,435 - werkzeug - INFO -  * Detected change in 'c:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 19:58:40,449 - werkzeug - INFO -  * Detected change in 'C:\\Users\\akash\\pythonProject19\\timetable.py', reloading
+2025-03-03 19:58:40,845 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:58:40,863 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:58:44,511 - app - INFO - Test data already exists
+2025-03-03 19:58:44,518 - app - INFO - Test data already exists
+2025-03-03 19:58:44,539 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:58:44,546 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:58:44,553 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:58:44,561 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:58:53,141 - app - INFO - Test data already exists
+2025-03-03 19:58:53,187 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 19:58:53,189 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 19:58:53,194 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 19:58:55,587 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 19:58:55,656 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:55] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 19:58:55,962 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:58:56,051 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:58:57,294 - app - INFO - Test data already exists
+2025-03-03 19:58:57,329 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 19:58:57,337 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 19:58:57,761 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:57] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 19:58:57,810 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:58:57,954 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:58:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:59:04,417 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:04] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 19:59:04,533 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:59:04,587 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:04] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 19:59:04,594 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:04] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 19:59:04,623 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 19:59:24,530 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:24] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 19:59:24,630 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 19:59:24,655 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 19:59:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 20:02:06,516 - app - INFO - Test data already exists
+2025-03-03 20:02:06,559 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.31.156:5001
+2025-03-03 20:02:06,561 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 20:02:06,565 - werkzeug - INFO -  * Restarting with stat
+2025-03-03 20:02:10,402 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 20:02:10,436 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:10] "GET /hod/dashboard HTTP/1.1" 200 -
+2025-03-03 20:02:10,487 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 20:02:10,492 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 20:02:10,764 - app - INFO - Test data already exists
+2025-03-03 20:02:10,794 - werkzeug - WARNING -  * Debugger is active!
+2025-03-03 20:02:10,799 - werkzeug - INFO -  * Debugger PIN: 767-866-184
+2025-03-03 20:02:11,946 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:11] "GET /timetable/render_timetable HTTP/1.1" 200 -
+2025-03-03 20:02:12,079 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 20:02:12,122 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 20:02:13,856 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:13] "GET /timetable/edit_timetable HTTP/1.1" 200 -
+2025-03-03 20:02:13,978 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 20:02:14,026 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:14] "[36mGET /static/timetable_css_js/css/timetable_editor.css HTTP/1.1[0m" 304 -
+2025-03-03 20:02:14,034 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:14] "[36mGET /static/timetable_css_js/js/timetable_editor.js HTTP/1.1[0m" 304 -
+2025-03-03 20:02:14,038 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 20:02:15,659 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:15] "GET /timetable/print_timetable?course_id=1&year=2007&semester=4&batch_id=1 HTTP/1.1" 200 -
+2025-03-03 20:02:15,833 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 20:02:15,857 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:02:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-03 20:03:42,212 - werkzeug - INFO - 127.0.0.1 - - [03/Mar/2025 20:03:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
